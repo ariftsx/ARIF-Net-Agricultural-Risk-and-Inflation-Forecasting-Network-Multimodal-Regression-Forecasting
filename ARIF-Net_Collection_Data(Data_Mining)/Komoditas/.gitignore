@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+*.log
+*.tmp
+*.part
+
+# Raw data are intentionally kept outside normal source control unless repository policy allows them.
+data/raw/pihps/raw_json/*.json

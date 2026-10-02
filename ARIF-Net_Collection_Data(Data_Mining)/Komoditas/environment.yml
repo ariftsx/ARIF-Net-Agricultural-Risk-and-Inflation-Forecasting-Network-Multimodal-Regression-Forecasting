@@ -1,0 +1,8 @@
+name: arifnet-pihps
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - pip:
+      - requests>=2.31.0,<3
