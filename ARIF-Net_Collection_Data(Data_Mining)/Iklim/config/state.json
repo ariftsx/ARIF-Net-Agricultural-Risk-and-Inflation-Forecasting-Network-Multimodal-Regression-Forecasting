@@ -1,0 +1,36 @@
+{
+  "smoke": {
+    "core": {
+      "verdict": "PASS",
+      "model": "era5_seamless",
+      "at": "2026-10-02T16:07:59Z",
+      "raw_file": "data/raw/openmeteo/smoke/core_era5_seamless_brebes.json",
+      "report": "reports/smoke_core.json"
+    },
+    "reserve": {
+      "verdict": "PASS",
+      "model": "era5_seamless",
+      "at": "2026-10-02T16:09:32Z",
+      "raw_file": "data/raw/openmeteo/smoke/reserve_era5_seamless_brebes.json",
+      "report": "reports/smoke_reserve.json"
+    }
+  },
+  "model_in_use": "era5_seamless",
+  "smoke_history": [
+    {
+      "set": "core",
+      "model": "era5_seamless",
+      "verdict": "PASS",
+      "at": "2026-10-02T16:07:59Z",
+      "raw_file": "data/raw/openmeteo/smoke/core_era5_seamless_brebes.json"
+    },
+    {
+      "set": "reserve",
+      "model": "era5_seamless",
+      "verdict": "PASS",
+      "at": "2026-10-02T16:09:32Z",
+      "raw_file": "data/raw/openmeteo/smoke/reserve_era5_seamless_brebes.json"
+    }
+  ],
+  "updated_at_utc": "2026-10-02T16:09:32Z"
+}

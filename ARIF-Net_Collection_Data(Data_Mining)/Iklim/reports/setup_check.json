@@ -1,0 +1,296 @@
+{
+  "step": "Langkah 1 — setup",
+  "verdict": "PASS",
+  "failed": 0,
+  "warnings": 0,
+  "python": "3.13.15",
+  "sys_prefix": "C:\\Users\\arsyp\\anaconda3\\envs\\arif-net",
+  "checked_at_utc": "2026-10-03T09:36:32Z",
+  "items": [
+    {
+      "check": "Python 3.13.x",
+      "status": "PASS",
+      "detail": "3.13.15"
+    },
+    {
+      "check": "Conda env 'arif-net'",
+      "status": "PASS",
+      "detail": "sys.prefix = C:\\Users\\arsyp\\anaconda3\\envs\\arif-net"
+    },
+    {
+      "check": "import requests",
+      "status": "PASS",
+      "detail": "2.34.2"
+    },
+    {
+      "check": "import pandas",
+      "status": "PASS",
+      "detail": "3.0.6"
+    },
+    {
+      "check": "import numpy",
+      "status": "PASS",
+      "detail": "2.5.3"
+    },
+    {
+      "check": "import geopandas",
+      "status": "PASS",
+      "detail": "1.2.0"
+    },
+    {
+      "check": "import shapely",
+      "status": "PASS",
+      "detail": "2.1.2"
+    },
+    {
+      "check": "import pyproj",
+      "status": "PASS",
+      "detail": "3.7.2"
+    },
+    {
+      "check": "import pyogrio",
+      "status": "PASS",
+      "detail": "0.13.0"
+    },
+    {
+      "check": "folder config/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder scripts/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder docs/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder logs/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder reports/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder tests/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder data/raw/openmeteo/core/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder data/raw/openmeteo/reserve/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder data/raw/openmeteo/smoke/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder data/processed/openmeteo/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder data/external/boundaries/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file README.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file environment.yml",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file requirements.txt",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file config/locations.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file config/variables.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file config/request_settings.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file docs/PHASE1_COLLECTION_OPENMETEO.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "lokasi = 18 lokasi Contract §4.6 (P1-DG-11)",
+      "status": "PASS",
+      "detail": "18 lokasi"
+    },
+    {
+      "check": "semua lokasi = Kabupaten",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "tier hanya 1/2 untuk 3 komoditas (P1-DG-04/11)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "bawang_merah_ukuran_sedang: ada lokasi Tier 1",
+      "status": "PASS",
+      "detail": "brebes, cirebon, indramayu"
+    },
+    {
+      "check": "beras_kualitas_medium_i: ada lokasi Tier 1",
+      "status": "PASS",
+      "detail": "cirebon, indramayu, karawang, subang, demak"
+    },
+    {
+      "check": "cabai_merah_keriting: ada lokasi Tier 1",
+      "status": "PASS",
+      "detail": "garut, cianjur, bandung_barat, bandung, sumedang, magelang"
+    },
+    {
+      "check": "koordinat centroid terisi (Langkah 2)",
+      "status": "PASS",
+      "detail": "18/18"
+    },
+    {
+      "check": "variabel core = 9 variabel P1-DG-14",
+      "status": "PASS",
+      "detail": "9"
+    },
+    {
+      "check": "variabel reserve = 11 variabel P1-DG-14",
+      "status": "PASS",
+      "detail": "11"
+    },
+    {
+      "check": "core ∩ reserve kosong",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "tidak ada hourly di config",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "setting endpoint = 'https://archive-api.open-meteo.com/v1/archive'",
+      "status": "PASS",
+      "detail": "terdeteksi 'https://archive-api.open-meteo.com/v1/archive'"
+    },
+    {
+      "check": "setting model_primary = 'era5_seamless'",
+      "status": "PASS",
+      "detail": "terdeteksi 'era5_seamless'"
+    },
+    {
+      "check": "setting model_fallback = 'era5'",
+      "status": "PASS",
+      "detail": "terdeteksi 'era5'"
+    },
+    {
+      "check": "setting temperature_unit = 'celsius'",
+      "status": "PASS",
+      "detail": "terdeteksi 'celsius'"
+    },
+    {
+      "check": "setting wind_speed_unit = 'ms'",
+      "status": "PASS",
+      "detail": "terdeteksi 'ms'"
+    },
+    {
+      "check": "setting precipitation_unit = 'mm'",
+      "status": "PASS",
+      "detail": "terdeteksi 'mm'"
+    },
+    {
+      "check": "setting timeformat = 'iso8601'",
+      "status": "PASS",
+      "detail": "terdeteksi 'iso8601'"
+    },
+    {
+      "check": "setting timezone = 'Asia/Jakarta'",
+      "status": "PASS",
+      "detail": "terdeteksi 'Asia/Jakarta'"
+    },
+    {
+      "check": "setting expected_utc_offset_seconds = 25200",
+      "status": "PASS",
+      "detail": "terdeteksi 25200"
+    },
+    {
+      "check": "setting cell_selection = 'land'",
+      "status": "PASS",
+      "detail": "terdeteksi 'land'"
+    },
+    {
+      "check": "setting start_date = '2018-01-01'",
+      "status": "PASS",
+      "detail": "terdeteksi '2018-01-01'"
+    },
+    {
+      "check": "setting end_date = '2026-09-30'",
+      "status": "PASS",
+      "detail": "terdeteksi '2026-09-30'"
+    },
+    {
+      "check": "setting release_lag_days_for_features = 5",
+      "status": "PASS",
+      "detail": "terdeteksi 5"
+    },
+    {
+      "check": "setting imputation_at_collection = False",
+      "status": "PASS",
+      "detail": "terdeteksi False"
+    },
+    {
+      "check": "model bukan best_match",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rate limit ≤ kuota free tier (600/m, 5000/j, 10000/h)",
+      "status": "PASS",
+      "detail": "{'per_minute': 480, 'per_hour': 4000, 'per_day': 8000}"
+    },
+    {
+      "check": "path terpanjang pipeline ≤ 259 karakter (MAX_PATH Windows)",
+      "status": "PASS",
+      "detail": "249 karakter: data\\raw\\openmeteo\\smoke\\reserve_era5_seamless_brebes.r9.json | LongPathsEnabled=True"
+    },
+    {
+      "check": "smoke test core PASS (Langkah 3)",
+      "status": "PASS",
+      "detail": "model=era5_seamless"
+    },
+    {
+      "check": "smoke test reserve PASS (Langkah 4)",
+      "status": "PASS",
+      "detail": "model=era5_seamless"
+    }
+  ]
+}

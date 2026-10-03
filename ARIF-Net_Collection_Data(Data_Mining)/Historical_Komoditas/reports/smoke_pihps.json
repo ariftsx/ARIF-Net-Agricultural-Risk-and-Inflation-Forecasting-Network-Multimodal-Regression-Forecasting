@@ -1,0 +1,171 @@
+{
+  "step": "Langkah 2 — smoke PIHPS",
+  "verdict": "PASS",
+  "period": [
+    "2019-01-01",
+    "2019-01-31"
+  ],
+  "reference_file": "data/raw/pihps/reference/ref_commodity.json",
+  "id_verification": {
+    "com_14": {
+      "expected": "Cabai Merah Keriting",
+      "found_names": [
+        "14",
+        "Cabai Merah Keriting",
+        "kg"
+      ],
+      "verified": true
+    },
+    "com_11": {
+      "expected": "Bawang Merah Ukuran Sedang",
+      "found_names": [
+        "11",
+        "Bawang Merah Ukuran Sedang",
+        "kg"
+      ],
+      "verified": true
+    },
+    "com_3": {
+      "expected": "Beras Kualitas Medium I",
+      "found_names": [
+        "3",
+        "Beras Kualitas Medium I",
+        "kg"
+      ],
+      "verified": true
+    }
+  },
+  "chunks": {
+    "com_14": {
+      "commodity": "Cabai Merah Keriting",
+      "request_url": "https://www.bi.go.id/hargapangan/WebSite/TabelHarga/GetGridDataKomoditas?price_type_id=1&comcat_id=com_14&province_id=13&regency_id=34&showKota=true&showPasar=true&tipe_laporan=1&start_date=2019-01-01&end_date=2019-01-31&_=1791021492353",
+      "http_status": 200,
+      "raw_file": "data/raw/pihps/smoke/com_14_2019-01.json",
+      "raw_sha256": "97193090931d7885f5b77e4d8693fd7f10afe9b330f687d219989f4723868fe2",
+      "issues": [],
+      "n_date_keys": 23,
+      "n_reported": 22,
+      "n_dash": 1,
+      "n_expected_weekdays": 23,
+      "first_values": [
+        [
+          "2019-01-01",
+          "-"
+        ],
+        [
+          "2019-01-02",
+          "40,000"
+        ],
+        [
+          "2019-01-03",
+          "40,000"
+        ]
+      ]
+    },
+    "com_11": {
+      "commodity": "Bawang Merah Ukuran Sedang",
+      "request_url": "https://www.bi.go.id/hargapangan/WebSite/TabelHarga/GetGridDataKomoditas?price_type_id=1&comcat_id=com_11&province_id=13&regency_id=34&showKota=true&showPasar=true&tipe_laporan=1&start_date=2019-01-01&end_date=2019-01-31&_=1791021493935",
+      "http_status": 200,
+      "raw_file": "data/raw/pihps/smoke/com_11_2019-01.json",
+      "raw_sha256": "076ece3a0ce6509562d4e44c7aaf847599a8a6b37771b3c2d71abe4bf204ebca",
+      "issues": [],
+      "n_date_keys": 23,
+      "n_reported": 22,
+      "n_dash": 1,
+      "n_expected_weekdays": 23,
+      "first_values": [
+        [
+          "2019-01-01",
+          "-"
+        ],
+        [
+          "2019-01-02",
+          "37,500"
+        ],
+        [
+          "2019-01-03",
+          "37,500"
+        ]
+      ]
+    },
+    "com_3": {
+      "commodity": "Beras Kualitas Medium I",
+      "request_url": "https://www.bi.go.id/hargapangan/WebSite/TabelHarga/GetGridDataKomoditas?price_type_id=1&comcat_id=com_3&province_id=13&regency_id=34&showKota=true&showPasar=true&tipe_laporan=1&start_date=2019-01-01&end_date=2019-01-31&_=1791021495690",
+      "http_status": 200,
+      "raw_file": "data/raw/pihps/smoke/com_3_2019-01.json",
+      "raw_sha256": "93db34bbdd36c259c1f8e3655aefbbffc7d663857105dc43065390e41bcc5e60",
+      "issues": [],
+      "n_date_keys": 23,
+      "n_reported": 22,
+      "n_dash": 1,
+      "n_expected_weekdays": 23,
+      "first_values": [
+        [
+          "2019-01-01",
+          "-"
+        ],
+        [
+          "2019-01-02",
+          "13,350"
+        ],
+        [
+          "2019-01-03",
+          "13,350"
+        ]
+      ]
+    }
+  },
+  "checks": [
+    {
+      "check": "reference HTTP 200",
+      "status": "PASS",
+      "detail": "status=200 file=data/raw/pihps/reference/ref_commodity.json"
+    },
+    {
+      "check": "comcat_id com_14 = 'Cabai Merah Keriting' di reference",
+      "status": "PASS",
+      "detail": "ditemukan: ['14', 'Cabai Merah Keriting', 'kg']"
+    },
+    {
+      "check": "comcat_id com_11 = 'Bawang Merah Ukuran Sedang' di reference",
+      "status": "PASS",
+      "detail": "ditemukan: ['11', 'Bawang Merah Ukuran Sedang', 'kg']"
+    },
+    {
+      "check": "comcat_id com_3 = 'Beras Kualitas Medium I' di reference",
+      "status": "PASS",
+      "detail": "ditemukan: ['3', 'Beras Kualitas Medium I', 'kg']"
+    },
+    {
+      "check": "com_14 HTTP 200",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "check": "com_14 struktur & row Pasar Kramatjati L3",
+      "status": "PASS",
+      "detail": "tanggal=23 (hari kerja 23) dilaporkan=22 '-'=1 contoh=[('2019-01-01', '-'), ('2019-01-02', '40,000'), ('2019-01-03', '40,000')]"
+    },
+    {
+      "check": "com_11 HTTP 200",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "check": "com_11 struktur & row Pasar Kramatjati L3",
+      "status": "PASS",
+      "detail": "tanggal=23 (hari kerja 23) dilaporkan=22 '-'=1 contoh=[('2019-01-01', '-'), ('2019-01-02', '37,500'), ('2019-01-03', '37,500')]"
+    },
+    {
+      "check": "com_3 HTTP 200",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "check": "com_3 struktur & row Pasar Kramatjati L3",
+      "status": "PASS",
+      "detail": "tanggal=23 (hari kerja 23) dilaporkan=22 '-'=1 contoh=[('2019-01-01', '-'), ('2019-01-02', '13,350'), ('2019-01-03', '13,350')]"
+    }
+  ],
+  "checked_at_utc": "2026-10-03T09:58:17Z"
+}

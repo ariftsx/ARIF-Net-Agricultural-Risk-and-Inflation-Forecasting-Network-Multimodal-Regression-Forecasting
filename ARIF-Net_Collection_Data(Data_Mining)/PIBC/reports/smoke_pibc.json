@@ -1,0 +1,56 @@
+{
+  "step": "Langkah 2 — smoke PIBC",
+  "verdict": "PASS",
+  "period": [
+    "2019-01-01",
+    "2019-01-31"
+  ],
+  "request_url": "https://pibc.foodstation.co.id/rice-price-detail?start_date=2018-12-31&end_date=2019-01-31&draw=1&columns%5B0%5D%5Bdata%5D=tgl&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=cjr_kpl&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=cjr_slyp&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=setra&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=saigon&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=muncul1&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=muncul2&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=muncul3&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=ir641&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=ir642&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=true&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B10%5D%5Bdata%5D=ir643&columns%5B10%5D%5Bname%5D=&columns%5B10%5D%5Bsearchable%5D=true&columns%5B10%5D%5Borderable%5D=true&columns%5B10%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B10%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B11%5D%5Bdata%5D=ir42&columns%5B11%5D%5Bname%5D=&columns%5B11%5D%5Bsearchable%5D=true&columns%5B11%5D%5Borderable%5D=true&columns%5B11%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B11%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B12%5D%5Bdata%5D=kp_biasa&columns%5B12%5D%5Bname%5D=&columns%5B12%5D%5Bsearchable%5D=true&columns%5B12%5D%5Borderable%5D=true&columns%5B12%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B12%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B13%5D%5Bdata%5D=kp_paris&columns%5B13%5D%5Bname%5D=&columns%5B13%5D%5Bsearchable%5D=true&columns%5B13%5D%5Borderable%5D=true&columns%5B13%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B13%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B14%5D%5Bdata%5D=ktn_htm&columns%5B14%5D%5Bname%5D=&columns%5B14%5D%5Bsearchable%5D=true&columns%5B14%5D%5Borderable%5D=true&columns%5B14%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B14%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=400&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1791023719520",
+  "http_status": 200,
+  "raw_file": "data/raw/pibc/smoke/2019-01.json",
+  "raw_sha256": "58b25482499b78ed6bceb1e638dc14e80ce7fe2f68833bfee89bba371d6f66dd",
+  "issues": [],
+  "records_filtered": 31,
+  "n_rows": 31,
+  "n_expected_days": 31,
+  "first_tgl": "2019 01 01",
+  "last_tgl": "2019 01 31",
+  "n_empty_values": 0,
+  "first_rows": [
+    {
+      "tgl": "2019 01 01",
+      "cjr_kpl": "13,325",
+      "cjr_slyp": "12,050",
+      "setra": "13,275",
+      "saigon": "11,800",
+      "muncul1": "11,175",
+      "muncul2": "10,300",
+      "muncul3": "9,625",
+      "ir641": "10,800",
+      "ir642": "10,200",
+      "ir643": "8,500",
+      "ir42": "12,075",
+      "kp_biasa": "11,675",
+      "kp_paris": "14,925",
+      "ktn_htm": "17,925"
+    },
+    {
+      "tgl": "2019 01 02",
+      "cjr_kpl": "13,425",
+      "cjr_slyp": "12,050",
+      "setra": "13,375",
+      "saigon": "11,850",
+      "muncul1": "11,175",
+      "muncul2": "10,300",
+      "muncul3": "9,725",
+      "ir641": "10,875",
+      "ir642": "10,300",
+      "ir643": "8,500",
+      "ir42": "12,150",
+      "kp_biasa": "11,700",
+      "kp_paris": "14,925",
+      "ktn_htm": "17,925"
+    }
+  ],
+  "checked_at_utc": "2026-10-03T10:35:21Z"
+}

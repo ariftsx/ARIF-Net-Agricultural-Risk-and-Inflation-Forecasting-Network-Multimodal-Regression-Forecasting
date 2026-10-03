@@ -1,0 +1,171 @@
+{
+  "step": "Langkah 1 — setup PIBC",
+  "verdict": "PASS",
+  "failed": 0,
+  "warnings": 0,
+  "python": "3.13.15",
+  "sys_prefix": "C:\\Users\\arsyp\\anaconda3\\envs\\arif-net",
+  "checked_at_utc": "2026-10-03T11:01:15Z",
+  "items": [
+    {
+      "check": "Python 3.13.x",
+      "status": "PASS",
+      "detail": "3.13.15"
+    },
+    {
+      "check": "Conda env 'arif-net'",
+      "status": "PASS",
+      "detail": "sys.prefix = C:\\Users\\arsyp\\anaconda3\\envs\\arif-net"
+    },
+    {
+      "check": "import requests",
+      "status": "PASS",
+      "detail": "2.34.2"
+    },
+    {
+      "check": "import pandas",
+      "status": "PASS",
+      "detail": "3.0.6"
+    },
+    {
+      "check": "import numpy",
+      "status": "PASS",
+      "detail": "2.5.3"
+    },
+    {
+      "check": "folder config/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder scripts/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder tests/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder docs/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder logs/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder reports/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder data/raw/pibc/smoke/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder data/processed/pibc/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file README.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file environment.yml",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file requirements.txt",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file config/varieties.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file config/request_settings.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file docs/PHASE1_COLLECTION_PIBC.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "14 kolom varietas sesuai header halaman PIBC",
+      "status": "PASS",
+      "detail": "14"
+    },
+    {
+      "check": "setting data_url = 'https://pibc.foodstation.co.id/rice-price-detail'",
+      "status": "PASS",
+      "detail": "terdeteksi 'https://pibc.foodstation.co.id/rice-price-detail'"
+    },
+    {
+      "check": "setting columns (15 field DataTables)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "setting start_date = '2019-01-01'",
+      "status": "PASS",
+      "detail": "terdeteksi '2019-01-01'"
+    },
+    {
+      "check": "setting end_date = '2025-06-16'",
+      "status": "PASS",
+      "detail": "terdeteksi '2025-06-16'"
+    },
+    {
+      "check": "setting chunk = 'yearly'",
+      "status": "PASS",
+      "detail": "terdeteksi 'yearly'"
+    },
+    {
+      "check": "setting imputation_at_collection = False",
+      "status": "PASS",
+      "detail": "terdeteksi False"
+    },
+    {
+      "check": "page_length ≥ 366 (1 tahun per request)",
+      "status": "PASS",
+      "detail": "400"
+    },
+    {
+      "check": "delay ≥ 1 detik",
+      "status": "PASS",
+      "detail": "1.5"
+    },
+    {
+      "check": "pemetaan Beras Medium I diputuskan peneliti (P1-DG-05; dibutuhkan Langkah 5)",
+      "status": "PASS",
+      "detail": "medium_i_mapping = 'muncul1'"
+    },
+    {
+      "check": "CSV PIHPS tersedia (untuk bukti pemetaan)",
+      "status": "PASS",
+      "detail": "pihps_kramatjati_long.csv"
+    },
+    {
+      "check": "path terpanjang pipeline ≤ 259 karakter",
+      "status": "PASS",
+      "detail": "229 karakter: data\\processed\\pibc\\pibc_medium_i_long.csv"
+    },
+    {
+      "check": "smoke test PASS",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

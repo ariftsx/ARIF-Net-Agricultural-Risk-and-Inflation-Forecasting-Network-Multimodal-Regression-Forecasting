@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "decision_refs": ["P1-DG-09", "P1-DG-10", "P1-DG-15", "P1-DG-16", "P1-DG-17"],
+    "authority": "Plan v2.0.0 §0.5, §10.2a; Contract v2.1.0 §0B, §5.6",
+    "source_doc": "https://open-meteo.com/en/docs/historical-weather-api",
+    "data_nature": "reanalysis (gabungan model + observasi), BUKAN observasi stasiun"
+  },
+  "endpoint": "https://archive-api.open-meteo.com/v1/archive",
+  "model_primary": "era5_seamless",
+  "model_fallback": "era5",
+  "temperature_unit": "celsius",
+  "wind_speed_unit": "ms",
+  "precipitation_unit": "mm",
+  "timeformat": "iso8601",
+  "timezone": "Asia/Jakarta",
+  "expected_utc_offset_seconds": 25200,
+  "cell_selection": "land",
+  "start_date": "2018-01-01",
+  "end_date": "2026-09-30",
+  "chunk": "yearly",
+  "timeout_seconds": 90,
+  "retries": 5,
+  "min_delay_seconds": 1.0,
+  "rate_limit": {
+    "_note": "Free tier Open-Meteo: 600/menit, 5000/jam, 10000/hari (open-meteo.com/en/terms). Request >10 variabel atau >14 hari dihitung pecahan (open-meteo.com/en/pricing). Batas di bawah = ±80% kuota sebagai margin aman.",
+    "per_minute": 480,
+    "per_hour": 4000,
+    "per_day": 8000
+  },
+  "usable_end_date": "2026-09-24",
+  "usable_end_date_note": "Keputusan peneliti 2026-10-03 (opsi A, CP6): seri iklim dipotong di 2026-09-24 = hari terakhir 20 variabel lengkap di 18 lokasi. Diterapkan di feature layer (Phase 3); raw & processed tetap utuh s.d. end_date. Alasan: tepi rilis ERA5 2026-09-25..30 berisi null & precipitation_hours bernilai artefak.",
+  "release_lag_days_for_features": 5,
+  "release_lag_note": "Diterapkan di feature layer (Phase 3), BUKAN saat collection. Collection menyimpan tanggal asli (P1-DG-17).",
+  "imputation_at_collection": false
+}

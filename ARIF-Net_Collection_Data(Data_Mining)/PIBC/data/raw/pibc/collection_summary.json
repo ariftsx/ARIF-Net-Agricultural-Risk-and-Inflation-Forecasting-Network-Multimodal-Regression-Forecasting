@@ -1,0 +1,17 @@
+{
+  "step": "Langkah 3 — full collection PIBC",
+  "start_date": "2019-01-01",
+  "end_date": "2025-06-16",
+  "chunk": "yearly",
+  "expected_chunks": 7,
+  "completed_chunks": 7,
+  "expected_rows": 2359,
+  "this_run": {
+    "requests_ok": 7,
+    "requests_error": 0
+  },
+  "verdict": "PASS",
+  "manifest": "data/raw/pibc/collection_manifest.csv",
+  "finished_at_utc": "2026-10-03T10:35:39Z",
+  "note": "Raw memuat 14 varietas; tanpa imputasi."
+}

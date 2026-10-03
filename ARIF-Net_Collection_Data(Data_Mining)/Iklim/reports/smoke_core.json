@@ -1,0 +1,246 @@
+{
+  "step": "Langkah 3 — smoke core",
+  "set": "core",
+  "model": "era5_seamless",
+  "location_id": "brebes",
+  "requested_point": [
+    -7.05928,
+    108.92756
+  ],
+  "period": [
+    "2018-01-01",
+    "2018-01-31"
+  ],
+  "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=-7.05928&longitude=108.92756&start_date=2018-01-01&end_date=2018-01-31&daily=precipitation_sum%2Cprecipitation_hours%2Ctemperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Crelative_humidity_2m_mean%2Csunshine_duration%2Cet0_fao_evapotranspiration%2Csoil_moisture_7_to_28cm_mean&models=era5_seamless&temperature_unit=celsius&wind_speed_unit=ms&precipitation_unit=mm&timeformat=iso8601&timezone=Asia%2FJakarta&cell_selection=land",
+  "http_status": 200,
+  "api_weight": 2.214,
+  "raw_file": "data/raw/openmeteo/smoke/core_era5_seamless_brebes.json",
+  "raw_sha256": "09c758410ef2c8aa3a2b6fb603ed00e31f4c919b5ea86edea7011816283d9f0c",
+  "checked_at_utc": "2026-10-02T16:07:59Z",
+  "response_meta": {
+    "latitude": -7.0999985,
+    "longitude": 108.899994,
+    "elevation": 63.0,
+    "utc_offset_seconds": 25200,
+    "timezone": "Asia/Jakarta",
+    "timezone_abbreviation": "GMT+7",
+    "generationtime_ms": 6.885051727294922
+  },
+  "daily_units": {
+    "time": "iso8601",
+    "precipitation_sum": "mm",
+    "precipitation_hours": "h",
+    "temperature_2m_mean": "°C",
+    "temperature_2m_max": "°C",
+    "temperature_2m_min": "°C",
+    "relative_humidity_2m_mean": "%",
+    "sunshine_duration": "s",
+    "et0_fao_evapotranspiration": "mm",
+    "soil_moisture_7_to_28cm_mean": "m³/m³"
+  },
+  "per_variable": {
+    "precipitation_sum": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "mm",
+      "first_values": [
+        0.7,
+        15.4,
+        12.2
+      ]
+    },
+    "precipitation_hours": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "h",
+      "first_values": [
+        4.0,
+        9.0,
+        14.0
+      ]
+    },
+    "temperature_2m_mean": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "°C",
+      "first_values": [
+        26.6,
+        26.0,
+        26.2
+      ]
+    },
+    "temperature_2m_max": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "°C",
+      "first_values": [
+        30.3,
+        29.2,
+        30.6
+      ]
+    },
+    "temperature_2m_min": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "°C",
+      "first_values": [
+        22.8,
+        24.2,
+        23.2
+      ]
+    },
+    "relative_humidity_2m_mean": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "%",
+      "first_values": [
+        83,
+        89,
+        89
+      ]
+    },
+    "sunshine_duration": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "s",
+      "first_values": [
+        43472.89,
+        36578.38,
+        36133.89
+      ]
+    },
+    "et0_fao_evapotranspiration": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "mm",
+      "first_values": [
+        4.8,
+        3.64,
+        4.2
+      ]
+    },
+    "soil_moisture_7_to_28cm_mean": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "m³/m³",
+      "first_values": [
+        0.446,
+        0.447,
+        0.466
+      ]
+    }
+  },
+  "unit_notes_non_locked": {},
+  "verdict": "PASS",
+  "checks": [
+    {
+      "check": "HTTP 200",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "check": "utc_offset_seconds = 25200 (WIB)",
+      "status": "PASS",
+      "detail": "25200"
+    },
+    {
+      "check": "timezone = Asia/Jakarta",
+      "status": "PASS",
+      "detail": "Asia/Jakarta"
+    },
+    {
+      "check": "daily_units.time = iso8601",
+      "status": "PASS",
+      "detail": "iso8601"
+    },
+    {
+      "check": "jumlah hari = 31",
+      "status": "PASS",
+      "detail": "31"
+    },
+    {
+      "check": "hari pertama/terakhir sesuai",
+      "status": "PASS",
+      "detail": "['2018-01-01']…['2018-01-31']"
+    },
+    {
+      "check": "variabel precipitation_sum ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=mm null=0/31 contoh=[0.7, 15.4, 12.2]"
+    },
+    {
+      "check": "unit precipitation_sum = mm (P1-DG-15)",
+      "status": "PASS",
+      "detail": "mm"
+    },
+    {
+      "check": "variabel precipitation_hours ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=h null=0/31 contoh=[4.0, 9.0, 14.0]"
+    },
+    {
+      "check": "variabel temperature_2m_mean ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=°C null=0/31 contoh=[26.6, 26.0, 26.2]"
+    },
+    {
+      "check": "unit temperature_2m_mean = °C (P1-DG-15)",
+      "status": "PASS",
+      "detail": "°C"
+    },
+    {
+      "check": "variabel temperature_2m_max ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=°C null=0/31 contoh=[30.3, 29.2, 30.6]"
+    },
+    {
+      "check": "unit temperature_2m_max = °C (P1-DG-15)",
+      "status": "PASS",
+      "detail": "°C"
+    },
+    {
+      "check": "variabel temperature_2m_min ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=°C null=0/31 contoh=[22.8, 24.2, 23.2]"
+    },
+    {
+      "check": "unit temperature_2m_min = °C (P1-DG-15)",
+      "status": "PASS",
+      "detail": "°C"
+    },
+    {
+      "check": "variabel relative_humidity_2m_mean ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=% null=0/31 contoh=[83, 89, 89]"
+    },
+    {
+      "check": "variabel sunshine_duration ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=s null=0/31 contoh=[43472.89, 36578.38, 36133.89]"
+    },
+    {
+      "check": "variabel et0_fao_evapotranspiration ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=mm null=0/31 contoh=[4.8, 3.64, 4.2]"
+    },
+    {
+      "check": "unit et0_fao_evapotranspiration = mm (P1-DG-15)",
+      "status": "PASS",
+      "detail": "mm"
+    },
+    {
+      "check": "variabel soil_moisture_7_to_28cm_mean ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=m³/m³ null=0/31 contoh=[0.446, 0.447, 0.466]"
+    }
+  ]
+}

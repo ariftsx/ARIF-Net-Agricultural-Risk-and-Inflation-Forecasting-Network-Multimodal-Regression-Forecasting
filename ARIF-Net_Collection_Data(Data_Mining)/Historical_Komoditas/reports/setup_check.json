@@ -1,0 +1,211 @@
+{
+  "step": "Langkah 1 — setup",
+  "verdict": "PASS",
+  "failed": 0,
+  "warnings": 0,
+  "python": "3.13.15",
+  "sys_prefix": "C:\\Users\\arsyp\\anaconda3\\envs\\arif-net",
+  "checked_at_utc": "2026-10-03T10:08:52Z",
+  "items": [
+    {
+      "check": "Python 3.13.x",
+      "status": "PASS",
+      "detail": "3.13.15"
+    },
+    {
+      "check": "Conda env 'arif-net'",
+      "status": "PASS",
+      "detail": "sys.prefix = C:\\Users\\arsyp\\anaconda3\\envs\\arif-net"
+    },
+    {
+      "check": "import requests",
+      "status": "PASS",
+      "detail": "2.34.2"
+    },
+    {
+      "check": "import pandas",
+      "status": "PASS",
+      "detail": "3.0.6"
+    },
+    {
+      "check": "import numpy",
+      "status": "PASS",
+      "detail": "2.5.3"
+    },
+    {
+      "check": "folder config/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder scripts/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder tests/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder docs/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder logs/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder reports/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder data/raw/pihps/reference/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder data/raw/pihps/smoke/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder data/processed/pihps/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "folder archive/run_2022/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file README.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file environment.yml",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file requirements.txt",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file config/commodities.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file config/request_settings.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "file docs/PHASE1_COLLECTION_PIHPS.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "komoditas = 3 primary P1-DG-04/05",
+      "status": "PASS",
+      "detail": "{'Cabai Merah Keriting': 'com_14', 'Bawang Merah Ukuran Sedang': 'com_11', 'Beras Kualitas Medium I': 'com_3'}"
+    },
+    {
+      "check": "bawang putih tidak ada (P1-DG-13)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "setting data_url = 'https://www.bi.go.id/hargapangan/WebSite/TabelHarga/GetGridDataKomoditas'",
+      "status": "PASS",
+      "detail": "terdeteksi 'https://www.bi.go.id/hargapangan/WebSite/TabelHarga/GetGridDataKomoditas'"
+    },
+    {
+      "check": "setting price_type_id = 1",
+      "status": "PASS",
+      "detail": "terdeteksi 1"
+    },
+    {
+      "check": "setting province_id = 13",
+      "status": "PASS",
+      "detail": "terdeteksi 13"
+    },
+    {
+      "check": "setting regency_id = 34",
+      "status": "PASS",
+      "detail": "terdeteksi 34"
+    },
+    {
+      "check": "setting tipe_laporan = 1",
+      "status": "PASS",
+      "detail": "terdeteksi 1"
+    },
+    {
+      "check": "setting show_kota = 'true'",
+      "status": "PASS",
+      "detail": "terdeteksi 'true'"
+    },
+    {
+      "check": "setting show_pasar = 'true'",
+      "status": "PASS",
+      "detail": "terdeteksi 'true'"
+    },
+    {
+      "check": "setting market_name = 'Pasar Kramatjati'",
+      "status": "PASS",
+      "detail": "terdeteksi 'Pasar Kramatjati'"
+    },
+    {
+      "check": "setting market_level = 3",
+      "status": "PASS",
+      "detail": "terdeteksi 3"
+    },
+    {
+      "check": "setting start_date = '2019-01-01'",
+      "status": "PASS",
+      "detail": "terdeteksi '2019-01-01'"
+    },
+    {
+      "check": "setting end_date = '2026-09-30'",
+      "status": "PASS",
+      "detail": "terdeteksi '2026-09-30'"
+    },
+    {
+      "check": "setting chunk = 'monthly'",
+      "status": "PASS",
+      "detail": "terdeteksi 'monthly'"
+    },
+    {
+      "check": "setting imputation_at_collection = False",
+      "status": "PASS",
+      "detail": "terdeteksi False"
+    },
+    {
+      "check": "delay ≥ 1 detik (sopan terhadap server BI)",
+      "status": "PASS",
+      "detail": "1.0"
+    },
+    {
+      "check": "path terpanjang pipeline ≤ 259 karakter",
+      "status": "PASS",
+      "detail": "249 karakter: data\\raw\\pihps\\reference\\ref_commodity.r9.json"
+    },
+    {
+      "check": "arsip run 2022 tersedia (pembanding audit)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "smoke test PASS (Langkah 2)",
+      "status": "PASS",
+      "detail": "2026-10-03T09:58:17Z"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "step": "Langkah 5 — audit PIHPS",
+  "verdict": "PASS",
+  "fails": [],
+  "period": [
+    "2019-01-01",
+    "2026-09-30"
+  ],
+  "market": "Pasar Kramatjati (level 3, harga eceran)",
+  "findings": {
+    "per_commodity": {
+      "com_14": {
+        "commodity": "Cabai Merah Keriting",
+        "dates_returned": 2022,
+        "expected_weekdays": 2022,
+        "weekday_coverage_pct": 100.0,
+        "weekday_not_returned": 0,
+        "weekend_dates_returned": 0,
+        "first_date": "2019-01-01",
+        "last_date": "2026-09-30",
+        "reported": 1953,
+        "not_reported_dash": 69,
+        "price_min": 20000.0,
+        "price_median": 50000.0,
+        "price_max": 150000.0,
+        "share_days_no_change_pct": 68.65,
+        "longest_repeat_run_days": 24,
+        "longest_repeat_run_end": "2021-09-06",
+        "largest_abs_daily_change": [
+          {
+            "date": "2022-01-17",
+            "pct": 66.67,
+            "price": 50000.0,
+            "prev_price": 30000.0
+          },
+          {
+            "date": "2024-04-29",
+            "pct": 66.67,
+            "price": 75000.0,
+            "prev_price": 45000.0
+          },
+          {
+            "date": "2025-03-03",
+            "pct": 56.13,
+            "price": 102500.0,
+            "prev_price": 65650.0
+          },
+          {
+            "date": "2022-11-10",
+            "pct": 50.59,
+            "price": 64000.0,
+            "prev_price": 42500.0
+          },
+          {
+            "date": "2022-07-11",
+            "pct": 48.72,
+            "price": 145000.0,
+            "prev_price": 97500.0
+          }
+        ]
+      },
+      "com_11": {
+        "commodity": "Bawang Merah Ukuran Sedang",
+        "dates_returned": 2022,
+        "expected_weekdays": 2022,
+        "weekday_coverage_pct": 100.0,
+        "weekday_not_returned": 0,
+        "weekend_dates_returned": 0,
+        "first_date": "2019-01-01",
+        "last_date": "2026-09-30",
+        "reported": 1953,
+        "not_reported_dash": 69,
+        "price_min": 25000.0,
+        "price_median": 40300.0,
+        "price_max": 82500.0,
+        "share_days_no_change_pct": 80.89,
+        "longest_repeat_run_days": 49,
+        "longest_repeat_run_end": "2021-01-05",
+        "largest_abs_daily_change": [
+          {
+            "date": "2022-09-13",
+            "pct": 37.5,
+            "price": 55000.0,
+            "prev_price": 40000.0
+          },
+          {
+            "date": "2024-04-16",
+            "pct": 36.36,
+            "price": 75000.0,
+            "prev_price": 55000.0
+          },
+          {
+            "date": "2023-04-17",
+            "pct": 31.25,
+            "price": 52500.0,
+            "prev_price": 40000.0
+          },
+          {
+            "date": "2019-10-09",
+            "pct": 30.0,
+            "price": 32500.0,
+            "prev_price": 25000.0
+          },
+          {
+            "date": "2022-02-10",
+            "pct": 28.57,
+            "price": 45000.0,
+            "prev_price": 35000.0
+          }
+        ]
+      },
+      "com_3": {
+        "commodity": "Beras Kualitas Medium I",
+        "dates_returned": 2022,
+        "expected_weekdays": 2022,
+        "weekday_coverage_pct": 100.0,
+        "weekday_not_returned": 0,
+        "weekend_dates_returned": 0,
+        "first_date": "2019-01-01",
+        "last_date": "2026-09-30",
+        "reported": 1953,
+        "not_reported_dash": 69,
+        "price_min": 11950.0,
+        "price_median": 14000.0,
+        "price_max": 16100.0,
+        "share_days_no_change_pct": 96.41,
+        "longest_repeat_run_days": 243,
+        "longest_repeat_run_end": "2021-03-30",
+        "largest_abs_daily_change": [
+          {
+            "date": "2022-07-12",
+            "pct": 14.34,
+            "price": 14750.0,
+            "prev_price": 12900.0
+          },
+          {
+            "date": "2022-07-13",
+            "pct": -12.54,
+            "price": 12900.0,
+            "prev_price": 14750.0
+          },
+          {
+            "date": "2022-09-14",
+            "pct": 10.88,
+            "price": 13250.0,
+            "prev_price": 11950.0
+          },
+          {
+            "date": "2022-09-13",
+            "pct": -9.81,
+            "price": 11950.0,
+            "prev_price": 13250.0
+          },
+          {
+            "date": "2022-11-10",
+            "pct": 6.42,
+            "price": 14100.0,
+            "prev_price": 13250.0
+          }
+        ]
+      }
+    },
+    "dash_dates_common_all_commodities": 69,
+    "archive_2022_overlap": {
+      "overlap_rows": 3711,
+      "identical": 3711,
+      "value_differs": 0,
+      "null_status_differs": 0,
+      "file": "reports/audit_pihps_vs_archive2022.csv"
+    }
+  },
+  "note": "Audit deskriptif; tidak ada data diubah. '-' dan tanggal tidak dikembalikan TIDAK diimputasi.",
+  "checked_at_utc": "2026-10-03T10:08:03Z"
+}

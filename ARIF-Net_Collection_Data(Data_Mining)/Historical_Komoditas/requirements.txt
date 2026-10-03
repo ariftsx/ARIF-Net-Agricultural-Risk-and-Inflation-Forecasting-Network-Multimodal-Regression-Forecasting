@@ -1,1 +1,4 @@
-requests>=2.31.0,<3
+# Koleksi harga PIHPS (Phase 1). Env: arif-net.
+requests>=2.32
+pandas>=3.0
+numpy>=2.0

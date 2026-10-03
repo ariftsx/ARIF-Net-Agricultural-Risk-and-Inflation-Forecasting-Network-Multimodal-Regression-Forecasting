@@ -1,0 +1,16 @@
+{
+  "step": "Langkah 2a — batas administrasi",
+  "verdict": "PASS",
+  "source": "GADM 4.1, Indonesia, level 2 (kabupaten/kota)",
+  "source_url": "https://geodata.ucdavis.edu/gadm/gadm4.1/json/gadm41_IDN_2.json.zip",
+  "license": "GADM: academic & non-commercial use; redistribution not allowed (gadm.org/license.html)",
+  "zip_file": "data/external/boundaries/gadm41_IDN_2.json.zip",
+  "zip_sha256": "309c629141e05244cafd3d5a71597645a19ef2ed95da7b17bb3d8af469feff49",
+  "zip_bytes": 1324235,
+  "json_file": "data/external/boundaries/gadm41_IDN_2.json",
+  "json_sha256": "a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75",
+  "json_bytes": 4834976,
+  "http_status": 200,
+  "downloaded_at_utc": "2026-10-02T16:01:30Z",
+  "checked_at_utc": "2026-10-02T16:01:30Z"
+}

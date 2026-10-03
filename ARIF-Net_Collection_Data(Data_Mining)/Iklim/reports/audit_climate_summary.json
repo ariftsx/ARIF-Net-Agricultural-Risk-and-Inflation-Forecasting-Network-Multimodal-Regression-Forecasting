@@ -1,0 +1,167 @@
+{
+  "step": "Langkah 7 — audit",
+  "verdict": "PASS",
+  "fails": [],
+  "findings": {
+    "core": {
+      "series": 162,
+      "missing_dates": 0,
+      "duplicate_dates": 0,
+      "non_tail_nulls": 0,
+      "max_tail_nulls_days": 6,
+      "series_with_mid_nulls": [],
+      "completeness_file": "reports/audit_core_completeness.csv",
+      "range_violations": []
+    },
+    "reserve": {
+      "series": 198,
+      "missing_dates": 0,
+      "duplicate_dates": 0,
+      "non_tail_nulls": 18,
+      "max_tail_nulls_days": 6,
+      "series_with_mid_nulls": [
+        [
+          "bandung_barat",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "bima",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "bandung",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "nganjuk",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "sukoharjo",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "cilacap",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "garut",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "sragen",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "cianjur",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "karawang",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "brebes",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "cirebon",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "indramayu",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "magelang",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "sumedang",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "demak",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "temanggung",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ],
+        [
+          "subang",
+          "wind_speed_10m_max",
+          "1",
+          "2026-09-25"
+        ]
+      ],
+      "completeness_file": "reports/audit_reserve_completeness.csv",
+      "range_violations": []
+    },
+    "grid": {
+      "file": "reports/audit_grid.csv",
+      "collisions": [],
+      "locations_with_multiple_grid_cells": [],
+      "max_offset_km": 8.5
+    },
+    "qc_rain_vs_precip": {
+      "n_pairs": 57510,
+      "max_abs_diff_mm": 0.0,
+      "share_diff_gt_0_1mm": 0.0
+    },
+    "manifest_meta": {
+      "models": [
+        "era5_seamless"
+      ],
+      "utc_offsets": [
+        "25200"
+      ],
+      "timezones": [
+        "Asia/Jakarta"
+      ],
+      "model_in_use": "era5_seamless",
+      "model_fallback_reason": null
+    }
+  },
+  "period": [
+    "2018-01-01",
+    "2026-09-30"
+  ],
+  "data_nature": "reanalysis (Open-Meteo), bukan observasi stasiun",
+  "note": "Audit deskriptif. Tidak ada data yang diubah. WARN dilaporkan ke peneliti, bukan diperbaiki otomatis.",
+  "checked_at_utc": "2026-10-02T18:51:20Z"
+}

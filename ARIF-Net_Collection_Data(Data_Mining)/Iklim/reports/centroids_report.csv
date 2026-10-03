@@ -1,0 +1,19 @@
+location_id,kabupaten,provinsi,gadm_gid_2,gadm_name_2,gadm_name_1,gadm_type_2,centroid_lat,centroid_lon,centroid_inside_polygon,representative_lat,representative_lon,area_km2,status
+garut,Kabupaten Garut,Jawa Barat,IDN.9.11_1,Garut,JawaBarat,Kabupaten,-7.35951,107.78883,True,-7.3426,107.70291,3089.4,PASS
+cianjur,Kabupaten Cianjur,Jawa Barat,IDN.9.7_1,Cianjur,JawaBarat,Kabupaten,-7.13358,107.15776,True,-7.05365,107.0692,3591.5,PASS
+bandung_barat,Kabupaten Bandung Barat,Jawa Barat,IDN.9.1_1,BandungBarat,JawaBarat,Kabupaten,-6.89711,107.41495,True,-6.9068,107.41176,1276.9,PASS
+bandung,Kabupaten Bandung,Jawa Barat,IDN.9.2_1,Bandung,JawaBarat,Kabupaten,-7.09994,107.61075,True,-7.0632,107.6335,1755.4,PASS
+sumedang,Kabupaten Sumedang,Jawa Barat,IDN.9.25_1,Sumedang,JawaBarat,Kabupaten,-6.82506,107.98087,True,-6.81045,107.9615,1557.5,PASS
+magelang,Kabupaten Magelang,Jawa Tengah,IDN.10.20_1,Magelang,JawaTengah,Kabupaten,-7.50157,110.24663,True,-7.51375,110.21383,1131.0,PASS
+brebes,Kabupaten Brebes,Jawa Tengah,IDN.10.6_1,Brebes,JawaTengah,Kabupaten,-7.05928,108.92756,True,-7.0555,108.88784,1751.5,PASS
+cirebon,Kabupaten Cirebon,Jawa Barat,IDN.9.9_1,Cirebon,JawaBarat,Kabupaten,-6.74541,108.55129,False,-6.76145,108.45635,1067.9,WARN
+indramayu,Kabupaten Indramayu,Jawa Barat,IDN.9.12_1,Indramayu,JawaBarat,Kabupaten,-6.44857,108.16875,True,-6.45395,108.18575,2088.1,PASS
+karawang,Kabupaten Karawang,Jawa Barat,IDN.9.13_1,Karawang,JawaBarat,Kabupaten,-6.25204,107.35394,True,-6.26475,107.42895,1910.9,PASS
+subang,Kabupaten Subang,Jawa Barat,IDN.9.23_1,Subang,JawaBarat,Kabupaten,-6.48414,107.7322,True,-6.5005,107.73429,2162.1,PASS
+demak,Kabupaten Demak,Jawa Tengah,IDN.10.8_1,Demak,JawaTengah,Kabupaten,-6.91109,110.63202,True,-6.92285,110.62945,999.7,PASS
+temanggung,Kabupaten Temanggung,Jawa Tengah,IDN.10.33_1,Temanggung,JawaTengah,Kabupaten,-7.25788,110.13565,True,-7.2381,110.12067,873.1,PASS
+nganjuk,Kabupaten Nganjuk,Jawa Timur,IDN.11.24_1,Nganjuk,JawaTimur,Kabupaten,-7.59737,111.9384,True,-7.61565,111.94642,1290.4,PASS
+bima,Kabupaten Bima,Nusa Tenggara Barat,IDN.20.1_1,Bima,NusaTenggaraBarat,Kabupaten,-8.47469,118.6187,True,-8.56465,118.76129,4211.0,PASS
+sragen,Kabupaten Sragen,Jawa Tengah,IDN.10.29_1,Sragen,JawaTengah,Kabupaten,-7.3872,110.97751,True,-7.39385,110.9524,977.9,PASS
+cilacap,Kabupaten Cilacap,Jawa Tengah,IDN.10.7_1,Cilacap,JawaTengah,Kabupaten,-7.49089,108.89037,True,-7.46065,108.80423,2345.5,PASS
+sukoharjo,Kabupaten Sukoharjo,Jawa Tengah,IDN.10.30_1,Sukoharjo,JawaTengah,Kabupaten,-7.6808,110.83464,True,-7.68295,110.86588,493.5,PASS

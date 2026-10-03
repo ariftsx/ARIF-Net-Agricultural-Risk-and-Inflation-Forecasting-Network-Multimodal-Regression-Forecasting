@@ -1,0 +1,275 @@
+{
+  "step": "Langkah 4 — smoke reserve",
+  "set": "reserve",
+  "model": "era5_seamless",
+  "location_id": "brebes",
+  "requested_point": [
+    -7.05928,
+    108.92756
+  ],
+  "period": [
+    "2018-01-01",
+    "2018-01-31"
+  ],
+  "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=-7.05928&longitude=108.92756&start_date=2018-01-01&end_date=2018-01-31&daily=relative_humidity_2m_max%2Crelative_humidity_2m_min%2Cvapour_pressure_deficit_max%2Cshortwave_radiation_sum%2Ccloud_cover_mean%2Cwind_speed_10m_max%2Cwind_speed_10m_mean%2Csoil_moisture_0_to_7cm_mean%2Csoil_moisture_28_to_100cm_mean%2Csoil_temperature_0_to_7cm_mean%2Crain_sum&models=era5_seamless&temperature_unit=celsius&wind_speed_unit=ms&precipitation_unit=mm&timeformat=iso8601&timezone=Asia%2FJakarta&cell_selection=land",
+  "http_status": 200,
+  "api_weight": 2.436,
+  "raw_file": "data/raw/openmeteo/smoke/reserve_era5_seamless_brebes.json",
+  "raw_sha256": "40c740b35286f9d31822baaf42dad9ea76b00afc9be075c25b2e7712e2b669e6",
+  "checked_at_utc": "2026-10-02T16:09:32Z",
+  "response_meta": {
+    "latitude": -7.0999985,
+    "longitude": 108.899994,
+    "elevation": 63.0,
+    "utc_offset_seconds": 25200,
+    "timezone": "Asia/Jakarta",
+    "timezone_abbreviation": "GMT+7",
+    "generationtime_ms": 35.43961048126221
+  },
+  "daily_units": {
+    "time": "iso8601",
+    "relative_humidity_2m_max": "%",
+    "relative_humidity_2m_min": "%",
+    "vapour_pressure_deficit_max": "kPa",
+    "shortwave_radiation_sum": "MJ/m²",
+    "cloud_cover_mean": "%",
+    "wind_speed_10m_max": "m/s",
+    "wind_speed_10m_mean": "m/s",
+    "soil_moisture_0_to_7cm_mean": "m³/m³",
+    "soil_moisture_28_to_100cm_mean": "m³/m³",
+    "soil_temperature_0_to_7cm_mean": "°C",
+    "rain_sum": "mm"
+  },
+  "per_variable": {
+    "relative_humidity_2m_max": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "%",
+      "first_values": [
+        99,
+        98,
+        99
+      ]
+    },
+    "relative_humidity_2m_min": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "%",
+      "first_values": [
+        64,
+        76,
+        70
+      ]
+    },
+    "vapour_pressure_deficit_max": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "kPa",
+      "first_values": [
+        1.54,
+        0.98,
+        1.3
+      ]
+    },
+    "shortwave_radiation_sum": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "MJ/m²",
+      "first_values": [
+        23.45,
+        17.82,
+        20.48
+      ]
+    },
+    "cloud_cover_mean": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "%",
+      "first_values": [
+        64,
+        98,
+        99
+      ]
+    },
+    "wind_speed_10m_max": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "m/s",
+      "first_values": [
+        2.01,
+        2.41,
+        1.25
+      ]
+    },
+    "wind_speed_10m_mean": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "m/s",
+      "first_values": [
+        1.43,
+        1.62,
+        0.84
+      ]
+    },
+    "soil_moisture_0_to_7cm_mean": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "m³/m³",
+      "first_values": [
+        0.444,
+        0.455,
+        0.484
+      ]
+    },
+    "soil_moisture_28_to_100cm_mean": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "m³/m³",
+      "first_values": [
+        0.418,
+        0.416,
+        0.415
+      ]
+    },
+    "soil_temperature_0_to_7cm_mean": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "°C",
+      "first_values": [
+        27.6,
+        27.4,
+        27.7
+      ]
+    },
+    "rain_sum": {
+      "present": true,
+      "n_values": 31,
+      "n_null": 0,
+      "unit": "mm",
+      "first_values": [
+        0.7,
+        15.4,
+        12.2
+      ]
+    }
+  },
+  "unit_notes_non_locked": {},
+  "verdict": "PASS",
+  "checks": [
+    {
+      "check": "HTTP 200",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "check": "utc_offset_seconds = 25200 (WIB)",
+      "status": "PASS",
+      "detail": "25200"
+    },
+    {
+      "check": "timezone = Asia/Jakarta",
+      "status": "PASS",
+      "detail": "Asia/Jakarta"
+    },
+    {
+      "check": "daily_units.time = iso8601",
+      "status": "PASS",
+      "detail": "iso8601"
+    },
+    {
+      "check": "jumlah hari = 31",
+      "status": "PASS",
+      "detail": "31"
+    },
+    {
+      "check": "hari pertama/terakhir sesuai",
+      "status": "PASS",
+      "detail": "['2018-01-01']…['2018-01-31']"
+    },
+    {
+      "check": "variabel relative_humidity_2m_max ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=% null=0/31 contoh=[99, 98, 99]"
+    },
+    {
+      "check": "variabel relative_humidity_2m_min ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=% null=0/31 contoh=[64, 76, 70]"
+    },
+    {
+      "check": "variabel vapour_pressure_deficit_max ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=kPa null=0/31 contoh=[1.54, 0.98, 1.3]"
+    },
+    {
+      "check": "variabel shortwave_radiation_sum ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=MJ/m² null=0/31 contoh=[23.45, 17.82, 20.48]"
+    },
+    {
+      "check": "variabel cloud_cover_mean ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=% null=0/31 contoh=[64, 98, 99]"
+    },
+    {
+      "check": "variabel wind_speed_10m_max ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=m/s null=0/31 contoh=[2.01, 2.41, 1.25]"
+    },
+    {
+      "check": "unit wind_speed_10m_max = m/s (P1-DG-15)",
+      "status": "PASS",
+      "detail": "m/s"
+    },
+    {
+      "check": "variabel wind_speed_10m_mean ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=m/s null=0/31 contoh=[1.43, 1.62, 0.84]"
+    },
+    {
+      "check": "unit wind_speed_10m_mean = m/s (P1-DG-15)",
+      "status": "PASS",
+      "detail": "m/s"
+    },
+    {
+      "check": "variabel soil_moisture_0_to_7cm_mean ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=m³/m³ null=0/31 contoh=[0.444, 0.455, 0.484]"
+    },
+    {
+      "check": "variabel soil_moisture_28_to_100cm_mean ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=m³/m³ null=0/31 contoh=[0.418, 0.416, 0.415]"
+    },
+    {
+      "check": "variabel soil_temperature_0_to_7cm_mean ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=°C null=0/31 contoh=[27.6, 27.4, 27.7]"
+    },
+    {
+      "check": "unit soil_temperature_0_to_7cm_mean = °C (P1-DG-15)",
+      "status": "PASS",
+      "detail": "°C"
+    },
+    {
+      "check": "variabel rain_sum ada & tidak seluruhnya null",
+      "status": "PASS",
+      "detail": "unit=mm null=0/31 contoh=[0.7, 15.4, 12.2]"
+    },
+    {
+      "check": "unit rain_sum = mm (P1-DG-15)",
+      "status": "PASS",
+      "detail": "mm"
+    }
+  ]
+}

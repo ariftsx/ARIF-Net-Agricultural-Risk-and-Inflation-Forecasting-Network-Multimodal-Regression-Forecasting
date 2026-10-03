@@ -1,0 +1,18 @@
+{
+  "step": "Langkah 5a — normalisasi PIBC",
+  "verdict": "PASS",
+  "mapping": [
+    "muncul1"
+  ],
+  "mapped_to": "Beras Kualitas Medium I (PIHPS com_3)",
+  "decided_at": "2026-10-03",
+  "file": "data/processed/pibc/pibc_medium_i_long.csv",
+  "rows": 2359,
+  "reported": 2359,
+  "empty": 0,
+  "date_min": "2019-01-01",
+  "date_max": "2025-06-16",
+  "duplicates": 0,
+  "problems": [],
+  "checked_at_utc": "2026-10-03T11:01:06Z"
+}

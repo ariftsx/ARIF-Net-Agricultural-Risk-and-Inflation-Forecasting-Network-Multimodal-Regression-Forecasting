@@ -1,0 +1,54 @@
+{
+  "step": "Langkah 5b — audit PIBC",
+  "verdict": "PASS",
+  "fails": [],
+  "per_variety": {
+    "muncul1": {
+      "label": "Muncul I",
+      "days": 2359,
+      "expected_days": 2359,
+      "missing_dates": 0,
+      "duplicates": 0,
+      "empty_values": 0,
+      "first_date": "2019-01-01",
+      "last_date": "2025-06-16",
+      "price_min": 9925.0,
+      "price_median": 11150.0,
+      "price_max": 15900.0,
+      "share_days_no_change_pct": 85.96,
+      "longest_repeat_run_days": 88,
+      "largest_abs_daily_change": [
+        {
+          "date": "2023-09-20",
+          "pct": 10.37
+        },
+        {
+          "date": "2021-12-26",
+          "pct": 8.56
+        },
+        {
+          "date": "2021-12-25",
+          "pct": -7.89
+        },
+        {
+          "date": "2022-07-12",
+          "pct": 2.91
+        },
+        {
+          "date": "2022-07-11",
+          "pct": -2.59
+        }
+      ]
+    }
+  },
+  "coverage_of_pihps_nulls": {
+    "pihps_com3_null_dates": 69,
+    "with_pibc_value_same_date": 69,
+    "pihps_null_after_pibc_end": 0,
+    "note": "Deskriptif saja. Pengisian = tahap P1-DG-06 (value_source + is_filled, validasi overlap, kalibrasi training-only)."
+  },
+  "source_end_date": "2025-06-16",
+  "source_end_note": "Situs PIBC tidak diperbarui setelah 2025-06-16; target PIHPS s.d. 2026-09-30.",
+  "note": "Audit deskriptif; tidak ada data diubah.",
+  "checked_at_utc": "2026-10-03T11:01:11Z"
+}

@@ -1,0 +1,20 @@
+{
+  "smoke_history": [
+    {
+      "verdict": "PASS",
+      "at": "2026-10-03T09:58:17Z"
+    }
+  ],
+  "smoke": {
+    "verdict": "PASS",
+    "at": "2026-10-03T09:58:17Z",
+    "ids_verified": [
+      "com_11",
+      "com_14",
+      "com_3"
+    ],
+    "reference_file": "data/raw/pihps/reference/ref_commodity.json",
+    "report": "reports/smoke_pihps.json"
+  },
+  "updated_at_utc": "2026-10-03T09:58:17Z"
+}

@@ -1,0 +1,24 @@
+{
+  "step": "Langkah 5 — full collection",
+  "model": "era5_seamless",
+  "start_date": "2018-01-01",
+  "end_date": "2026-09-30",
+  "n_locations": 18,
+  "n_chunks_per_location": 9,
+  "expected_chunks": 324,
+  "completed_chunks_total": 324,
+  "completed_chunks_per_set": {
+    "core": 162,
+    "reserve": 162
+  },
+  "this_run": {
+    "requests_ok": 25,
+    "requests_error": 0,
+    "paused_until_utc": null
+  },
+  "api_weight_used_last_24h": 8657.2,
+  "verdict": "PASS",
+  "manifest": "data/raw/openmeteo/collection_manifest.csv",
+  "finished_at_utc": "2026-10-02T18:50:47Z",
+  "note": "Tanpa imputasi. Null di hari-hari terakhir wajar (jeda ERA5 ±5 hari) — dilaporkan di audit."
+}

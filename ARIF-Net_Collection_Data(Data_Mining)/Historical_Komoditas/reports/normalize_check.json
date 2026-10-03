@@ -1,0 +1,29 @@
+{
+  "step": "Langkah 4 — normalisasi PIHPS",
+  "verdict": "PASS",
+  "file": "data/processed/pihps/pihps_kramatjati_long.csv",
+  "rows": 6066,
+  "reported": 5859,
+  "not_reported_dash": 207,
+  "chunks": 279,
+  "duplicates": 0,
+  "per_commodity": {
+    "com_11": {
+      "count": 2022,
+      "min": "2019-01-01",
+      "max": "2026-09-30"
+    },
+    "com_14": {
+      "count": 2022,
+      "min": "2019-01-01",
+      "max": "2026-09-30"
+    },
+    "com_3": {
+      "count": 2022,
+      "min": "2019-01-01",
+      "max": "2026-09-30"
+    }
+  },
+  "problems": [],
+  "checked_at_utc": "2026-10-03T10:07:58Z"
+}

@@ -1,8 +1,9 @@
-name: arifnet-pihps
+# Env bersama ARIF-Net (dipakai juga oleh paket Iklim). Collector PIHPS hanya butuh requests + pandas.
+name: arif-net
 channels:
   - conda-forge
 dependencies:
   - python=3.13
-  - pip
-  - pip:
-      - requests>=2.31.0,<3
+  - requests
+  - pandas>=3.0
+  - numpy
