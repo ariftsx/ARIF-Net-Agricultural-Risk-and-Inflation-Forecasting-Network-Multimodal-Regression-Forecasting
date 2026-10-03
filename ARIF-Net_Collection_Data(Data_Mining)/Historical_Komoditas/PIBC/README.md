@@ -8,7 +8,7 @@ Paket ini mengoleksi harga beras **grosir** harian dari situs PIBC (PT Food Stat
 - **Raw:** 7 file tahunan, byte-identik, masing-masing memuat 14 varietas.
 - **Processed:** **hanya** kolom PIBC yang dipetakan ke **Beras Kualitas Medium I**. Pemetaan ini adalah keputusan peneliti (P1-DG-05) dan disimpan di `config/varieties.json` → `medium_i_mapping`.
 
-## Menjalankan (dari folder `PIBC`, env `arif-net`)
+## Menjalankan (dari folder `Historical_Komoditas\PIBC`, env `arif-net`)
 
 ```cmd
 conda run -n arif-net python -m unittest discover -s tests -v

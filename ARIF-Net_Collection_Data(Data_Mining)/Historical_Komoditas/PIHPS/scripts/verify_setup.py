@@ -5,7 +5,7 @@ Memeriksa env, struktur folder, panjang path Windows, dan kesesuaian config deng
 keputusan P1-DG-01…06, 13, 16 (Plan v2.0.0 §0.5; Contract v2.1.0 §3.1, §5.6).
 Nilai yang dikunci keputusan ditulis eksplisit di sini → config yang menyimpang = FAIL.
 
-Pemakaian (dari folder Historical_Komoditas):
+Pemakaian (dari folder Historical_Komoditas\\PIHPS):
     conda run -n arif-net python scripts\\verify_setup.py
 """
 from __future__ import annotations
@@ -33,7 +33,8 @@ LOCKED_SETTINGS = {
 REQUIRED_PACKAGES = ["requests", "pandas", "numpy"]
 REQUIRED_DIRS = ["config", "scripts", "tests", "docs", "logs", "reports", "data/raw/pihps/reference",
                  "data/raw/pihps/smoke", "data/processed/pihps", "archive/run_2022"]
-REQUIRED_FILES = ["README.md", "environment.yml", "requirements.txt", "config/commodities.json",
+# environment.yml & requirements.txt dipakai bersama di Historical_Komoditas/ (satu tingkat di atas paket)
+REQUIRED_FILES = ["README.md", "../environment.yml", "../requirements.txt", "config/commodities.json",
                   "config/request_settings.json", "docs/PHASE1_COLLECTION_PIHPS.md"]
 
 

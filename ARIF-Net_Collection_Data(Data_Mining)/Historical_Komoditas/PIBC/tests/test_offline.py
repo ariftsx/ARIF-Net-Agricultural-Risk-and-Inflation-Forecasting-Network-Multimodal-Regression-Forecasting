@@ -3,7 +3,7 @@
 Fixture meniru respons /rice-price-detail dari tangkapan DevTools peneliti (2026-10-03):
 {"draw", "recordsTotal", "recordsFiltered", "data": [{"tgl": "2019 01 01", "cjr_kpl": "13,325", ...}]}
 
-Pemakaian (dari folder PIBC):
+Pemakaian (dari folder Historical_Komoditas\\PIBC):
     conda run -n arif-net python -m unittest discover -s tests -v
 """
 from __future__ import annotations

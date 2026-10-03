@@ -1,9 +1,0 @@
-# Env bersama ARIF-Net. Collector PIBC hanya butuh requests + pandas + numpy.
-name: arif-net
-channels:
-  - conda-forge
-dependencies:
-  - python=3.13
-  - requests
-  - pandas>=3.0
-  - numpy

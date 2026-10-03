@@ -1,45 +1,57 @@
-# ARIF-Net — Phase 1 · Koleksi Harga PIHPS (Pasar Kramatjati, 2019 → 2026-09-30)
+# ARIF-Net — Phase 1 · Koleksi Harga Komoditas
 
-Paket ini mengoleksi harga **eceran** harian dari **PIHPS Bank Indonesia** untuk target market **Pasar Kramatjati (level 3)**. Komoditas yang dikoleksi adalah 3 komoditas primary Capstone. Dasarnya adalah P1-DG-01…06, 13, dan 16 (Plan v2.0.0 §0.5, §10.1a; Contract v2.1.0 §3.1, §5.6). Detail provenance ada di [`docs/PHASE1_COLLECTION_PIHPS.md`](docs/PHASE1_COLLECTION_PIHPS.md).
+Folder ini berisi semua collector **harga komoditas** ARIF-Net. Setiap sumber adalah sub-paket mandiri dengan config, script, test, docs, data, dan report-nya sendiri. Path di manifest dan report selalu relatif terhadap folder sub-paket, sehingga sub-paket bisa dipindah tanpa merusak bukti.
 
-| Komoditas | comcat_id |
-|---|---|
-| Cabai Merah Keriting | `com_14` |
-| Bawang Merah Ukuran Sedang | `com_11` |
-| Beras Kualitas Medium I | `com_3` |
+**Otoritas:** Plan v2.0.0 §0.5 (P1-DG-01…06, 13, 16), §10.1a · Contract v2.1.0 §3.1, §5.1, §5.6. Panduan agen ada di `AGENT.md` (root repo) §13–§15.
 
-Endpoint: `GET https://www.bi.go.id/hargapangan/WebSite/TabelHarga/GetGridDataKomoditas` (`price_type_id=1`, `province_id=13`, `regency_id=34`, `tipe_laporan=1`), dengan chunk bulanan, 3 × 93 = **279 request**.
-
-## Menjalankan (Windows CMD, dari folder `Historical_Komoditas`, env `arif-net`)
-
-```cmd
-conda run -n arif-net python -m unittest discover -s tests -v
-conda run -n arif-net python scripts\verify_setup.py
-conda run -n arif-net python scripts\collect_pihps.py smoke
-conda run -n arif-net --no-capture-output python scripts\collect_pihps.py full
-conda run -n arif-net python scripts\normalize_pihps.py
-conda run -n arif-net python scripts\audit_pihps.py
-```
-
-Perintah `full` akan resume otomatis: chunk yang sukses (HTTP 200, check OK, sha256 cocok) di-skip saat dijalankan ulang.
+| Sumber | Folder | Peran | Level harga | Komoditas | Periode | Status |
+|---|---|---|---|---|---|---|
+| PIHPS Bank Indonesia | [`PIHPS/`](PIHPS/README.md) | **target** (P1-DG-01/02) | eceran, Pasar Kramatjati (L3) | CMK `com_14`, Bawang Merah `com_11`, Beras Medium I `com_3` | 2019-01-01 → 2026-09-30 | PASS |
+| PIBC (Pasar Induk Beras Cipinang) | [`PIBC/`](PIBC/README.md) | **pelengkap** (P1-DG-06) & konteks pasokan | grosir pasar induk | Muncul I (= Beras Medium I, P1-DG-05) | 2019-01-01 → 2025-06-16 (akhir data sumber) | PASS |
+| IPJ | `IPJ/` (belum ada) | pelengkap | — | — | — | menunggu informasi |
 
 ## Struktur
 
 ```text
-config/      commodities.json · request_settings.json · state.json (ditulis script)
-scripts/     common.py · verify_setup.py · collect_pihps.py · normalize_pihps.py · audit_pihps.py
-tests/       test_offline.py
-data/raw/pihps/<comcat_id>/<YYYY-MM>.json   ← raw evidence (byte-identik dengan response)
-data/raw/pihps/reference/ · smoke/ · collection_manifest.csv · collection_summary.json
-data/processed/pihps/pihps_kramatjati_long.csv   ← Git LFS
-archive/run_2022/   ← artefak run lama 2022-01 → 2026-09 (12 komoditas); hanya sebagai pembanding audit
-reports/ · logs/
+Historical_Komoditas/
+├── README.md · environment.yml · requirements.txt · .gitignore · .gitattributes   ← dipakai bersama
+├── PIHPS/   config/ scripts/ tests/ docs/ data/ reports/ logs/ archive/run_2022/
+├── PIBC/    config/ scripts/ tests/ docs/ data/ reports/ logs/
+└── IPJ/     (nanti, pola yang sama)
 ```
 
-## Aturan integritas (ringkas)
+## Menjalankan
 
-1. Raw tidak pernah diedit atau ditimpa. Pengambilan ulang menghasilkan file `.rN.json`.
-2. Nilai `"-"` dari sumber berarti **tidak dilaporkan**: `price_rp_per_kg` dikosongkan dan `is_reported=false`. **Tidak ada imputasi atau ffill.** Pengisian dari PIBC/IPJ hanya boleh dilakukan di layer terpisah (P1-DG-06).
-3. Harga yang sama berhari-hari adalah **observasi valid** (P1-DG-06).
-4. Level harga = **eceran**. Label regency PIHPS "Kota Jakarta Pusat" adalah *source quirk* (P1-DG-03); Pasar Kramatjati berada di Jakarta Timur.
-5. Target `r(t,h)` dan fitur harga **tidak** dihitung di sini; keduanya bagian dari Phase 2.
+Env **`arif-net`** (`conda env update -n arif-net -f environment.yml` bila paket belum lengkap). Jalankan setiap sumber **dari foldernya sendiri**:
+
+```cmd
+cd Historical_Komoditas\PIHPS
+conda run -n arif-net python -m unittest discover -s tests
+conda run -n arif-net python scripts\verify_setup.py
+conda run -n arif-net python scripts\collect_pihps.py smoke
+conda run -n arif-net python scripts\collect_pihps.py full
+conda run -n arif-net python scripts\normalize_pihps.py
+conda run -n arif-net python scripts\audit_pihps.py
+
+cd ..\PIBC
+conda run -n arif-net python scripts\verify_setup.py
+conda run -n arif-net python scripts\collect_pibc.py smoke
+conda run -n arif-net python scripts\collect_pibc.py full
+conda run -n arif-net python scripts\mapping_evidence.py
+conda run -n arif-net python scripts\normalize_pibc.py
+conda run -n arif-net python scripts\audit_pibc.py
+```
+
+`PIBC/scripts/mapping_evidence.py` dan `audit_pibc.py` membaca `PIHPS/data/processed/pihps/pihps_kramatjati_long.csv`, jadi PIHPS harus selesai lebih dulu.
+
+## Aturan bersama
+
+1. Raw adalah evidence: byte-identik dengan response, sha256 tercatat di manifest, dan tidak pernah ditimpa (pengambilan ulang menghasilkan `.rN.json`).
+2. Tidak ada imputasi, ffill, kalibrasi, atau perhitungan target di collection layer.
+3. Null pada seri target PIHPS **hanya** boleh diisi dari sumber pelengkap di tahap P1-DG-06 (terpisah dari folder ini), dengan syarat:
+   - kolom `value_source` + `is_filled`;
+   - validasi pada hari overlap;
+   - kalibrasi yang di-fit hanya pada data training;
+   - eksperimen dilaporkan dengan dan tanpa nilai isian.
+4. Cookie atau token tidak pernah di-hardcode; sesi diambil lewat warm-up halaman publik.
+5. CSV processed dilacak **Git LFS** (`.gitattributes`).

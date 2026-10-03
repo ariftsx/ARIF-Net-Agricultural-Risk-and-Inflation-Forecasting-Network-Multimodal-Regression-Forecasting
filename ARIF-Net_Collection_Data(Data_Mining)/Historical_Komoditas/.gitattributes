@@ -1,1 +1,2 @@
-data/processed/**/*.csv filter=lfs diff=lfs merge=lfs -text
+# CSV processed setiap sumber dilacak Git LFS
+**/data/processed/**/*.csv filter=lfs diff=lfs merge=lfs -text

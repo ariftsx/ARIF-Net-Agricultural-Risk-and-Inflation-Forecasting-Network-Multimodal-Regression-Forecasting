@@ -9,7 +9,7 @@ Aturan: raw = bytes response apa adanya + sha256 (tidak pernah ditimpa). Respons
 hanya kolom yang dipetakan ke Beras Medium I (keputusan peneliti, P1-DG-05) yang dinormalisasi nanti.
 Tanpa imputasi/ffill. Cookie diambil lewat warm-up; tidak ada cookie/token hard-coded.
 
-Contoh (dari folder PIBC):
+Contoh (dari folder Historical_Komoditas\\PIBC):
   conda run -n arif-net python scripts\\collect_pibc.py smoke
   conda run -n arif-net python scripts\\collect_pibc.py full
 """

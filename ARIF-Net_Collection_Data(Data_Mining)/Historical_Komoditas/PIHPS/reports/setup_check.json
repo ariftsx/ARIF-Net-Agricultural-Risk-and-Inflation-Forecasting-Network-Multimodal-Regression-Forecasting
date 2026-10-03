@@ -5,7 +5,7 @@
   "warnings": 0,
   "python": "3.13.15",
   "sys_prefix": "C:\\Users\\arsyp\\anaconda3\\envs\\arif-net",
-  "checked_at_utc": "2026-10-03T10:08:52Z",
+  "checked_at_utc": "2026-10-03T11:46:50Z",
   "items": [
     {
       "check": "Python 3.13.x",
@@ -88,12 +88,12 @@
       "detail": ""
     },
     {
-      "check": "file environment.yml",
+      "check": "file ../environment.yml",
       "status": "PASS",
       "detail": ""
     },
     {
-      "check": "file requirements.txt",
+      "check": "file ../requirements.txt",
       "status": "PASS",
       "detail": ""
     },
@@ -195,7 +195,7 @@
     {
       "check": "path terpanjang pipeline ≤ 259 karakter",
       "status": "PASS",
-      "detail": "249 karakter: data\\raw\\pihps\\reference\\ref_commodity.r9.json"
+      "detail": "255 karakter: data\\raw\\pihps\\reference\\ref_commodity.r9.json"
     },
     {
       "check": "arsip run 2022 tersedia (pembanding audit)",

@@ -3,6 +3,6 @@ __pycache__/
 *.part
 *.tmp
 
-# Log run (lokal)
-logs/*
-!logs/.gitkeep
+# Log run per sumber (lokal)
+*/logs/*
+!*/logs/.gitkeep

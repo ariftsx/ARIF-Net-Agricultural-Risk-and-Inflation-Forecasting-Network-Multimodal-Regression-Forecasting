@@ -67,3 +67,4 @@ Rincian: `reports/audit_pihps_summary.json`, `audit_pihps_not_reported.csv`, `au
 | 2026-10-03 | Artefak run 2022 dipindah ke `archive/run_2022/` (tidak dihapus) | Keputusan peneliti; hindari tercampur | `archive/run_2022/ARCHIVE_NOTE.md` |
 | 2026-10-03 | Collector ditulis ulang: raw byte-identik, anti-timpa, resume, verifikasi ID via reference | Script lama menyimpan raw via `json.dumps` & menghapus manifest tiap run | git `aa3844f` |
 | 2026-10-03 | CSV processed dilacak Git LFS | Konsisten dengan paket Iklim | `.gitattributes` |
+| 2026-10-03 | Struktur: paket dipindah ke `Historical_Komoditas/PIHPS/` (satu folder untuk semua sumber harga komoditas); `environment.yml`, `requirements.txt`, `.gitignore`, `.gitattributes` disatukan di `Historical_Komoditas/` | Permintaan peneliti; manifest & raw tidak berubah (path relatif terhadap paket) | `Historical_Komoditas/README.md` |

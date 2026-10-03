@@ -4,7 +4,7 @@ Fixture meniru bentuk respons asli GetGridDataKomoditas (raw run 2022 di git 0cf
 6 row (L0 Semua Provinsi, L1 DKI Jakarta, L2 'Kota Jakarta Pusat', L3 tiga pasar),
 kunci tanggal DD/MM/YYYY hanya hari kerja, nilai string '50,000' dan '-'.
 
-Pemakaian (dari folder Historical_Komoditas):
+Pemakaian (dari folder Historical_Komoditas\\PIHPS):
     conda run -n arif-net python -m unittest discover -s tests -v
 """
 from __future__ import annotations

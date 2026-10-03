@@ -58,3 +58,4 @@ Bukti statistik 2019–2020 (`reports/mapping_evidence.*`) **lemah**. Seri PIHPS
 | 2026-10-03 | Periode 2019-01-01 → 2025-06-16 | Peneliti meminta verifikasi tanggal akhir; probe: data terakhir `2025 06 16`, query setelahnya 0 baris | `config/request_settings.json` |
 | 2026-10-03 | Pemetaan Medium I → `muncul1` (Muncul I) | Keputusan peneliti di CP2 berbasis definisi mutu | `config/varieties.json` |
 | 2026-10-03 | Hanya kolom terpetakan ke Beras Medium I yang diproses; raw tetap 14 varietas | Keputusan peneliti (sesuai kontrak) | P1-DG-05 |
+| 2026-10-03 | Struktur: paket dipindah ke `Historical_Komoditas/PIBC/` (satu folder untuk semua sumber harga komoditas); `environment.yml`, `requirements.txt`, `.gitignore`, `.gitattributes` disatukan di `Historical_Komoditas/` | Permintaan peneliti; manifest & raw tidak berubah (path relatif terhadap paket) | `Historical_Komoditas/README.md` |

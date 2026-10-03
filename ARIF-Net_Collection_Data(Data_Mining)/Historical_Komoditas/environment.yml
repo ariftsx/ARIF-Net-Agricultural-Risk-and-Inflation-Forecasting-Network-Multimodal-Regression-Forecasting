@@ -1,4 +1,5 @@
-# Env bersama ARIF-Net (dipakai juga oleh paket Iklim). Collector PIHPS hanya butuh requests + pandas.
+# Env bersama ARIF-Net untuk semua collector harga komoditas (PIHPS, PIBC, IPJ nanti).
+# Env sudah ada → cukup pastikan paket ini terpasang.
 name: arif-net
 channels:
   - conda-forge

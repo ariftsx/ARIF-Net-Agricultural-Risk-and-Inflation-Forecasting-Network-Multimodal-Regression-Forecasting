@@ -3,7 +3,7 @@ ARIF-Net — Phase 1 PIBC — Langkah 1: verifikasi setup (offline).
 
 Nilai yang dikunci keputusan/analisis ditulis eksplisit di sini → config yang menyimpang = FAIL.
 
-Pemakaian (dari folder PIBC):
+Pemakaian (dari folder Historical_Komoditas\\PIBC):
     conda run -n arif-net python scripts\\verify_setup.py
 """
 from __future__ import annotations
@@ -25,7 +25,8 @@ LOCKED_SETTINGS = {
     "chunk": "yearly", "imputation_at_collection": False,
 }
 REQUIRED_DIRS = ["config", "scripts", "tests", "docs", "logs", "reports", "data/raw/pibc/smoke", "data/processed/pibc"]
-REQUIRED_FILES = ["README.md", "environment.yml", "requirements.txt", "config/varieties.json",
+# environment.yml & requirements.txt dipakai bersama di Historical_Komoditas/ (satu tingkat di atas paket)
+REQUIRED_FILES = ["README.md", "../environment.yml", "../requirements.txt", "config/varieties.json",
                   "config/request_settings.json", "docs/PHASE1_COLLECTION_PIBC.md"]
 
 

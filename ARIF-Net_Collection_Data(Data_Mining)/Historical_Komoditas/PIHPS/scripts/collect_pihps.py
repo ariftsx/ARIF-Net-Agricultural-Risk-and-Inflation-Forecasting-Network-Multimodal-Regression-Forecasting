@@ -13,7 +13,7 @@ Aturan (Plan v2.0.0 §10.1a; Contract v2.1.0 §5.6; P1-DG-01…06):
   * Tanpa imputasi/ffill. '-' dari sumber dibiarkan (dilaporkan di normalisasi/audit).
   * Satu market: Pasar Kramatjati level 3 (harga eceran). Label regency = source quirk.
 
-Contoh (dari folder Historical_Komoditas):
+Contoh (dari folder Historical_Komoditas\\PIHPS):
   conda run -n arif-net python scripts\\collect_pihps.py smoke
   conda run -n arif-net python scripts\\collect_pihps.py full
 """

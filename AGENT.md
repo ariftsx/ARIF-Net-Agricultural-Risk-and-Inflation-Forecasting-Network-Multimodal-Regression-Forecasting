@@ -2,7 +2,7 @@
 
 > **Untuk:** Claude Code atau agen AI lain yang mengeksekusi, memelihara, atau memperpanjang koleksi data Phase 1 ARIF-Net.
 > **Isi:** §1–§12 = **Iklim (Open-Meteo)** · §13 = **Harga target PIHPS** · §14 = **Harga pelengkap PIBC** · §15 = status lintas sumber. Aturan peran (§1), integritas (§8), dan format laporan (§10) **berlaku untuk semua sumber**.
-> **Folder kerja:** `ARIF-Net_Collection_Data(Data_Mining)\` → `Iklim\`, `Historical_Komoditas\` (PIHPS), `PIBC\`.
+> **Folder kerja:** `ARIF-Net_Collection_Data(Data_Mining)\` → `Iklim\`, `Historical_Komoditas\` (semua sumber harga: `PIHPS\`, `PIBC\`, nanti `IPJ\`).
 > **Env:** Conda **`arif-net`** (Python 3.13). Env lama `arifnet-climate` sudah **dihapus** dan tidak dipakai lagi.
 > **Otoritas:** `ARIF-Net_PROJECT_IMPLEMENTATION_PLAN_v2.0.0.md` (§0.5, §9, §10.2a) → `ARIF-Net_Phase_0_Research_Contract_v2.1.0.md` (§0B, §4.5–4.6, §5.6, §6.4).
 > **Status (3 Okt 2026):** Langkah A, 1–7 **PASS**. Dataset iklim lengkap 324/324 chunk. Langkah 8 (dokumentasi) berjalan di `Iklim/docs/PHASE1_COLLECTION_OPENMETEO.md`.
@@ -310,7 +310,7 @@ Bahasa laporan: **Bahasa Indonesia**.
 
 ---
 
-## 13. Harga target — PIHPS Bank Indonesia (`Historical_Komoditas\`)
+## 13. Harga target — PIHPS Bank Indonesia (`Historical_Komoditas\PIHPS\`)
 
 **Otoritas:** P1-DG-01…06, 13, 16 (Plan §0.5, §10.1a; Contract §3.1, §5.1, §5.6). **Status (3 Okt 2026): Langkah A–5 PASS.**
 
@@ -325,7 +325,7 @@ Bahasa laporan: **Bahasa Indonesia**.
 | Output | raw `data/raw/pihps/<comcat_id>/<YYYY-MM>.json` (byte-identik) · `data/processed/pihps/pihps_kramatjati_long.csv` (6.066 baris; kolom `raw_value`, `is_reported`) |
 | Arsip | `archive/run_2022/` = run lama 2022–2026 (12 komoditas); **jangan dihapus**, hanya dipakai sebagai pembanding audit |
 
-**Perintah** (dari `Historical_Komoditas`, `conda run -n arif-net python …`): `scripts\verify_setup.py` → `scripts\collect_pihps.py smoke` → ⛔ → `scripts\collect_pihps.py full` (resume) → `scripts\normalize_pihps.py` → `scripts\audit_pihps.py`.
+**Perintah** (dari `Historical_Komoditas\PIHPS`, `conda run -n arif-net python …`): `scripts\verify_setup.py` → `scripts\collect_pihps.py smoke` → ⛔ → `scripts\collect_pihps.py full` (resume) → `scripts\normalize_pihps.py` → `scripts\audit_pihps.py`.
 
 **Aturan khusus PIHPS:**
 - `comcat_id` **tidak boleh ditebak**. Bila reference tidak cocok, smoke FAIL → berhenti dan laporkan.
@@ -339,7 +339,7 @@ Bahasa laporan: **Bahasa Indonesia**.
 4. Spike–reversal beras 2022-07-12/13.
 5. Overlap dengan arsip 2022: 3.711/3.711 identik.
 
-## 14. Harga pelengkap — PIBC Pasar Induk Beras Cipinang (`PIBC\`)
+## 14. Harga pelengkap — PIBC Pasar Induk Beras Cipinang (`Historical_Komoditas\PIBC\`)
 
 **Otoritas:** P1-DG-01, 02, 05, 06 (Plan §0.5, §10.1a; Contract §3.1). **Peran: pelengkap dan konteks pasokan, BUKAN target.** **Status (3 Okt 2026): Langkah A–5 PASS.**
 
@@ -353,7 +353,7 @@ Bahasa laporan: **Bahasa Indonesia**.
 | Pemetaan (P1-DG-05) | **Beras Kualitas Medium I → `muncul1` (Muncul I)**, keputusan peneliti 2026-10-03 berbasis definisi mutu (`config/varieties.json`). Raw tetap 14 varietas; processed **hanya** `muncul1` |
 | Output | raw `data/raw/pibc/<YYYY>.json` · `data/processed/pibc/pibc_medium_i_long.csv` (2.359 baris) · `reports/mapping_evidence.*` |
 
-**Perintah** (dari `PIBC`): `scripts\verify_setup.py` → `scripts\collect_pibc.py smoke` → `scripts\collect_pibc.py full` → `scripts\mapping_evidence.py` → ⛔ keputusan pemetaan → `scripts\normalize_pibc.py` → `scripts\audit_pibc.py`.
+**Perintah** (dari `Historical_Komoditas\PIBC`): `scripts\verify_setup.py` → `scripts\collect_pibc.py smoke` → `scripts\collect_pibc.py full` → `scripts\mapping_evidence.py` → ⛔ keputusan pemetaan → `scripts\normalize_pibc.py` → `scripts\audit_pibc.py`.
 
 **Aturan khusus PIBC:**
 - Jangan mengubah `medium_i_mapping` tanpa keputusan pengguna. `normalize_pibc.py` menolak berjalan bila mapping kosong.
@@ -371,6 +371,8 @@ Bahasa laporan: **Bahasa Indonesia**.
 | Sumber | Folder | Periode | Status |
 |---|---|---|---|
 | Iklim Open-Meteo (ERA5-Seamless) | `Iklim\` | 2018-01-01 → 2026-09-30 (fitur s.d. 2026-09-24) | PASS |
-| Harga target PIHPS (eceran, Pasar Kramatjati) | `Historical_Komoditas\` | 2019-01-01 → 2026-09-30 | PASS |
-| Harga pelengkap PIBC (grosir, Muncul I) | `PIBC\` | 2019-01-01 → 2025-06-16 | PASS |
-| Harga pelengkap IPJ | — | — | menunggu informasi pengguna |
+| Harga target PIHPS (eceran, Pasar Kramatjati) | `Historical_Komoditas\PIHPS\` | 2019-01-01 → 2026-09-30 | PASS |
+| Harga pelengkap PIBC (grosir, Muncul I) | `Historical_Komoditas\PIBC\` | 2019-01-01 → 2025-06-16 | PASS |
+| Harga pelengkap IPJ | `Historical_Komoditas\IPJ\` (rencana) | — | menunggu informasi pengguna |
+
+**Struktur harga komoditas (3 Okt 2026):** semua collector harga berada di `Historical_Komoditas\` sebagai sub-paket per sumber (`PIHPS\`, `PIBC\`), dengan `environment.yml`, `requirements.txt`, `.gitignore`, dan `.gitattributes` (LFS) dipakai bersama di `Historical_Komoditas\`. Path di manifest relatif terhadap sub-paket. Sumber baru (IPJ) ditambahkan sebagai sub-paket dengan pola yang sama.
