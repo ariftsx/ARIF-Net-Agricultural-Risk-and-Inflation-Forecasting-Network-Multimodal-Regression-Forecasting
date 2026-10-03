@@ -2,13 +2,13 @@
 
 Folder ini berisi semua collector **harga komoditas** ARIF-Net. Setiap sumber adalah sub-paket mandiri dengan config, script, test, docs, data, dan report-nya sendiri. Path di manifest dan report selalu relatif terhadap folder sub-paket, sehingga sub-paket bisa dipindah tanpa merusak bukti.
 
-**Otoritas:** Plan v2.0.0 §0.5 (P1-DG-01…06, 13, 16), §10.1a · Contract v2.1.0 §3.1, §5.1, §5.6. Panduan agen ada di `AGENT.md` (root repo) §13–§15.
+**Otoritas:** Plan v2.0.0 §0.5 (P1-DG-01…06, 13, 16), §10.1a · Contract v2.1.0 §3.1, §5.1, §5.6. Panduan agen ada di `ARIF-Net_Collection_Data(Data_Mining)/AGENT.md` §13–§16.
 
 | Sumber | Folder | Peran | Level harga | Komoditas | Periode | Status |
 |---|---|---|---|---|---|---|
 | PIHPS Bank Indonesia | [`PIHPS/`](PIHPS/README.md) | **target** (P1-DG-01/02) | eceran, Pasar Kramatjati (L3) | CMK `com_14`, Bawang Merah `com_11`, Beras Medium I `com_3` | 2019-01-01 → 2026-09-30 | PASS |
 | PIBC (Pasar Induk Beras Cipinang) | [`PIBC/`](PIBC/README.md) | **pelengkap** (P1-DG-06) & konteks pasokan | grosir pasar induk | Muncul I (= Beras Medium I, P1-DG-05) | 2019-01-01 → 2025-06-16 (akhir data sumber) | PASS |
-| IPJ | `IPJ/` (belum ada) | pelengkap | — | — | — | menunggu informasi |
+| Info Pangan Jakarta (IPJ) | [`IPJ/`](IPJ/README.md) | **pelengkap** (P1-DG-06), prioritas tertinggi: eceran pasar sama | eceran, Pasar Kramat Jati (`market_id` 12) | CMK, Bawang Merah, Beras Muncul I | 2024-01-01 → 2026-09-30 (sebelum 2024 tidak tersedia) | PASS |
 
 ## Struktur
 
@@ -17,7 +17,7 @@ Historical_Komoditas/
 ├── README.md · environment.yml · requirements.txt · .gitignore · .gitattributes   ← dipakai bersama
 ├── PIHPS/   config/ scripts/ tests/ docs/ data/ reports/ logs/ archive/run_2022/
 ├── PIBC/    config/ scripts/ tests/ docs/ data/ reports/ logs/
-└── IPJ/     (nanti, pola yang sama)
+└── IPJ/     config/ scripts/ tests/ docs/ data/ reports/ logs/
 ```
 
 ## Menjalankan
@@ -40,9 +40,16 @@ conda run -n arif-net python scripts\collect_pibc.py full
 conda run -n arif-net python scripts\mapping_evidence.py
 conda run -n arif-net python scripts\normalize_pibc.py
 conda run -n arif-net python scripts\audit_pibc.py
+
+cd ..\IPJ
+conda run -n arif-net python scripts\verify_setup.py
+conda run -n arif-net python scripts\collect_ipj.py smoke
+conda run -n arif-net python scripts\collect_ipj.py full
+conda run -n arif-net python scripts\normalize_ipj.py
+conda run -n arif-net python scripts\audit_ipj.py
 ```
 
-`PIBC/scripts/mapping_evidence.py` dan `audit_pibc.py` membaca `PIHPS/data/processed/pihps/pihps_kramatjati_long.csv`, jadi PIHPS harus selesai lebih dulu.
+`PIBC/scripts/mapping_evidence.py`, `audit_pibc.py`, dan `IPJ/scripts/audit_ipj.py` membaca `PIHPS/data/processed/pihps/pihps_kramatjati_long.csv`, jadi PIHPS harus selesai lebih dulu.
 
 ## Aturan bersama
 

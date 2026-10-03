@@ -1,7 +1,7 @@
-# AGENT.md — ARIF-Net · Phase 1 · Pengumpulan Data (Iklim · PIHPS · PIBC)
+# AGENT.md — ARIF-Net · Phase 1 · Pengumpulan Data (Iklim · PIHPS · PIBC · IPJ)
 
 > **Untuk:** Claude Code atau agen AI lain yang mengeksekusi, memelihara, atau memperpanjang koleksi data Phase 1 ARIF-Net.
-> **Isi:** §1–§12 = **Iklim (Open-Meteo)** · §13 = **Harga target PIHPS** · §14 = **Harga pelengkap PIBC** · §15 = status lintas sumber. Aturan peran (§1), integritas (§8), dan format laporan (§10) **berlaku untuk semua sumber**.
+> **Isi:** §1–§12 = **Iklim (Open-Meteo)** · §13 = **Harga target PIHPS** · §14 = **Harga pelengkap PIBC** · §15 = status lintas sumber · §16 = **Harga pelengkap IPJ**. Aturan peran (§1), integritas (§8), dan format laporan (§10) **berlaku untuk semua sumber**.
 > **Folder kerja:** `ARIF-Net_Collection_Data(Data_Mining)\` → `Iklim\`, `Historical_Komoditas\` (semua sumber harga: `PIHPS\`, `PIBC\`, nanti `IPJ\`).
 > **Env:** Conda **`arif-net`** (Python 3.13). Env lama `arifnet-climate` sudah **dihapus** dan tidak dipakai lagi.
 > **Otoritas:** `ARIF-Net_PROJECT_IMPLEMENTATION_PLAN_v2.0.0.md` (§0.5, §9, §10.2a) → `ARIF-Net_Phase_0_Research_Contract_v2.1.0.md` (§0B, §4.5–4.6, §5.6, §6.4).
@@ -292,7 +292,7 @@ Bahasa laporan: **Bahasa Indonesia**.
 
 ## 11. Di luar scope dokumen ini
 
-- Scraping IPJ (menunggu informasi dari pengguna). Halaman PIBC lain (Stok Beras, Beras Masuk, Beras Keluar) belum dikoleksi; mengoleksinya butuh keputusan pengguna.
+- Halaman PIBC lain (Stok Beras, Beras Masuk, Beras Keluar) belum dikoleksi; mengoleksinya butuh keputusan pengguna.
 - Pengisian null target dari PIBC/IPJ (P1-DG-06), kalibrasi, dan penggabungan sumber.
 - Feature engineering, alignment ke kalender harga, split train/val/test, modelling, evaluasi.
 - Perubahan dokumen otoritas (Plan/Contract), yang hanya dilakukan pengguna melalui decision gate.
@@ -373,6 +373,27 @@ Bahasa laporan: **Bahasa Indonesia**.
 | Iklim Open-Meteo (ERA5-Seamless) | `Iklim\` | 2018-01-01 → 2026-09-30 (fitur s.d. 2026-09-24) | PASS |
 | Harga target PIHPS (eceran, Pasar Kramatjati) | `Historical_Komoditas\PIHPS\` | 2019-01-01 → 2026-09-30 | PASS |
 | Harga pelengkap PIBC (grosir, Muncul I) | `Historical_Komoditas\PIBC\` | 2019-01-01 → 2025-06-16 | PASS |
-| Harga pelengkap IPJ | `Historical_Komoditas\IPJ\` (rencana) | — | menunggu informasi pengguna |
+| Harga pelengkap IPJ (eceran, Pasar Kramat Jati) | `Historical_Komoditas\IPJ\` | 2024-01-01 → 2026-09-30 (sebelum 2024 tidak tersedia) | PASS |
 
 **Struktur harga komoditas (3 Okt 2026):** semua collector harga berada di `Historical_Komoditas\` sebagai sub-paket per sumber (`PIHPS\`, `PIBC\`), dengan `environment.yml`, `requirements.txt`, `.gitignore`, dan `.gitattributes` (LFS) dipakai bersama di `Historical_Komoditas\`. Path di manifest relatif terhadap sub-paket. Sumber baru (IPJ) ditambahkan sebagai sub-paket dengan pola yang sama.
+
+## 16. Harga pelengkap — IPJ Info Pangan Jakarta (`Historical_Komoditas\IPJ\`)
+
+**Otoritas:** P1-DG-01, 02, 04–06. **Peran: pelengkap dengan prioritas pengisian tertinggi** (eceran, pasar sama dengan target) dan validasi silang PIHPS. **Status (3 Okt 2026): Langkah A–5 PASS.**
+
+| Elemen | Nilai |
+|---|---|
+| Endpoint | `GET https://infopangan.jakarta.go.id/api2/v1/public/report?filterBy=market&Id=12&yearMonth=YYYY-MM`. 1 request = 1 bulan × semua komoditas pasar. Tanpa login atau header khusus; cookie dari tangkapan browser pengguna **tidak** dipakai |
+| Market | `market_id` **12 = "Pasar Kramat Jati"** (`market_level: eceran`, Jakarta Timur), diverifikasi via `/api2/v1/master-data/market?search_text=kramat` saat smoke. **Jangan** memakai `market_id` 1 (Pasar Induk / PIKJ, P1-DG-02) |
+| Pemetaan (keputusan peneliti) | Cabe Merah Keriting (8) → `com_14` · Bawang Merah (12) → `com_11` (IPJ tidak menyebut ukuran) · **Beras Muncul I (4) → `com_3`** (konsisten dengan P1-DG-05). "Beras Medium" (id 114) tidak dipakai |
+| Periode | Diminta 2019-01 → 2026-09 (93 request). **Data hanya 2024-01-01 → 2026-09-30**; 60 bulan sebelumnya `OK_EMPTY` |
+| Status chunk | `OK` = ada data · `OK_EMPTY` = respons valid tanpa data · `FAIL` = struktur, nama komoditas berubah, tanggal di luar bulan, atau **duplikat bernilai berbeda**. Duplikat bernilai **identik** diterima sebagai 1 baris (keputusan peneliti, kasus 2026-09-12) |
+| Output | raw `data/raw/ipj/<YYYY-MM>.json` (+ `.r2` untuk 2026-09) · `data/processed/ipj/ipj_kramatjati_long.csv` (2.890 baris) |
+
+**Perintah** (dari `Historical_Komoditas\IPJ`): `scripts\verify_setup.py` → `scripts\collect_ipj.py smoke` → `scripts\collect_ipj.py full` (resume, hanya mengulang FAIL) → `scripts\normalize_ipj.py` → `scripts\audit_ipj.py`.
+
+**Temuan (jangan dikoreksi di collection layer):**
+- Ada 3 nilai yang kemungkinan salah input di sumber: CMK 2024-11-29 = 300.000, CMK 2024-06-16 = 18.000, Bawang Merah 2025-01-14 = 4.000.
+- IPJ vs PIHPS (pasar sama) berselisih median 5–7% dan jarang identik.
+- IPJ hanya mencakup 4 dari 69 null PIHPS (null tahun 2024+).
+- Ada hari yang tidak dikembalikan sumber: 35 hari untuk CMK dan Bawang Merah, 52 hari untuk Beras.

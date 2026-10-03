@@ -1,0 +1,26 @@
+{
+  "smoke_history": [
+    {
+      "verdict": "PASS",
+      "at": "2026-10-03T12:34:42Z"
+    }
+  ],
+  "smoke": {
+    "verdict": "PASS",
+    "at": "2026-10-03T12:34:42Z",
+    "market_verified": {
+      "city_id": "4",
+      "city_name": "Jakarta Timur",
+      "market_id": "12",
+      "market_name": "Pasar Kramat Jati",
+      "market_short_name": "Kramat Jati",
+      "market_address": "Jl. Raya Bogor KM.20 Kel. Kramat Jati, Kec. Kramat Jati",
+      "market_latitude": "-6.268712",
+      "market_longitude": "106.866947",
+      "market_phone": "+62 21 8092418 / 70797683",
+      "market_level": "eceran"
+    },
+    "report": "reports/smoke_ipj.json"
+  },
+  "updated_at_utc": "2026-10-03T12:34:42Z"
+}

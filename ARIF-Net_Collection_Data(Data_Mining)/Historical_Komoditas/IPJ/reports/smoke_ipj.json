@@ -1,0 +1,63 @@
+{
+  "step": "Langkah 2 — smoke IPJ",
+  "verdict": "PASS",
+  "market": {
+    "city_id": "4",
+    "city_name": "Jakarta Timur",
+    "market_id": "12",
+    "market_name": "Pasar Kramat Jati",
+    "market_short_name": "Kramat Jati",
+    "market_address": "Jl. Raya Bogor KM.20 Kel. Kramat Jati, Kec. Kramat Jati",
+    "market_latitude": "-6.268712",
+    "market_longitude": "106.866947",
+    "market_phone": "+62 21 8092418 / 70797683",
+    "market_level": "eceran"
+  },
+  "reference_file": "data/raw/ipj/reference/market_kramat.json",
+  "month": "2024-01",
+  "request_url": "https://infopangan.jakarta.go.id/api2/v1/public/report?filterBy=market&Id=12&yearMonth=2024-01",
+  "raw_file": "data/raw/ipj/smoke/2024-01.json",
+  "raw_sha256": "9ba0234ca90d1b0ddd93a9ad006026d01fc1979a841cb5e7f653349e78e83031",
+  "stats": {
+    "n_commodities": 45,
+    "recaps_per_target": {
+      "com_14": 31,
+      "com_11": 31,
+      "com_3": 31
+    },
+    "days_in_month": 31
+  },
+  "checks": [
+    {
+      "check": "market reference HTTP 200",
+      "status": "PASS",
+      "detail": "file=data/raw/ipj/reference/market_kramat.json"
+    },
+    {
+      "check": "market_id 12 = 'Pasar Kramat Jati'",
+      "status": "PASS",
+      "detail": "ditemukan: {'city_id': '4', 'city_name': 'Jakarta Timur', 'market_id': '12', 'market_name': 'Pasar Kramat Jati', 'market_short_name': 'Kramat Jati', 'market_address': 'Jl. Raya Bogor KM.20 Kel. Kramat Jati, Kec. Kramat Jati', 'market_latitude': '-6.268712', 'market_longitude': '106.866947', 'market_phone': '+62 21 8092418 / 70797683', 'market_level': 'eceran'}"
+    },
+    {
+      "check": "report 2024-01 HTTP 200 & struktur",
+      "status": "PASS",
+      "detail": "status=OK {'n_commodities': 45, 'recaps_per_target': {'com_14': 31, 'com_11': 31, 'com_3': 31}, 'days_in_month': 31}"
+    },
+    {
+      "check": "com_14: recaps = 31 hari",
+      "status": "PASS",
+      "detail": "31"
+    },
+    {
+      "check": "com_11: recaps = 31 hari",
+      "status": "PASS",
+      "detail": "31"
+    },
+    {
+      "check": "com_3: recaps = 31 hari",
+      "status": "PASS",
+      "detail": "31"
+    }
+  ],
+  "checked_at_utc": "2026-10-03T12:34:42Z"
+}

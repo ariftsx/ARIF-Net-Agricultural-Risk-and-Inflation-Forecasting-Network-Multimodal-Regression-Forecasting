@@ -1,0 +1,150 @@
+{
+  "step": "Langkah 5 — audit IPJ",
+  "verdict": "PASS",
+  "fails": [],
+  "market": "Pasar Kramat Jati (id 12, eceran)",
+  "months_with_data": 33,
+  "first_month_with_data": "2024-01",
+  "last_month_with_data": "2026-09",
+  "empty_months": 60,
+  "empty_months_inside_data_span": [],
+  "per_commodity": {
+    "com_14": {
+      "ipj_commodity": "Cabe Merah Keriting",
+      "first_date": "2024-01-01",
+      "last_date": "2026-09-30",
+      "days": 969,
+      "calendar_days_in_span": 1004,
+      "missing_days_in_span": 35,
+      "not_reported": 0,
+      "price_min": 18000.0,
+      "price_median": 50000.0,
+      "price_max": 300000.0,
+      "share_days_no_change_pct": 80.58,
+      "longest_repeat_run_days": 28,
+      "largest_abs_daily_change": [
+        {
+          "date": "2024-11-29",
+          "pct": 757.14
+        },
+        {
+          "date": "2024-06-17",
+          "pct": 288.89
+        },
+        {
+          "date": "2024-11-30",
+          "pct": -90.0
+        },
+        {
+          "date": "2024-06-16",
+          "pct": -74.29
+        },
+        {
+          "date": "2025-03-03",
+          "pct": 66.67
+        }
+      ],
+      "vs_pihps_same_market": {
+        "n_pairs": 687,
+        "identical_pct": 11.5,
+        "median_abs_diff_pct": 6.667,
+        "p90_abs_diff_pct": 15.416,
+        "mean_ratio_ipj_over_pihps": 1.0428
+      },
+      "pihps_null_dates": 69,
+      "pihps_null_with_ipj_value": 4
+    },
+    "com_11": {
+      "ipj_commodity": "Bawang Merah",
+      "first_date": "2024-01-01",
+      "last_date": "2026-09-30",
+      "days": 969,
+      "calendar_days_in_span": 1004,
+      "missing_days_in_span": 35,
+      "not_reported": 0,
+      "price_min": 4000.0,
+      "price_median": 45000.0,
+      "price_max": 80000.0,
+      "share_days_no_change_pct": 86.05,
+      "longest_repeat_run_days": 76,
+      "largest_abs_daily_change": [
+        {
+          "date": "2025-01-15",
+          "pct": 900.0
+        },
+        {
+          "date": "2025-01-14",
+          "pct": -90.0
+        },
+        {
+          "date": "2025-07-21",
+          "pct": 50.0
+        },
+        {
+          "date": "2024-04-28",
+          "pct": 50.0
+        },
+        {
+          "date": "2026-05-25",
+          "pct": 40.0
+        }
+      ],
+      "vs_pihps_same_market": {
+        "n_pairs": 687,
+        "identical_pct": 15.14,
+        "median_abs_diff_pct": 5.66,
+        "p90_abs_diff_pct": 13.244,
+        "mean_ratio_ipj_over_pihps": 0.9918
+      },
+      "pihps_null_dates": 69,
+      "pihps_null_with_ipj_value": 4
+    },
+    "com_3": {
+      "ipj_commodity": "Beras Muncul I",
+      "first_date": "2024-01-01",
+      "last_date": "2026-09-30",
+      "days": 952,
+      "calendar_days_in_span": 1004,
+      "missing_days_in_span": 52,
+      "not_reported": 0,
+      "price_min": 13500.0,
+      "price_median": 15000.0,
+      "price_max": 17500.0,
+      "share_days_no_change_pct": 86.65,
+      "longest_repeat_run_days": 105,
+      "largest_abs_daily_change": [
+        {
+          "date": "2026-05-06",
+          "pct": 20.69
+        },
+        {
+          "date": "2026-05-07",
+          "pct": -17.14
+        },
+        {
+          "date": "2026-05-24",
+          "pct": 14.29
+        },
+        {
+          "date": "2026-06-16",
+          "pct": 14.29
+        },
+        {
+          "date": "2026-05-25",
+          "pct": -12.5
+        }
+      ],
+      "vs_pihps_same_market": {
+        "n_pairs": 674,
+        "identical_pct": 3.86,
+        "median_abs_diff_pct": 5.063,
+        "p90_abs_diff_pct": 9.938,
+        "mean_ratio_ipj_over_pihps": 0.9563
+      },
+      "pihps_null_dates": 69,
+      "pihps_null_with_ipj_value": 4
+    }
+  },
+  "note": "Deskriptif; tidak ada data diubah. Perbandingan PIHPS bukan kalibrasi (P1-DG-06: kalibrasi training-only).",
+  "checked_at_utc": "2026-10-03T12:40:14Z"
+}

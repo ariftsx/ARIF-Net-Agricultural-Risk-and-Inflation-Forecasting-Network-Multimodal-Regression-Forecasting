@@ -1,0 +1,20 @@
+{
+  "step": "Langkah 3 — full collection IPJ",
+  "market_id": 12,
+  "market_name": "Pasar Kramat Jati",
+  "months_expected": 93,
+  "months_done": 93,
+  "months_with_data": 33,
+  "months_empty": 60,
+  "first_month_with_data": "2024-01",
+  "last_month_with_data": "2026-09",
+  "this_run": {
+    "OK": 1,
+    "OK_EMPTY": 0,
+    "FAIL": 0
+  },
+  "verdict": "PASS",
+  "manifest": "data/raw/ipj/collection_manifest.csv",
+  "finished_at_utc": "2026-10-03T12:40:05Z",
+  "note": "OK_EMPTY = respons valid tanpa data untuk 3 komoditas terpetakan (tidak tersedia di sumber). Tanpa imputasi."
+}
