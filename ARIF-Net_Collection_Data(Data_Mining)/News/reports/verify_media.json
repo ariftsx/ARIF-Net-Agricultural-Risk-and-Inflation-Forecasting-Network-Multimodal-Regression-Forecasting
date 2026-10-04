@@ -1,0 +1,315 @@
+{
+  "step": "Verifikasi pola URL tangkapan peneliti",
+  "test_date": "2019-01-02",
+  "checked_at_utc": "2026-10-03T14:55:05Z",
+  "results": {
+    "detik": {
+      "p1": {
+        "url": "https://news.detik.com/indeks?date=01/02/2019",
+        "final_url": "https://news.detik.com/indeks?date=01/02/2019",
+        "http_status": 200,
+        "article_links": 18,
+        "sample": [
+          "https://news.detik.com/berita/d-4368787/pertamina-bantu-korban-angin-puting-beliung-di-cirebon",
+          "https://news.detik.com/berita/d-4368789/gerindra-soal-insiden-sobek-buku-mustahil-polisi-terang-terangan-tak-netral"
+        ]
+      },
+      "p2": {
+        "url": "https://news.detik.com/indeks?page=2&date=01/02/2019",
+        "final_url": "https://news.detik.com/indeks?page=2&date=01/02/2019",
+        "http_status": 200,
+        "article_links": 18,
+        "sample": [
+          "https://news.detik.com/berita/d-4368787/pertamina-bantu-korban-angin-puting-beliung-di-cirebon",
+          "https://news.detik.com/berita/d-4368789/gerindra-soal-insiden-sobek-buku-mustahil-polisi-terang-terangan-tak-netral"
+        ]
+      },
+      "ch": {
+        "url": "https://finance.detik.com/indeks?date=01/02/2019",
+        "final_url": "https://finance.detik.com/indeks?date=01/02/2019",
+        "http_status": 200,
+        "article_links": 20,
+        "sample": [
+          "https://finance.detik.com/berita-ekonomi-bisnis/d-4368487/sandiaga-setiap-anak-di-ri-tanggung-utang-rp-13-juta",
+          "https://finance.detik.com/berita-ekonomi-bisnis/d-4368566/penerimaan-pajak-kurang-rp-109-triliun-di-2018"
+        ]
+      },
+      "overlap_p1_p2": 18,
+      "article": {
+        "url": "https://finance.detik.com/berita-ekonomi-bisnis/d-4368487/sandiaga-setiap-anak-di-ri-tanggung-utang-rp-13-juta",
+        "http_status": 200,
+        "meta_published_time": [],
+        "jsonld_datePublished": [
+          "2019-01-02T18:26:24+07:00",
+          "2019-01-02T18:26:24+07:00"
+        ],
+        "content_published_date": [],
+        "meta_pubdate": [
+          "2019/01/02 18:26:24",
+          "2019-01-02T18-26-24Z"
+        ]
+      }
+    },
+    "cnbcindonesia": {
+      "p1": {
+        "url": "https://www.cnbcindonesia.com/indeks?date=2019/01/02&tipe=",
+        "final_url": "https://www.cnbcindonesia.com/indeks?date=2019/01/02&tipe=",
+        "http_status": 200,
+        "article_links": 10,
+        "sample": [
+          "https://www.cnbcindonesia.com/market/20190102182453-19-48817/ekonom-inflasi-2019-maksimal-35-asalkan",
+          "https://www.cnbcindonesia.com/market/20190102182857-19-48818/aprindo-kalau-ingin-ritel-tumbuh-jaga-daya-beli"
+        ]
+      },
+      "p2": {
+        "url": "https://www.cnbcindonesia.com/indeks?date=2019/01/02&page=2",
+        "final_url": "https://www.cnbcindonesia.com/indeks?date=2019/01/02&page=2",
+        "http_status": 200,
+        "article_links": 10,
+        "sample": [
+          "https://www.cnbcindonesia.com/market/20190102192016-17-48834/syarat-restrukturisasi-anak-usaha-mytx-raih-subdebt-rp-93-m",
+          "https://www.cnbcindonesia.com/market/20190102192058-17-48833/data-manufaktur-dan-rencana-lelang-bebani-pasar-obligasi"
+        ]
+      },
+      "ch": {
+        "url": "https://www.cnbcindonesia.com/mymoney/indeks/71?date=2019/01/02&tipe=",
+        "final_url": "https://www.cnbcindonesia.com/mymoney/indeks/71?date=2019/01/02&tipe=",
+        "http_status": 200,
+        "article_links": 6,
+        "sample": [
+          "https://www.cnbcindonesia.com/mymoney/20190102132847-72-48745/masuk-2019-harga-emas-antam-stagnan",
+          "https://www.cnbcindonesia.com/mymoney/20190102133627-72-48746/garap-sektor-ritel-asuransi-harus-kembangkan-teknologi"
+        ]
+      },
+      "overlap_p1_p2": 0,
+      "article": {
+        "url": "https://www.cnbcindonesia.com/mymoney/20190102132847-72-48745/masuk-2019-harga-emas-antam-stagnan",
+        "http_status": 200,
+        "meta_published_time": [],
+        "jsonld_datePublished": [
+          "2019-01-02T13:33:47+07:00",
+          "2019-01-02T13:33:47+07:00"
+        ],
+        "content_published_date": [],
+        "meta_pubdate": [
+          "2019/01/02 13:33:47"
+        ]
+      }
+    },
+    "cnnindonesia": {
+      "p1": {
+        "url": "https://www.cnnindonesia.com/indeks/?date=2019/01/02",
+        "final_url": "https://www.cnnindonesia.com/indeks/?date=2019/01/02",
+        "http_status": 200,
+        "article_links": 10,
+        "sample": [
+          "https://www.cnnindonesia.com/gaya-hidup/20190102190714-260-358031/yang-terjadi-pada-tubuh-saat-lama-tak-berhubungan-seks",
+          "https://www.cnnindonesia.com/hiburan/20190102164335-234-357999/2-hari-debut-akun-instagram-wayv-menghilang"
+        ]
+      },
+      "p2": {
+        "url": "https://www.cnnindonesia.com/indeks/2?date=2019/01/02&page=2",
+        "final_url": "https://www.cnnindonesia.com/indeks/2?date=2019/01/02&page=2",
+        "http_status": 200,
+        "article_links": 10,
+        "sample": [
+          "https://www.cnnindonesia.com/ekonomi/20190102200342-78-358057/the-fed-tak-lagi-agresif-bi-ramal-rupiah-lebih-kokoh",
+          "https://www.cnnindonesia.com/gaya-hidup/20190102140404-269-357952/memelihara-dinginnya-tahun-baru-di-eropa"
+        ]
+      },
+      "ch": {
+        "url": "https://www.cnnindonesia.com/ekonomi/indeks/5?date=2019/01/02",
+        "final_url": "https://www.cnnindonesia.com/ekonomi/indeks/5?date=2019/01/02",
+        "http_status": 200,
+        "article_links": 10,
+        "sample": [
+          "https://www.cnnindonesia.com/ekonomi/20190102151347-92-357996/sudah-dua-tahun-pemprov-dki-belum-juga-lepas-saham-delta",
+          "https://www.cnnindonesia.com/ekonomi/20190102170725-78-358002/ojk-klaim-kredit-perbankan-naik-1245-persen-di-2018"
+        ]
+      },
+      "overlap_p1_p2": 0,
+      "article": {
+        "url": "https://www.cnnindonesia.com/ekonomi/20190102151347-92-357996/sudah-dua-tahun-pemprov-dki-belum-juga-lepas-saham-delta",
+        "http_status": 200,
+        "meta_published_time": [],
+        "jsonld_datePublished": [
+          "2019-01-02T16:59:56+07:00",
+          "2019-01-02T16:59:56+07:00"
+        ],
+        "content_published_date": [],
+        "meta_pubdate": [
+          "2019/01/02 16:59:56"
+        ]
+      }
+    },
+    "kontan": {
+      "p1": {
+        "url": "https://www.kontan.co.id/search/indeks?kanal=&tanggal=2&bulan=01&tahun=2019",
+        "final_url": "https://www.kontan.co.id/search/indeks?kanal=&tanggal=2&bulan=01&tahun=2019",
+        "http_status": 200,
+        "article_links": 38,
+        "sample": [
+          "https://asset.kontan.co.id/news/main",
+          "https://industri.kontan.co.id/news/wacana-penghapusan-pembatasan-gerai-waralaba-ini-kata-apindo"
+        ]
+      },
+      "p2": {
+        "url": "https://www.kontan.co.id/search/indeks?kanal=&tanggal=2&bulan=01&tahun=2019&per_page=20",
+        "final_url": "https://www.kontan.co.id/search/indeks?kanal=&tanggal=2&bulan=01&tahun=2019&per_page=20",
+        "http_status": 200,
+        "article_links": 38,
+        "sample": [
+          "https://asset.kontan.co.id/news/main",
+          "https://industri.kontan.co.id/news/ada-bencana-jumlah-kunjungan-wisatawan-anjlok"
+        ]
+      },
+      "ch": null,
+      "overlap_p1_p2": 18,
+      "article": {
+        "url": "https://asset.kontan.co.id/news/main",
+        "http_status": 403,
+        "meta_published_time": [],
+        "jsonld_datePublished": [],
+        "content_published_date": [],
+        "meta_pubdate": []
+      }
+    },
+    "liputan6": {
+      "p1": {
+        "url": "https://www.liputan6.com/indeks/2019/01/02?start=2019-01-02&end=2019-01-03",
+        "final_url": "https://www.liputan6.com/indeks/2019/01/02?start=2019-01-02&end=2019-01-03",
+        "http_status": 200,
+        "article_links": 24,
+        "sample": [
+          "https://www.liputan6.com/cek-fakta/read/8303677/jaga-data-pribadi-begini-cara-cek-bansos-resmi-dan-hindari-jerat-penipuan",
+          "https://www.liputan6.com/cek-fakta/read/8303704/jadwal-libur-nasional-akhir-tahun-versi-skb-3-menteri-simak-selengkapnya"
+        ]
+      },
+      "p2": {
+        "url": "https://www.liputan6.com/indeks/2019/01/02?end=2019-01-03&start=2019-01-02&page=2",
+        "final_url": "https://www.liputan6.com/indeks/2019/01/02?end=2019-01-03&start=2019-01-02&page=2",
+        "http_status": 200,
+        "article_links": 24,
+        "sample": [
+          "https://www.liputan6.com/cek-fakta/read/8303677/jaga-data-pribadi-begini-cara-cek-bansos-resmi-dan-hindari-jerat-penipuan",
+          "https://www.liputan6.com/cek-fakta/read/8303704/jadwal-libur-nasional-akhir-tahun-versi-skb-3-menteri-simak-selengkapnya"
+        ]
+      },
+      "ch": {
+        "url": "https://www.liputan6.com/bisnis/indeks/2019/01/02",
+        "final_url": "https://www.liputan6.com/bisnis/indeks/2019/01/02",
+        "http_status": 200,
+        "article_links": 24,
+        "sample": [
+          "https://www.liputan6.com/bisnis/read/3859942/nikahi-gadis-anime-pria-ini-rogoh-rp-264-juta",
+          "https://www.liputan6.com/bisnis/read/3860591/kekayaan-miliarder-ini-bertambah-pada-2018-siapa-sajakah"
+        ]
+      },
+      "overlap_p1_p2": 4,
+      "article": {
+        "url": "https://www.liputan6.com/bisnis/read/3859942/nikahi-gadis-anime-pria-ini-rogoh-rp-264-juta",
+        "http_status": 200,
+        "meta_published_time": [
+          "2019-01-02T19:01:27+07:00"
+        ],
+        "jsonld_datePublished": [
+          "2019-01-02T19:01:27+07:00"
+        ],
+        "content_published_date": [],
+        "meta_pubdate": []
+      }
+    },
+    "tempo": {
+      "p1": {
+        "url": "https://www.tempo.co/indeks?page=1&start_date=2019-01-02&end_date=2019-01-02",
+        "final_url": "https://www.tempo.co/indeks?page=1&start_date=2019-01-02&end_date=2019-01-02",
+        "http_status": 403,
+        "article_links": 0,
+        "sample": []
+      },
+      "p2": {
+        "url": "https://www.tempo.co/indeks?page=2&start_date=2019-01-02&end_date=2019-01-02",
+        "final_url": "https://www.tempo.co/indeks?page=2&start_date=2019-01-02&end_date=2019-01-02",
+        "http_status": 403,
+        "article_links": 0,
+        "sample": []
+      },
+      "ch": {
+        "url": "https://www.tempo.co/indeks?page=1&rubric_slug=ekonomi&start_date=2019-01-02&end_date=2019-01-02",
+        "final_url": "https://www.tempo.co/indeks?page=1&rubric_slug=ekonomi&start_date=2019-01-02&end_date=2019-01-02",
+        "http_status": 403,
+        "article_links": 0,
+        "sample": []
+      },
+      "overlap_p1_p2": 0
+    },
+    "bisnis": {
+      "p1": {
+        "url": "https://www.bisnis.com/index?categoryId=0&type=indeks&date=2019-01-02",
+        "final_url": "https://www.bisnis.com/index?categoryId=0&type=indeks&date=2019-01-02",
+        "http_status": 200,
+        "article_links": 15,
+        "sample": [
+          "https://bola.bisnis.com/read/20261002/60/2009313/jadwal-dan-harga-tiket-final-indonesia-vs-thailand-fifa-asean-cup-2026",
+          "https://ekonomi.bisnis.com/read/20190102/45/874890/lintas-tol-seksi-1-becakayu-resmi-dioperasikan"
+        ]
+      },
+      "p2": null,
+      "ch": {
+        "url": "https://www.bisnis.com/index?categoryId=43&date=2019-01-02&type=indeks",
+        "final_url": "https://www.bisnis.com/index?categoryId=43&date=2019-01-02&type=indeks",
+        "http_status": 200,
+        "article_links": 39,
+        "sample": [
+          "https://bola.bisnis.com/read/20261002/60/2009313/jadwal-dan-harga-tiket-final-indonesia-vs-thailand-fifa-asean-cup-2026",
+          "https://ekonomi.bisnis.com/read/20190102/10/874738/defisit-keseimbangan-primer-apbn-2018-akhirnya-surplus-rp41-triliun"
+        ]
+      },
+      "overlap_p1_p2": null,
+      "article": {
+        "url": "https://bola.bisnis.com/read/20261002/60/2009313/jadwal-dan-harga-tiket-final-indonesia-vs-thailand-fifa-asean-cup-2026",
+        "http_status": 403,
+        "meta_published_time": [],
+        "jsonld_datePublished": [],
+        "content_published_date": [],
+        "meta_pubdate": []
+      }
+    },
+    "katadata": {
+      "p1": {
+        "url": "https://katadata.co.id/indeks/search/-/02-01-2019/02-01-2019",
+        "final_url": "https://katadata.co.id/indeks/search/-/02-01-2019/02-01-2019",
+        "http_status": 200,
+        "article_links": 24,
+        "sample": [
+          "https://katadata.co.id/berita/industri/5e9a557808efe/bulog-operasi-pasar-500-ribu-ton-pada-2018-terbesar-dalam-5-tahun",
+          "https://katadata.co.id/berita/nasional/5e9a5577eb514/laporan-ke-kpu-gerindra-miliki-dana-kampanye-terbesar"
+        ]
+      },
+      "p2": null,
+      "ch": {
+        "url": "https://katadata.co.id/indeks/search/4/02-01-2019/02-01-2019",
+        "final_url": "https://katadata.co.id/indeks/search/4/02-01-2019/02-01-2019",
+        "http_status": 200,
+        "article_links": 25,
+        "sample": [
+          "https://katadata.co.id/digital/teknologi/6ac0df02847f3/krisis-pasokan-ram-samsung-dan-google-naikkan-harga-ponsel-budget",
+          "https://katadata.co.id/finansial/bursa/5e9a5577f1d01/bei-akan-terus-pantau-perkembangan-kasus-suap-meikarta"
+        ]
+      },
+      "overlap_p1_p2": null,
+      "article": {
+        "url": "https://katadata.co.id/digital/teknologi/6ac0df02847f3/krisis-pasokan-ram-samsung-dan-google-naikkan-harga-ponsel-budget",
+        "http_status": 200,
+        "meta_published_time": [
+          "2026-10-03 17:54:00"
+        ],
+        "jsonld_datePublished": [
+          "2026-10-03 17:54:00+07:00"
+        ],
+        "content_published_date": [],
+        "meta_pubdate": []
+      }
+    }
+  }
+}

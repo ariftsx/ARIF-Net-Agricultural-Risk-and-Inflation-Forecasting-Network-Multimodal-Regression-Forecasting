@@ -1,0 +1,98 @@
+{
+  "_meta": {
+    "decision_refs": [
+      "P1-DG-25",
+      "P1-DG-26",
+      "P1-DG-28",
+      "P1-DG-29"
+    ],
+    "evidence": "Pola URL dari tangkapan DevTools peneliti (2026-10-03) + scripts/verify_kompas.py + scripts/verify_media.py (docs §3b)",
+    "url_tokens": "{date_iso}=YYYY-MM-DD · {date_next_iso}=YYYY-MM-DD (+1 hari) · {date_mdy_enc}=MM%2FDD%2FYYYY (Detik: WAJIB ter-encode) · {date_ymd_slash}=YYYY/MM/DD · {yyyy} {mm} {dd} · {d}=tanggal tanpa nol · {page} · {offset}=(page-1)*per_page",
+    "time_strategy": "url_kompas = jam dari URL /read/YYYY/MM/DD/HHMMSS..; index_title_wib = atribut title 'Rabu, 02 Jan 2019 22:00 WIB'; index_time_datetime = <time datetime=ISO+07:00>; index_date_only = hanya tanggal (precision=date); article_jsonld = JSON-LD datePublished di halaman artikel (hanya artikel relevan)",
+    "detik_note": "KEPUTUSAN PENELITI 2026-10-03 (CP2 smoke): Detik = detikFinance saja. detikNews dikeluarkan karena pagination tidak stabil dari script (cache CDN; reports/debug_detik_*.json). Berita umum tercakup Kompas, CNN, Liputan6.",
+    "smoke1_fixes": "2026-10-03 smoke-1: (a) detikNews `?page=N&date=` dari script → page 1 = page 2 (anomali server); urutan `?date=…&page=N` menghasilkan halaman berbeda (scripts/debug_pagination.py + uji curl) → dipakai. (b) CNN `/indeks/1?…&page=1` → 404; `/indeks/2?date=…&page=N` = indeks semua kanal (2 = ID indeks, bukan halaman) → dipakai.",
+    "raw_store_note": "KEPUTUSAN PENELITI 2026-10-03: raw HTML tetap di folder proyek (OneDrive) — peneliti menyadari ukuran ±11–12 GB ikut tersinkron. Isi 'raw_store' dengan path absolut untuk memindahkan (manifest mencatat 'RAWSTORE:…').",
+    "kompas_note": "KEPUTUSAN PENELITI 2026-10-04 (revisi P1-DG-28): Kompas dibatasi ke site=news (nasional, megapolitan, regional, internasional) + site=money (money & ekonomi). Bukti smoke: 3 kanal ini = 67% artikel & 91% (30/33) artikel relevan Kompas. site=regional tidak dipakai terpisah karena sudah termasuk site=news (verifikasi 2019-01-02)."
+  },
+  "period": {
+    "start": "2019-01-01",
+    "end": "2026-09-30"
+  },
+  "delay_seconds": 1.5,
+  "timeout_seconds": 45,
+  "retries": 4,
+  "max_pages_per_day": 80,
+  "sources": {
+    "kompas": {
+      "code": "kmp",
+      "indexes": [
+        {
+          "name": "news",
+          "url": "https://indeks.kompas.com/?site=news&date={date_iso}&page={page}"
+        },
+        {
+          "name": "mny",
+          "url": "https://indeks.kompas.com/?site=money&date={date_iso}&page={page}"
+        }
+      ],
+      "per_page": 20,
+      "time_strategy": "url_kompas"
+    },
+    "detik": {
+      "code": "dtk",
+      "indexes": [
+        {
+          "name": "fin",
+          "url": "https://finance.detik.com/indeks?date={date_mdy_enc}&page={page}"
+        }
+      ],
+      "per_page": 20,
+      "time_strategy": "index_title_wib"
+    },
+    "cnnindonesia": {
+      "code": "cnn",
+      "indexes": [
+        {
+          "name": "all",
+          "url": "https://www.cnnindonesia.com/indeks/2?date={date_ymd_slash}&page={page}"
+        }
+      ],
+      "per_page": 10,
+      "time_strategy": "article_jsonld"
+    },
+    "cnbcindonesia": {
+      "code": "cnbc",
+      "indexes": [
+        {
+          "name": "all",
+          "url": "https://www.cnbcindonesia.com/indeks?date={date_ymd_slash}&page={page}"
+        }
+      ],
+      "per_page": 10,
+      "time_strategy": "article_jsonld"
+    },
+    "kontan": {
+      "code": "ktn",
+      "indexes": [
+        {
+          "name": "all",
+          "url": "https://www.kontan.co.id/search/indeks?kanal=&tanggal={d}&bulan={mm}&tahun={yyyy}&pos=indeks&per_page={offset}"
+        }
+      ],
+      "per_page": 20,
+      "time_strategy": "index_date_only"
+    },
+    "liputan6": {
+      "code": "lp6",
+      "indexes": [
+        {
+          "name": "all",
+          "url": "https://www.liputan6.com/indeks/{yyyy}/{mm}/{dd}?start={date_iso}&end={date_next_iso}&page={page}"
+        }
+      ],
+      "per_page": 24,
+      "time_strategy": "index_time_datetime"
+    }
+  },
+  "raw_store": null
+}

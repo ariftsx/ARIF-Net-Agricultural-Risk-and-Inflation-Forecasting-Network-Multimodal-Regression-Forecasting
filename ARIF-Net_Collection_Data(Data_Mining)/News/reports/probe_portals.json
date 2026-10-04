@@ -1,0 +1,420 @@
+{
+  "step": "Langkah 0b — probe robots.txt portal",
+  "probed_at_utc": "2026-10-03T13:16:56Z",
+  "results": [
+    {
+      "source": "antaranews",
+      "base": "https://www.antaranews.com",
+      "final_url": "https://www.antaranews.com/robots.txt",
+      "http_status": 200,
+      "sha256": "8d7cd3c4094c4a90d8791c0f061ddc67bab6dc5e3850c30c3a1d0aea92f1edfb",
+      "star_disallow": [
+        "/ajax/*",
+        "/ucnews/*"
+      ],
+      "star_allow": [
+        "/"
+      ],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [],
+      "n_sitemaps": 0,
+      "user_agents": [
+        "*",
+        "blp_bbot",
+        "blp_bbot/0.1",
+        "claudebot",
+        "facebookexternalhit",
+        "twitterbot"
+      ]
+    },
+    {
+      "source": "kompas",
+      "base": "https://www.kompas.com",
+      "final_url": "https://www.kompas.com/robots.txt",
+      "http_status": 200,
+      "sha256": "f888134eed2a818cd120560ea96549bea8bb45479cdfd9af375cb6ff5b99042a",
+      "star_disallow": [
+        "/search/?q=",
+        "/komentar/*",
+        "/copy/*",
+        "*?jxrecoid=*",
+        "*?utm_source=*",
+        "*?source=*"
+      ],
+      "star_allow": [],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [
+        "https://www.kompas.com/sitemap.xml"
+      ],
+      "n_sitemaps": 1,
+      "user_agents": [
+        "*",
+        "addsearchbot",
+        "agenttimes",
+        "ai2bot",
+        "ai2bot-deepresearcheval",
+        "ai2bot-dolma",
+        "aihitbot",
+        "aiwebindex",
+        "aliyunsecbot",
+        "amazon-kendra",
+        "amazon-qbusiness",
+        "amazonbot",
+        "amazonbuyforme",
+        "amzn-searchbot",
+        "amzn-user",
+        "andibot",
+        "anomura",
+        "anthropic-ai",
+        "apifybot",
+        "apifywebsitecontentcrawler"
+      ]
+    },
+    {
+      "source": "detik",
+      "base": "https://www.detik.com",
+      "final_url": "https://www.detik.com/robots.txt",
+      "http_status": 200,
+      "sha256": "0eca8f97f272a29e6cb0b01a1c8374f9ab357b83005c019ab7d63793dc6e21dc",
+      "star_disallow": [],
+      "star_allow": [
+        "/"
+      ],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [
+        "https://www.detik.com/sitemap.xml"
+      ],
+      "n_sitemaps": 1,
+      "user_agents": [
+        "*",
+        "google-extended",
+        "googlebot"
+      ]
+    },
+    {
+      "source": "cnnindonesia",
+      "base": "https://www.cnnindonesia.com",
+      "final_url": "https://www.cnnindonesia.com/robots.txt",
+      "http_status": 200,
+      "sha256": "5a5c124f57dfedd246a4b8438edebc8c6addb940eabc3e42df9017b5a43b0eb4",
+      "star_disallow": [],
+      "star_allow": [
+        "/"
+      ],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [
+        "https://www.cnnindonesia.com/sitemap.xml"
+      ],
+      "n_sitemaps": 1,
+      "user_agents": [
+        "*",
+        "google-extended",
+        "googlebot"
+      ]
+    },
+    {
+      "source": "cnbcindonesia",
+      "base": "https://www.cnbcindonesia.com",
+      "final_url": "https://www.cnbcindonesia.com/robots.txt",
+      "http_status": 200,
+      "sha256": "efde7a727bb3ebec44a93875c6f86ade8df1ab5294653eec142a509ea59a1b7e",
+      "star_disallow": [],
+      "star_allow": [
+        "/"
+      ],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [
+        "https://www.cnbcindonesia.com/sitemap.xml"
+      ],
+      "n_sitemaps": 1,
+      "user_agents": [
+        "*",
+        "google-extended",
+        "googlebot"
+      ]
+    },
+    {
+      "source": "kontan",
+      "base": "https://www.kontan.co.id",
+      "final_url": "https://www.kontan.co.id/robots.txt",
+      "http_status": 200,
+      "sha256": "bb6635dcab73152de671a5b30cf71e650beb808d9a6921781b8d582560df8b39",
+      "star_disallow": [],
+      "star_allow": [],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [
+        "https://www.kontan.co.id/sitemap.xml"
+      ],
+      "n_sitemaps": 1,
+      "user_agents": [
+        "admantx",
+        "aliyunsecbot",
+        "amazonbot",
+        "anthropic-ai",
+        "applebot-extended",
+        "audigentadbot",
+        "awariorssbot",
+        "awariosmartbot",
+        "baiduspider",
+        "baiduspider-image",
+        "baiduspider-video",
+        "blexbot",
+        "bytespider",
+        "ccbot",
+        "chatgpt-user",
+        "chatgpt_user",
+        "claude-searchbot",
+        "claude-user",
+        "claude-web",
+        "claudebot"
+      ]
+    },
+    {
+      "source": "bisnis",
+      "base": "https://www.bisnis.com",
+      "final_url": "https://www.bisnis.com/robots.txt",
+      "http_status": 200,
+      "sha256": "3c0734268ad1c0cd2825b69af902701d70c794d505259faa2393fe919e19a568",
+      "star_disallow": [
+        "/wp-admin/",
+        "/wp-content/",
+        "/admin/",
+        "/rss/",
+        "/interaktif/",
+        "/cdn-cgi/",
+        "/feed/",
+        "/spektrum/",
+        "/fake_image.png"
+      ],
+      "star_allow": [
+        "/"
+      ],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [
+        "https://www.bisnis.com/sitemap.xml"
+      ],
+      "n_sitemaps": 1,
+      "user_agents": [
+        "*",
+        "aliyunsecbot",
+        "amazonbot",
+        "anthropic-ai",
+        "applebot-extended",
+        "audigentadbot",
+        "awariorssbot",
+        "awariosmartbot",
+        "blexbot",
+        "bytespider",
+        "ccbot",
+        "claude-web",
+        "claudebot",
+        "cohere-ai",
+        "dataforseobot",
+        "diffbot",
+        "echoboxbot",
+        "facebookbot",
+        "friendlycrawler",
+        "google-extended"
+      ]
+    },
+    {
+      "source": "tempo",
+      "base": "https://www.tempo.co",
+      "final_url": "https://www.tempo.co/robots.txt",
+      "http_status": 200,
+      "sha256": "0563ce67fbc4e4d58b49682897c6d74c272618c27503668fb7cbb32ee9f2ea36",
+      "star_disallow": [],
+      "star_allow": [
+        "/"
+      ],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [],
+      "n_sitemaps": 0,
+      "user_agents": [
+        "*",
+        "amazonbot",
+        "amzn-user",
+        "anthropic-ai",
+        "applebot-extended",
+        "atlassian-bot",
+        "awariorssbot",
+        "awariosmartbot",
+        "baiduspider",
+        "borderxbot",
+        "bytespider",
+        "ccbot",
+        "chatgpt-user",
+        "chathivecrawler",
+        "citibotsitecrawler",
+        "claude-user",
+        "claude-web",
+        "claudebot",
+        "cohere-ai",
+        "cotoyogi"
+      ]
+    },
+    {
+      "source": "liputan6",
+      "base": "https://www.liputan6.com",
+      "final_url": "https://www.liputan6.com/robots.txt",
+      "http_status": 200,
+      "sha256": "7cad433099645d258ac7282a868b10c49d61748c59db5151471d20ddd30a1cc1",
+      "star_disallow": [
+        "/search",
+        "/fimela/",
+        "/me/*",
+        "/ucnews/",
+        "/properti/",
+        "/widgets-nocache/",
+        "/login*",
+        "/dashboard/",
+        "/admin/",
+        "*/livestreaming/",
+        "/articles/preview",
+        "/gallery/",
+        "/3650493/",
+        "*/plugins/",
+        "*/bower_components/",
+        "*/dist/"
+      ],
+      "star_allow": [],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [
+        "https://www.liputan6.com/sitemap.xml"
+      ],
+      "n_sitemaps": 1,
+      "user_agents": [
+        "*"
+      ]
+    },
+    {
+      "source": "republika",
+      "base": "https://www.republika.co.id",
+      "final_url": "https://www.republika.co.id/robots.txt",
+      "http_status": 200,
+      "sha256": "2d51074b05c6028956cbf375eee62979398e11df10f4b118c3cb0b25005e2f51",
+      "star_disallow": [
+        "/search/?q=",
+        "/komentar/*",
+        "/copy/*",
+        "/cron/*",
+        "/curl/*",
+        "/feed/*",
+        "/post/*",
+        "/ajax/*",
+        "*?utm_source=*",
+        "*?source=*"
+      ],
+      "star_allow": [],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [
+        "https://republika.co.id/files/xml/sitemap.xml"
+      ],
+      "n_sitemaps": 1,
+      "user_agents": [
+        "*",
+        "aliyunsecbot",
+        "amazonbot",
+        "anthropic-ai",
+        "applebot-extended",
+        "audigentadbot",
+        "awariorssbot",
+        "awariosmartbot",
+        "blexbot",
+        "bytespider",
+        "ccbot",
+        "chatgpt-user",
+        "claude-web",
+        "claudebot",
+        "cohere-ai",
+        "dataforseobot",
+        "diffbot",
+        "duckassistbot",
+        "echoboxbot",
+        "facebookbot"
+      ]
+    },
+    {
+      "source": "katadata",
+      "base": "https://katadata.co.id",
+      "final_url": "https://katadata.co.id/robots.txt",
+      "http_status": 200,
+      "sha256": "4cdcda2554543fcaed4f57e87b678bbb42b9c7d47ceb191cc0d66c27b5222fb3",
+      "star_disallow": [],
+      "star_allow": [
+        "/"
+      ],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [
+        "https://www.katadata.co.id/sitemap.xml",
+        "https://www.katadata.co.id/sitemap-index.xml"
+      ],
+      "n_sitemaps": 2,
+      "user_agents": [
+        "*",
+        "googlebot"
+      ]
+    },
+    {
+      "source": "okezone",
+      "base": "https://www.okezone.com",
+      "final_url": "https://www.okezone.com/robots.txt",
+      "http_status": 200,
+      "sha256": "cbbcb7365e31dd43469b1395f1bfddfe0964ecff44045e99bd3bf5ee4e08901b",
+      "star_disallow": [
+        "/okezoneid",
+        "/jadwalsholat/*",
+        "/php/",
+        "/rc.php?*",
+        "/set-sso*",
+        "/set-alert*",
+        "/set-cookie*",
+        "/set-logout",
+        "/set-profile",
+        "/set-uuid",
+        "/clear-cookie"
+      ],
+      "star_allow": [
+        "/"
+      ],
+      "crawl_delay": null,
+      "blocks_all_for_star": false,
+      "sitemaps": [
+        "https://www.okezone.com/sitemap.xml",
+        "https://www.okezone.com/news/sitemap.xml"
+      ],
+      "n_sitemaps": 2,
+      "user_agents": [
+        "*"
+      ]
+    },
+    {
+      "source": "beritajakarta",
+      "base": "https://www.beritajakarta.id",
+      "final_url": "https://www.beritajakarta.id",
+      "http_status": "EXC",
+      "sha256": "e7d093fed29a5c3502b2d248463a543f94d39a49373ef6c734e181ffcf5f9f1b",
+      "note": "robots.txt tidak tersedia/HTML"
+    },
+    {
+      "source": "bapanas",
+      "base": "https://badanpangan.go.id",
+      "final_url": "https://badanpangan.go.id/robots.txt",
+      "http_status": 404,
+      "sha256": "d465172175d35d493fb1633e237700022bd849fa123164790b168b8318acb090",
+      "note": "robots.txt tidak tersedia/HTML"
+    }
+  ],
+  "note": "Hanya robots.txt; tidak ada artikel diambil. ToS tiap media tetap harus dibaca peneliti."
+}

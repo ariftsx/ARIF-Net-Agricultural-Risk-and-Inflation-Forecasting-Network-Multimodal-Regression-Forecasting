@@ -1,0 +1,87 @@
+{
+  "step": "Langkah 0d — probe indeks arsip per tanggal (2019-01-02)",
+  "probed_at_utc": "2026-10-03T13:19:08Z",
+  "results": [
+    {
+      "source": "kompas",
+      "url": "https://indeks.kompas.com/?site=all&date=2019-01-02",
+      "final_url": "https://indeks.kompas.com/?site=all&date=2019-01-02",
+      "http_status": 200,
+      "bytes": 204953,
+      "sha256": "1411a116b09c941515a2439ae0c22a48d6af74b9c0a230e4a69a7ff035f324a4",
+      "article_links_found": 0,
+      "link_sample": []
+    },
+    {
+      "source": "detik",
+      "url": "https://news.detik.com/indeks?date=01/02/2019",
+      "final_url": "https://news.detik.com/indeks?date=01/02/2019",
+      "http_status": 200,
+      "bytes": 140018,
+      "sha256": "d1002207c03af4cb100eb38ce55d8bdf0f2f59f28a68db9a44418ac5e9ac6ae9",
+      "article_links_found": 18,
+      "link_sample": [
+        "detik.com/berita/d-4368787",
+        "detik.com/berita/d-4368789",
+        "detik.com/berita/d-4368806"
+      ]
+    },
+    {
+      "source": "cnnindonesia",
+      "url": "https://www.cnnindonesia.com/indeks?date=2019/01/02",
+      "final_url": "https://www.cnnindonesia.com/indeks?date=2019/01/02",
+      "http_status": 200,
+      "bytes": 146389,
+      "sha256": "e6c6b3eaffe6684ec6e7a5942f0f3ae95a2aec69887bea9d5a21490c4a3537fb",
+      "article_links_found": 10,
+      "link_sample": [
+        "cnnindonesia.com/gaya-hidup/20190102190714",
+        "cnnindonesia.com/hiburan/20190102164335",
+        "cnnindonesia.com/internasional/20190102195827"
+      ]
+    },
+    {
+      "source": "cnbcindonesia",
+      "url": "https://www.cnbcindonesia.com/indeks?date=2019/01/02",
+      "final_url": "https://www.cnbcindonesia.com/indeks?date=2019/01/02",
+      "http_status": 200,
+      "bytes": 101905,
+      "sha256": "f3f3e3e6c0f82c7a744b9583cc019f3858018f4ed615f6bbe204f298f438691e",
+      "article_links_found": 10,
+      "link_sample": [
+        "cnbcindonesia.com/market/20190102182453",
+        "cnbcindonesia.com/market/20190102182857",
+        "cnbcindonesia.com/market/20190102203259"
+      ]
+    },
+    {
+      "source": "antaranews",
+      "url": "https://www.antaranews.com/indeks/terkini/2019-01-02",
+      "final_url": "https://www.antaranews.com/indeks/terkini/2019-01-02",
+      "http_status": 404,
+      "bytes": 797884,
+      "sha256": "46a1d3a94e54ad23f07e5a26e59af7870a87ca7d83aaecd7534fbed4cc7044e1",
+      "article_links_found": 481,
+      "link_sample": [
+        "antaranews.com/berita/268532/",
+        "antaranews.com/berita/322372/",
+        "antaranews.com/berita/391841/"
+      ]
+    },
+    {
+      "source": "kontan",
+      "url": "https://www.kontan.co.id/search/indeks?kanal=&tanggal=2&bulan=01&tahun=2019",
+      "final_url": "https://www.kontan.co.id/search/indeks?kanal=&tanggal=2&bulan=01&tahun=2019",
+      "http_status": 200,
+      "bytes": 101534,
+      "sha256": "e6fad64428b1f29fb3106f4e8399af4e2f6c707a561eb44c1dd846ff7cfdf68e",
+      "article_links_found": 38,
+      "link_sample": [
+        "kontan.co.id/news/analis-harga-paladium-masih-berpotensi-naik-tahun-ini",
+        "kontan.co.id/news/analis-harga-perak-tahun-ini-bisa-terangkat",
+        "kontan.co.id/news/asing-net-sell-rp-127-triliun-di-akhir-pekan-cermati-saham-yang-banyak-dilepas"
+      ]
+    }
+  ],
+  "note": "Hanya halaman indeks; pola URL wajib dikonfirmasi peneliti via DevTools sebelum koleksi."
+}

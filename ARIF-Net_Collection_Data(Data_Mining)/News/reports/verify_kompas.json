@@ -1,0 +1,79 @@
+{
+  "step": "Verifikasi pola URL Kompas",
+  "checked_at_utc": "2026-10-03T14:09:05Z",
+  "researcher_capture": {
+    "pagination": "https://indeks.kompas.com/?page=2",
+    "article_meta": "<meta property=\"article:published_time\" content=\"2026-10-02T23:10:00+00:00\" />",
+    "article_url": "https://money.kompas.com/read/2026/10/03/061000026/..."
+  },
+  "results": {
+    "all_p1": {
+      "url": "https://indeks.kompas.com/?site=all&date=2019-01-02",
+      "http_status": 200,
+      "article_links_2019_01_02": 20,
+      "subdomains": [
+        "bola",
+        "internasional",
+        "megapolitan",
+        "nasional",
+        "regional"
+      ],
+      "pagination_numbers_seen": [],
+      "max_page_seen": null,
+      "sample": [
+        "https://bola.kompas.com/read/2019/01/02/22433998/man-city-vs-liverpool-de-bruyne-kemungkinan-besar-bisa-dimainkan",
+        "https://bola.kompas.com/read/2019/01/02/23063638/meski-liverpool-gagal-dapatkan-pulisic-juergen-klopp-tetap-bahagia"
+      ]
+    },
+    "all_p2": {
+      "url": "https://indeks.kompas.com/?site=all&date=2019-01-02&page=2",
+      "http_status": 200,
+      "article_links_2019_01_02": 20,
+      "subdomains": [
+        "bola",
+        "entertainment",
+        "internasional",
+        "lifestyle",
+        "megapolitan",
+        "nasional",
+        "regional",
+        "sains",
+        "travel"
+      ],
+      "pagination_numbers_seen": [],
+      "max_page_seen": null,
+      "sample": [
+        "https://bola.kompas.com/read/2019/01/02/21250048/christian-pulisic-merasa-istimewa-bergabung-dengan-chelsea",
+        "https://bola.kompas.com/read/2019/01/02/22085088/el-loco-masih-tunggu-kesepakatan-perpanjang-kontrak-dengan-pss-sleman"
+      ]
+    },
+    "money_p1": {
+      "url": "https://indeks.kompas.com/?site=money&date=2019-01-02",
+      "http_status": 200,
+      "article_links_2019_01_02": 20,
+      "subdomains": [
+        "ekonomi",
+        "money"
+      ],
+      "pagination_numbers_seen": [],
+      "max_page_seen": null,
+      "sample": [
+        "https://ekonomi.kompas.com/read/2019/01/02/133000326/darmin--pertumbuhan-ekonomi-indonesia-terjaga-di-tengah-perang-dagang",
+        "https://ekonomi.kompas.com/read/2019/01/02/134908026/dirut-mandiri-prediksi-bi-naikkan-suku-bunga-2-kali-tahun-ini"
+      ]
+    },
+    "p1_p2_overlap": 0,
+    "money_filter_only_money_links": false,
+    "article": {
+      "url": "https://ekonomi.kompas.com/read/2019/01/02/133000326/darmin--pertumbuhan-ekonomi-indonesia-terjaga-di-tengah-perang-dagang",
+      "http_status": 200,
+      "meta_published": [
+        "<meta property=\"article:published_time\" content=\"2019-01-02T06:30:00+00:00\" />"
+      ],
+      "jsonld_datePublished": [
+        "2019-01-02T13:30:00+07:00"
+      ],
+      "url_date_time_wib": "2019-01-02 13:30"
+    }
+  }
+}

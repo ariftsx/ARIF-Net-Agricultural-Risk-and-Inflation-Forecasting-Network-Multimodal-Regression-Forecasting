@@ -1,0 +1,124 @@
+{
+  "_meta": {
+    "status": "DECIDED (2026-10-03): P1-DG-25…30 diputuskan peneliti (lihat decisions). File tetap bernama *_DRAFT.json untuk keterlacakan; isi berlaku.",
+    "authority": "Plan v2.0.0 §4.1 (topik: pangan, harga, inflasi, cuaca, supply, BBM/logistik); Contract v2.1.0 §5.3",
+    "matching": "usulan: case-insensitive pada JUDUL artikel; satu artikel bisa cocok >1 topik"
+  },
+  "topics": {
+    "komoditas_cmk": [
+      "cabai merah keriting",
+      "cabai keriting",
+      "cabe keriting",
+      "harga cabai",
+      "harga cabe",
+      "cabai merah"
+    ],
+    "komoditas_bawang_merah": [
+      "bawang merah",
+      "harga bawang"
+    ],
+    "komoditas_beras": [
+      "harga beras",
+      "beras medium",
+      "beras premium",
+      "stok beras",
+      "impor beras",
+      "beras bulog"
+    ],
+    "pasar_pasokan": [
+      "pasar induk kramat jati",
+      "pasar kramat jati",
+      "pasar induk beras cipinang",
+      "pibc",
+      "pasokan cabai",
+      "pasokan bawang",
+      "pasokan beras",
+      "panen",
+      "gagal panen",
+      "sentra produksi"
+    ],
+    "harga_inflasi_kebijakan": [
+      "harga pangan",
+      "inflasi pangan",
+      "inflasi",
+      "operasi pasar",
+      "het beras",
+      "harga eceran tertinggi",
+      "bapanas",
+      "badan pangan",
+      "bulog",
+      "stabilisasi harga"
+    ],
+    "cuaca_iklim": [
+      "banjir",
+      "kemarau",
+      "el nino",
+      "la nina",
+      "cuaca ekstrem",
+      "curah hujan",
+      "kekeringan"
+    ],
+    "bbm_logistik": [
+      "harga bbm",
+      "bbm naik",
+      "pertalite",
+      "solar",
+      "ongkos angkut",
+      "biaya distribusi",
+      "distribusi pangan"
+    ]
+  },
+  "supplier_regions_hint": [
+    "brebes",
+    "garut",
+    "cianjur",
+    "bandung",
+    "magelang",
+    "temanggung",
+    "cirebon",
+    "indramayu",
+    "karawang",
+    "subang",
+    "demak",
+    "nganjuk",
+    "bima"
+  ],
+  "period_DECIDED": {
+    "start": "2019-01-01",
+    "end": "2026-09-30",
+    "decision": "P1-DG-26, keputusan peneliti 2026-10-03"
+  },
+  "sources_DECIDED": {
+    "decision": "P1-DG-25 (revisi 2026-10-03): sumber terverifikasi via tangkapan peneliti + scripts/verify_media.py",
+    "sources": [
+      "kompas",
+      "detik",
+      "cnnindonesia",
+      "cnbcindonesia",
+      "kontan",
+      "liputan6"
+    ],
+    "excluded": {
+      "katadata": "pagination via XHR 'Tampilkan lebih banyak' belum terverifikasi — dikeluarkan peneliti",
+      "bisnis": "indeks ±40/hari tanpa pagination + artikel Cloudflare",
+      "tempo": "HTTP 403 untuk script + published_time 'null WIB'",
+      "antaranews": "belum terverifikasi",
+      "gdelt": "DOC API 429; BigQuery belum terverifikasi",
+      "okezone/republika": "belum diprobe",
+      "rilis_resmi": "belum diprobe"
+    }
+  },
+  "topics_status": "DECIDED (P1-DG-27)",
+  "decisions": {
+    "P1-DG-25": "sumber = kompas, detik, cnnindonesia, cnbcindonesia, kontan, liputan6",
+    "P1-DG-26": "periode 2019-01-01 → 2026-09-30",
+    "P1-DG-27": "topik & kata kunci = isi 'topics' di file ini (disetujui sesuai draf)",
+    "P1-DG-28": "semua kanal (indeks umum tiap media) + filter kata kunci pada judul; KECUALI Detik = detikFinance saja (2026-10-03) dan Kompas = site=news + site=money (2026-10-04)",
+    "P1-DG-29": "hanya judul + waktu terbit + metadata (tanpa teks penuh)",
+    "P1-DG-30": "relevansi = kata kunci (case-insensitive) pada judul",
+    "decided_at": "2026-10-03",
+    "P1-DG-31": "kolom wilayah_pemasok = location_id 18 kabupaten pemasok (P1-DG-11) yang disebut di judul (keputusan peneliti 2026-10-03)",
+    "P1-DG-27_refinement": "kata kunci terlalu luas (mis. 'panen' → 'panen garam') DIPERKETAT DI PHASE 3 (semua judul tersimpan lokal; tanpa scraping ulang)",
+    "execution": "REVISI 2026-10-03 (pilihan A): 93 fase kecil = 1 bulan data/fase (±40–60 menit), 2019-01 … 2026-09, via scripts/run_phase.py --month YYYY-MM [--max-minutes N]. Alasan: peneliti tidak dapat meninggalkan laptop berjam-jam."
+  }
+}

@@ -1,8 +1,9 @@
-# AGENT.md — ARIF-Net · Phase 1 · Pengumpulan Data (Iklim · PIHPS · PIBC · IPJ)
+# AGENT.md — ARIF-Net · Phase 1 · Pengumpulan Data (Iklim · PIHPS · PIBC · IPJ · News)
 
 > **Untuk:** Claude Code atau agen AI lain yang mengeksekusi, memelihara, atau memperpanjang koleksi data Phase 1 ARIF-Net.
-> **Isi:** §1–§12 = **Iklim (Open-Meteo)** · §13 = **Harga target PIHPS** · §14 = **Harga pelengkap PIBC** · §15 = status lintas sumber · §16 = **Harga pelengkap IPJ**. Aturan peran (§1), integritas (§8), dan format laporan (§10) **berlaku untuk semua sumber**.
-> **Folder kerja:** `ARIF-Net_Collection_Data(Data_Mining)\` → `Iklim\`, `Historical_Komoditas\` (semua sumber harga: `PIHPS\`, `PIBC\`, nanti `IPJ\`).
+> **Isi:** §1–§12 = **Iklim (Open-Meteo)** · §13 = **Harga target PIHPS** · §14 = **Harga pelengkap PIBC** · §15 = status lintas sumber · §16 = **Harga pelengkap IPJ** · §17 = **News**. Aturan peran (§1), integritas (§8), dan format laporan (§10) **berlaku untuk semua sumber**.
+> **Folder kerja:** `ARIF-Net_Collection_Data(Data_Mining)\` → `Iklim\` (iklim), `Historical_Komoditas\` (semua sumber harga: `PIHPS\`, `PIBC\`, `IPJ\`), `News\` (berita). Ketiganya setara.
+> **Alur kerja wajib (semua sumber):** analisis dokumen otoritas → probe read-only → **rencana disetujui pengguna** → codebase + test offline → smoke → ⛔ persetujuan → full → normalisasi → audit → docs. Setiap keputusan metodologis = decision gate pengguna, dicatat di docs paket.
 > **Env:** Conda **`arif-net`** (Python 3.13). Env lama `arifnet-climate` sudah **dihapus** dan tidak dipakai lagi.
 > **Otoritas:** `ARIF-Net_PROJECT_IMPLEMENTATION_PLAN_v2.0.0.md` (§0.5, §9, §10.2a) → `ARIF-Net_Phase_0_Research_Contract_v2.1.0.md` (§0B, §4.5–4.6, §5.6, §6.4).
 > **Status (3 Okt 2026):** Langkah A, 1–7 **PASS**. Dataset iklim lengkap 324/324 chunk. Langkah 8 (dokumentasi) berjalan di `Iklim/docs/PHASE1_COLLECTION_OPENMETEO.md`.
@@ -198,7 +199,8 @@ Pengambilan ulang tidak pernah menimpa file: versi baru disimpan sebagai `<tahun
   conda run -n arif-net python scripts\verify_setup.py
   ```
   Tambahkan `--no-capture-output` untuk melihat log secara langsung. `conda run ... python -c` **tidak** menerima argumen multi-baris; tulis script ke file bila perlu.
-- **Batas path Windows:** repo berada di OneDrive (path panjang). Nama file sengaja dibuat pendek; path terpanjang pipeline = 249 karakter, dan `verify_setup.py` mengeceknya. `LongPathsEnabled=1` di sistem ini.
+- **Lokasi repo:** letakkan repo **di luar folder sinkron cloud** (OneDrive/Google Drive), karena raw HTML News ±11–12 GB. Atau isi `News/config/sources.json` → `raw_store` dengan path absolut di luar folder sinkron.
+- **Batas path Windows:** nama file sengaja dibuat pendek; path terpanjang pipeline News = 215 karakter, dan `verify_setup.py` mengeceknya. `LongPathsEnabled=1` di sistem ini.
 - Proses background agen dibatasi **2 jam**. Full collection yang terhenti cukup dijalankan ulang (resume).
 
 ---
@@ -294,6 +296,7 @@ Bahasa laporan: **Bahasa Indonesia**.
 
 - Halaman PIBC lain (Stok Beras, Beras Masuk, Beras Keluar) belum dikoleksi; mengoleksinya butuh keputusan pengguna.
 - Pengisian null target dari PIBC/IPJ (P1-DG-06), kalibrasi, dan penggabungan sumber.
+- Skor sentimen, agregasi harian, dan fitur news (Phase 3; lihat §17).
 - Feature engineering, alignment ke kalender harga, split train/val/test, modelling, evaluasi.
 - Perubahan dokumen otoritas (Plan/Contract), yang hanya dilakukan pengguna melalui decision gate.
 
@@ -374,6 +377,7 @@ Bahasa laporan: **Bahasa Indonesia**.
 | Harga target PIHPS (eceran, Pasar Kramatjati) | `Historical_Komoditas\PIHPS\` | 2019-01-01 → 2026-09-30 | PASS |
 | Harga pelengkap PIBC (grosir, Muncul I) | `Historical_Komoditas\PIBC\` | 2019-01-01 → 2025-06-16 | PASS |
 | Harga pelengkap IPJ (eceran, Pasar Kramat Jati) | `Historical_Komoditas\IPJ\` | 2024-01-01 → 2026-09-30 (sebelum 2024 tidak tersedia) | PASS |
+| News (Kompas, detikFinance, CNN Indonesia, CNBC Indonesia, Kontan, Liputan6) | `News\` | 2019-01-01 → 2026-09-30 | Smoke PASS; **full: 93 fase × 1 bulan** |
 
 **Struktur harga komoditas (3 Okt 2026):** semua collector harga berada di `Historical_Komoditas\` sebagai sub-paket per sumber (`PIHPS\`, `PIBC\`), dengan `environment.yml`, `requirements.txt`, `.gitignore`, dan `.gitattributes` (LFS) dipakai bersama di `Historical_Komoditas\`. Path di manifest relatif terhadap sub-paket. Sumber baru (IPJ) ditambahkan sebagai sub-paket dengan pola yang sama.
 
@@ -397,3 +401,78 @@ Bahasa laporan: **Bahasa Indonesia**.
 - IPJ vs PIHPS (pasar sama) berselisih median 5–7% dan jarang identik.
 - IPJ hanya mencakup 4 dari 69 null PIHPS (null tahun 2024+).
 - Ada hari yang tidak dikembalikan sumber: 35 hari untuk CMK dan Bawang Merah, 52 hari untuk Beras.
+
+## 17. News — berita pangan, harga, inflasi, cuaca, supply, BBM (`News\`)
+
+**Otoritas:** Plan v2.0.0 §4.1 (modality 3), §8 Group 3, §9–§9.2, **§10.4 pipeline**, §12.1/§12.2, §22, §37 · Contract v2.1.0 §2.2, §5.1, **§5.3**, §18.3, **§19 (News)**, §21, DG-04, DG-10. Plan DG-09 `LOCKED DIRECTION`.
+**Status (3 Okt 2026):** probe, verifikasi, codebase (13 test), dan smoke **PASS**. Full collection = 93 fase × 1 bulan (±40–60 menit/fase). Rincian di `News/docs/PHASE1_COLLECTION_NEWS.md` (§3b–3d).
+
+### 17.1 Aturan yang dikunci dokumen otoritas
+| Aturan | Isi |
+|---|---|
+| Topik | Pangan, harga, inflasi, cuaca, supply, BBM/logistik (Plan §4.1) |
+| Waktu | Fitur origin `t` hanya dari artikel **terbit ≤ `t`**. Artikel tanpa timestamp terbit **tidak dipakai** (Contract §2.2, §19; DG-04) |
+| Pipeline | raw → source + publication timestamp → dedup → topic/relevance filter → normalisasi teks → model sentimen → skor artikel → agregasi harian → temporal cutoff (Plan §10.4) |
+| Batas collection | Folder `News\` hanya sampai **artikel ter-normalisasi + dedup + relevance flag berbasis aturan**. Sentimen, agregasi harian, dan fitur adalah **Phase 3** |
+| Fitur (Phase 3) | Bukan hanya `sentiment_mean`: volume, pos/neg balance, intensity, persistence, recency, topic relevance, source count, event burst, negative ratio (Contract §5.3, §18.3) |
+| Provenance model | Model sentimen yang benar-benar dipakai, termasuk fallback lexicon, **wajib dicatat**. Jangan menulis "IndoBERT" bila yang berjalan fallback (Plan §10.4, §37) |
+| Larangan | Dummy news notebook lama tidak boleh dipakai (Plan §22) · halaman search yang di-Disallow `robots.txt` tidak dipakai · cookie/token pengguna tidak dipakai · **teks penuh artikel tidak di-commit** (hak cipta) |
+
+### 17.2 Hasil probe (bukti di `News/data/raw/news/probe/`, laporan `News/reports/probe_*.json`)
+- **GDELT DOC API:** HTTP 429 konsisten dari jaringan ini (7 request, termasuk retry setelah 90 detik). File mentah GKG tersedia sejak 2015-02-18, tetapi ±1 TB untuk 2019–2026. Jalur realistis: **BigQuery** (butuh akun GCP). Tone GDELT ≠ IndoBERT.
+- **Indeks arsip per tanggal 2019 terbukti:** Kompas (`indeks.kompas.com/?site=all&date=`), Detik (`news.detik.com/indeks?date=`), CNN Indonesia & CNBC Indonesia (`/indeks?date=YYYY/MM/DD`), Kontan (`/search/indeks?tanggal=&bulan=&tahun=`).
+- **Belum terverifikasi:** Antara (butuh DevTools). **Ditolak (403):** Bisnis.com, Tempo. **Katadata:** sitemap baru mulai 2021-01.
+- Kompas, Liputan6, dan Republika men-Disallow `/search` → wajib lewat indeks.
+
+### 17.3 Keputusan (DECIDED 2026-10-03)
+| ID | Keputusan |
+|---|---|
+| P1-DG-25 | Sumber = **Kompas, Detik, CNN Indonesia, CNBC Indonesia, Kontan, Liputan6**. Jangan menambah sumber lain tanpa decision gate baru |
+| P1-DG-26 | Periode **2019-01-01 → 2026-09-30** |
+| P1-DG-27 | Topik/kata kunci = `News/config/news_scope_DRAFT.json` → `topics` |
+| P1-DG-28 | Semua kanal (indeks umum) + filter kata kunci pada judul |
+| P1-DG-29 | **Tanpa teks penuh**: hanya judul + waktu terbit + metadata |
+| P1-DG-30 | Relevansi = kata kunci (case-insensitive) pada judul |
+
+| P1-DG-28 (revisi CP2) | **Detik = detikFinance saja** (detikNews dikeluarkan: pagination tidak stabil dari script) · **Kompas = `site=news` + `site=money`** (revisi 2026-10-04; 91% artikel relevan Kompas ada di kanal ini) |
+| P1-DG-31 | Kolom **`wilayah_pemasok`** = kabupaten dari 18 wilayah pemasok (P1-DG-11) yang disebut di judul |
+| Eksekusi | **Revisi: 93 fase × 1 bulan** (±40–60 menit): `python scripts\run_phase.py --month YYYY-MM --max-minutes 60` (resume otomatis), dijalankan per giliran. Kata kunci yang terlalu luas **diperketat di Phase 3**. Raw ±11–12 GB disimpan lokal di dalam repo (default) atau di `raw_store`, **di luar folder sinkron cloud**; raw dan data News tidak di-commit |
+
+**Kuirk per media (wajib diikuti collector; detail di docs §3b–3c):** Detik (detikFinance), tanggal di-URL-encode (`%2F`) dengan urutan `?date=…&page=N` · CNN, `/indeks/2?date=…&page=N` (`/indeks/1` = 404) · Kompas, meta waktu dalam **UTC** → konversi ke WIB (jam juga ada di URL) · CNN/CNBC, angka di URL **bukan** waktu terbit → pakai JSON-LD `datePublished` · Kontan, halaman artikel **403** → judul + waktu dari indeks saja · Detik, CNN Indonesia, dan CNBC Indonesia satu grup media (keterbatasan keragaman).
+
+### 17.4 Sebelum membangun collector, agen WAJIB punya
+1. ✅ P1-DG-25…30 sudah DECIDED (17.3).
+2. ✅ Pola URL keenam media terverifikasi (docs §3b).
+3. Catatan ToS/izin setiap media (diisi pengguna).
+4. ✅ `beautifulsoup4` & `lxml` terpasang.
+5. **Rencana collector disetujui pengguna** sebelum eksekusi.
+
+### 17.4b Progres eksekusi (otomatis)
+<!-- NEWS_PROGRESS:START -->
+**Progres scraping News — belum ada koleksi di mesin ini.**
+
+| Item | Nilai |
+|---|---|
+| Fase selesai | **0/93** |
+| Fase berikutnya | 2019-01 |
+
+Blok ini diisi otomatis oleh `News/scripts/update_progress.py` setelah fase pertama selesai (sumber kebenaran: `News/data/raw/news/manifest_index_days.csv` lokal). Data News **tidak** ada di repo: setiap mesin mengoleksi sendiri dari 2019-01.
+<!-- NEWS_PROGRESS:END -->
+
+### 17.4c Protokol eksekusi 93 fase (aturan pengguna, 2026-10-03) — WAJIB
+1. **Jangan menjalankan kode scraping sebelum pengguna mengonfirmasi** di sesi berjalan.
+2. Setelah dikonfirmasi, jalankan fase **berurutan terus-menerus** (`News/scripts/run_phase.py --month YYYY-MM --max-minutes 60`), mulai dari "Fase berikutnya" di blok progres. Satu fase sekitar 40–60 menit, dijalankan sebagai proses latar belakang.
+3. **Bila pengguna menginterupsi:** segera hentikan proses scraping (hentikan proses `python … run_phase.py/collect_index.py/collect_articles.py`). Lalu jalankan `News/scripts/update_progress.py --note "dihentikan atas interupsi pengguna"` dan **laporkan sudah sampai fase/bulan/media mana**. Menghentikan proses aman: collector melanjutkan dari hari terakhir (resume).
+4. **Setelah setiap fase** (dan saat berhenti), blok progres di bawah diperbarui otomatis oleh `update_progress.py`. Agen melaporkan ringkasan fase (OK/FLAG/FAIL per media) kepada pengguna.
+5. Hari berstatus FAIL tidak boleh dilewati diam-diam: laporkan, lalu ulangi fase yang sama (resume hanya mengambil yang belum OK).
+6. Normalisasi dan audit penuh dijalankan di fase **Desember** setiap tahun dan di fase terakhir (2026-09).
+
+### 17.5 Hal yang sering salah (hindari)
+| Salah | Benar |
+|---|---|
+| Memakai `config/news_scope_DRAFT.json` sebelum diputuskan | Tunggu status DECIDED |
+| Mengagregasi berita per hari di collection layer | Phase 3 |
+| Memakai tanggal crawl sebagai tanggal berita | Pakai `published_at` dari artikel. Tanpa timestamp → keluarkan |
+| Menyimpulkan sentimen dari tone GDELT sebagai "IndoBERT" | Catat model aktual |
+| Crawling halaman search yang dilarang robots.txt | Pakai indeks per tanggal, jeda sopan |
+| Commit teks penuh artikel | Simpan lokal (`data/raw/news/fulltext/` di-ignore) |

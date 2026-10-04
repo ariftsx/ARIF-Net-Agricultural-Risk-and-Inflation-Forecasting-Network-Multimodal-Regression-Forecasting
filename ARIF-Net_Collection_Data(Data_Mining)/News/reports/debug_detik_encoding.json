@@ -1,0 +1,44 @@
+{
+  "default_p1": {
+    "status": 200,
+    "n": 20,
+    "content_encoding": "gzip",
+    "cache": null
+  },
+  "default_p2": {
+    "status": 200,
+    "n": 20,
+    "content_encoding": "gzip",
+    "cache": null
+  },
+  "default_p3": {
+    "status": 200,
+    "n": 20,
+    "content_encoding": "gzip",
+    "cache": null
+  },
+  "default_overlap_p1_p2": 0,
+  "default_overlap_p2_p3": 0,
+  "default_overlap_p1_p3": 0,
+  "identity_p1": {
+    "status": 200,
+    "n": 20,
+    "content_encoding": null,
+    "cache": null
+  },
+  "identity_p2": {
+    "status": 200,
+    "n": 20,
+    "content_encoding": null,
+    "cache": null
+  },
+  "identity_p3": {
+    "status": 200,
+    "n": 20,
+    "content_encoding": null,
+    "cache": null
+  },
+  "identity_overlap_p1_p2": 20,
+  "identity_overlap_p2_p3": 0,
+  "identity_overlap_p1_p3": 0
+}

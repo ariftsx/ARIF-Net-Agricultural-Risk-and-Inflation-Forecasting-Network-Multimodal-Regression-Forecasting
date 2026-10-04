@@ -1,0 +1,72 @@
+{
+  "detik_nosess_p1": {
+    "url": "https://news.detik.com/indeks?page=1&date=01%2F02%2F2019",
+    "final_url": "https://news.detik.com/indeks?page=1&date=01%2F02%2F2019",
+    "status": 200,
+    "n": 20,
+    "set_cookie": []
+  },
+  "detik_nosess_p2": {
+    "url": "https://news.detik.com/indeks?page=2&date=01%2F02%2F2019",
+    "final_url": "https://news.detik.com/indeks?page=2&date=01%2F02%2F2019",
+    "status": 200,
+    "n": 20,
+    "set_cookie": []
+  },
+  "detik_nosess_p3": {
+    "url": "https://news.detik.com/indeks?page=3&date=01%2F02%2F2019",
+    "final_url": "https://news.detik.com/indeks?page=3&date=01%2F02%2F2019",
+    "status": 200,
+    "n": 20,
+    "set_cookie": []
+  },
+  "detik_nopage": {
+    "url": "https://news.detik.com/indeks?date=01%2F02%2F2019",
+    "final_url": "https://news.detik.com/indeks?date=01%2F02%2F2019",
+    "status": 200,
+    "n": 20,
+    "set_cookie": []
+  },
+  "cnn_root_nopage": {
+    "url": "https://www.cnnindonesia.com/indeks/?date=2019/01/02",
+    "final_url": "https://www.cnnindonesia.com/indeks/?date=2019/01/02",
+    "status": 200,
+    "n": 10,
+    "set_cookie": []
+  },
+  "cnn_2_p1": {
+    "url": "https://www.cnnindonesia.com/indeks/2?date=2019/01/02&page=1",
+    "final_url": "https://www.cnnindonesia.com/indeks/2?date=2019/01/02&page=1",
+    "status": 200,
+    "n": 10,
+    "set_cookie": []
+  },
+  "cnn_2_p2": {
+    "url": "https://www.cnnindonesia.com/indeks/2?date=2019/01/02&page=2",
+    "final_url": "https://www.cnnindonesia.com/indeks/2?date=2019/01/02&page=2",
+    "status": 200,
+    "n": 10,
+    "set_cookie": []
+  },
+  "cnn_2_p3": {
+    "url": "https://www.cnnindonesia.com/indeks/2?date=2019/01/02&page=3",
+    "final_url": "https://www.cnnindonesia.com/indeks/2?date=2019/01/02&page=3",
+    "status": 200,
+    "n": 10,
+    "set_cookie": []
+  },
+  "cnn_root_p3": {
+    "url": "https://www.cnnindonesia.com/indeks/?date=2019/01/02&page=3",
+    "final_url": "https://www.cnnindonesia.com/indeks/?date=2019/01/02&page=3",
+    "status": 200,
+    "n": 10,
+    "set_cookie": []
+  },
+  "overlap detik_nosess_p1&detik_nosess_p2": 20,
+  "overlap detik_nosess_p2&detik_nosess_p3": 0,
+  "overlap detik_nopage&detik_nosess_p1": 20,
+  "overlap cnn_root_nopage&cnn_2_p1": 10,
+  "overlap cnn_2_p1&cnn_2_p2": 0,
+  "overlap cnn_2_p2&cnn_2_p3": 0,
+  "overlap cnn_root_nopage&cnn_root_p3": 0
+}

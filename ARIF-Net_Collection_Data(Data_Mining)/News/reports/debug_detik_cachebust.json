@@ -1,0 +1,36 @@
+{
+  "round1": {
+    "p1p2": 0,
+    "p2p3": 0,
+    "p1p3": 0,
+    "n": [
+      20,
+      20,
+      20
+    ],
+    "all_distinct": true
+  },
+  "round2": {
+    "p1p2": 0,
+    "p2p3": 20,
+    "p1p3": 0,
+    "n": [
+      20,
+      20,
+      20
+    ],
+    "all_distinct": false
+  },
+  "round3": {
+    "p1p2": 0,
+    "p2p3": 20,
+    "p1p3": 0,
+    "n": [
+      20,
+      20,
+      20
+    ],
+    "all_distinct": false
+  },
+  "rounds_all_distinct": "1/3"
+}

@@ -1,0 +1,222 @@
+{
+  "step": "Langkah 0c — probe sitemap/indeks portal",
+  "probed_at_utc": "2026-10-03T13:18:10Z",
+  "results": [
+    {
+      "source": "kompas",
+      "url": "https://www.kompas.com/sitemap.xml",
+      "final_url": "https://www.kompas.com/sitemap.xml",
+      "http_status": 200,
+      "bytes": 9087,
+      "sha256": "42749473bab7d9c0303e287d486bfe281a5854e61b852f030d76ab66b5cb7d73",
+      "n_loc": 0,
+      "loc_sample": [],
+      "years_mentioned": [
+        2026
+      ],
+      "mentions_2019_in_html": null
+    },
+    {
+      "source": "detik",
+      "url": "https://www.detik.com/sitemap.xml",
+      "final_url": "https://www.detik.com/sitemap.xml",
+      "http_status": 200,
+      "bytes": 68018,
+      "sha256": "c3053cbff8504944e49061688af73016155ec75eff3a69f292cd002b7665bfbc",
+      "n_loc": 536,
+      "loc_sample": [
+        "https://news.detik.com/suara-pembaca/sitemap_web.xml",
+        "https://news.detik.com/suara-pembaca/sitemap_news.xml",
+        "https://news.detik.com/berita/sitemap_web.xml",
+        "https://news.detik.com/berita/sitemap_news.xml",
+        "https://news.detik.com/internasional/sitemap_web.xml",
+        "https://news.detik.com/internasional/sitemap_news.xml"
+      ],
+      "years_mentioned": [
+        2026
+      ],
+      "mentions_2019_in_html": null
+    },
+    {
+      "source": "cnnindonesia",
+      "url": "https://www.cnnindonesia.com/sitemap.xml",
+      "final_url": "https://www.cnnindonesia.com/sitemap.xml",
+      "http_status": 200,
+      "bytes": 4953,
+      "sha256": "a76fdb871ac00bca15421370cd7b5789f46b4261549ff87273d7fda9d4008b30",
+      "n_loc": 0,
+      "loc_sample": [],
+      "years_mentioned": [
+        2026
+      ],
+      "mentions_2019_in_html": null
+    },
+    {
+      "source": "cnbcindonesia",
+      "url": "https://www.cnbcindonesia.com/sitemap.xml",
+      "final_url": "https://www.cnbcindonesia.com/sitemap.xml",
+      "http_status": 200,
+      "bytes": 5363,
+      "sha256": "b01cc2e9358dc2c98d71318e4f34295dba6837d43ca3a5d845215107d9ab203f",
+      "n_loc": 38,
+      "loc_sample": [
+        "https://www.cnbcindonesia.com/market/sitemap_news.xml",
+        "https://www.cnbcindonesia.com/market/sitemap_image.xml",
+        "https://www.cnbcindonesia.com/market/sitemap_video.xml",
+        "https://www.cnbcindonesia.com/market/sitemap_web.xml",
+        "https://www.cnbcindonesia.com/news/sitemap_news.xml",
+        "https://www.cnbcindonesia.com/news/sitemap_image.xml"
+      ],
+      "years_mentioned": [],
+      "mentions_2019_in_html": null
+    },
+    {
+      "source": "kontan",
+      "url": "https://www.kontan.co.id/sitemap.xml",
+      "final_url": "https://www.kontan.co.id/sitemap.xml",
+      "http_status": 200,
+      "bytes": 21396,
+      "sha256": "aa38ba4fc626d5cca872ae82a05d7403f72535b04c478d84b4f31be21165e733",
+      "n_loc": 0,
+      "loc_sample": [],
+      "years_mentioned": [
+        2026
+      ],
+      "mentions_2019_in_html": null
+    },
+    {
+      "source": "bisnis",
+      "url": "https://www.bisnis.com/sitemap.xml",
+      "final_url": "https://www.bisnis.com/sitemap.xml",
+      "http_status": 403,
+      "bytes": 5672,
+      "sha256": "8e664d94599f5f5d0258ebc40f4652674f7903aadb223f504d6b40b4fb0bdda8",
+      "n_loc": 0,
+      "loc_sample": [],
+      "years_mentioned": [],
+      "mentions_2019_in_html": null
+    },
+    {
+      "source": "liputan6",
+      "url": "https://www.liputan6.com/sitemap.xml",
+      "final_url": "https://www.liputan6.com/sitemap.xml",
+      "http_status": 200,
+      "bytes": 4600,
+      "sha256": "780b2a492602511889440f0937fc2abdcef242b0a2f967af82f445876227de76",
+      "n_loc": 29,
+      "loc_sample": [
+        "https://www.liputan6.com/news/sitemap.xml",
+        "https://www.liputan6.com/bisnis/sitemap.xml",
+        "https://www.liputan6.com/showbiz/sitemap.xml",
+        "https://www.liputan6.com/bola/sitemap.xml",
+        "https://www.liputan6.com/lifestyle/sitemap.xml",
+        "https://kesehatan.liputan6.com/sitemap.xml"
+      ],
+      "years_mentioned": [],
+      "mentions_2019_in_html": null
+    },
+    {
+      "source": "republika",
+      "url": "https://republika.co.id/files/xml/sitemap.xml",
+      "final_url": "https://republika.co.id/files/xml/sitemap.xml",
+      "http_status": 200,
+      "bytes": 175796,
+      "sha256": "beae9032434f3ac57fcf89cc008fb874788e9cf4fa8df4b3b04837fef3a57189",
+      "n_loc": 354,
+      "loc_sample": [
+        "https://republika.co.id",
+        "https://republika.co.id/kanal/video",
+        "https://republika.co.id/kanal/video/close-up",
+        "https://republika.co.id/kanal/video/podcast",
+        "https://republika.co.id/kanal/video/videografis",
+        "https://republika.co.id/kanal/video/ficer"
+      ],
+      "years_mentioned": [
+        2020,
+        2021,
+        2022,
+        2026
+      ],
+      "mentions_2019_in_html": null
+    },
+    {
+      "source": "katadata",
+      "url": "https://www.katadata.co.id/sitemap-index.xml",
+      "final_url": "https://katadata.co.id/sitemap-index.xml",
+      "http_status": 200,
+      "bytes": 5471,
+      "sha256": "02ed2d29c572dc516fdfdbc399cfadfd3fe81e622aa08dfb11b730bf03487fc9",
+      "n_loc": 70,
+      "loc_sample": [
+        "https://katadata.co.id/sitemap/post/2026-10.xml",
+        "https://katadata.co.id/sitemap/post/2026-09.xml",
+        "https://katadata.co.id/sitemap/post/2026-08.xml",
+        "https://katadata.co.id/sitemap/post/2026-07.xml",
+        "https://katadata.co.id/sitemap/post/2026-06.xml",
+        "https://katadata.co.id/sitemap/post/2026-05.xml"
+      ],
+      "years_mentioned": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "mentions_2019_in_html": null
+    },
+    {
+      "source": "okezone",
+      "url": "https://www.okezone.com/sitemap.xml",
+      "final_url": "https://www.okezone.com/sitemap.xml",
+      "http_status": 200,
+      "bytes": 11255,
+      "sha256": "2023a1ad9fbc515d362985251c4f469580c4962c2f52a00e0b73c79043235e68",
+      "n_loc": 0,
+      "loc_sample": [],
+      "years_mentioned": [
+        2026
+      ],
+      "mentions_2019_in_html": null
+    },
+    {
+      "source": "antaranews_indeks",
+      "url": "https://www.antaranews.com/indeks/2019-01-02",
+      "final_url": "https://www.antaranews.com/indeks/2019-01-02",
+      "http_status": 404,
+      "bytes": 799669,
+      "sha256": "03263dc37f8176cb0615b61216ad2cf0df3b15140eb1d96e110fe85a048e45e6",
+      "n_loc": 0,
+      "loc_sample": [],
+      "years_mentioned": [
+        2011,
+        2014,
+        2015,
+        2016,
+        2018,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "mentions_2019_in_html": 0
+    },
+    {
+      "source": "tempo_indeks",
+      "url": "https://www.tempo.co/indeks/2019-01-02",
+      "final_url": "https://www.tempo.co/indeks/2019-01-02",
+      "http_status": 403,
+      "bytes": 5756,
+      "sha256": "6e12a75cb60ee571d962954e0657911f4bab43e5b622b73bf7886d4fe792aefd",
+      "n_loc": 0,
+      "loc_sample": [],
+      "years_mentioned": [
+        2019
+      ],
+      "mentions_2019_in_html": 3
+    }
+  ],
+  "note": "Hanya indeks; tidak ada artikel diambil."
+}
