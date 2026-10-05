@@ -1,0 +1,30 @@
+__pycache__/
+*.pyc
+*.part
+*.tmp
+
+logs/*
+!logs/.gitkeep
+
+# Raw HTML indeks & artikel: LOKAL saja (±7–8 GB; hak cipta media).
+data/raw/news/ix/
+data/raw/news/art/
+# Teks penuh tidak dikoleksi (P1-DG-29)
+data/raw/news/fulltext/
+
+# SEMUA data News tidak di-commit (manifest, bukti probe, judul ter-normalisasi).
+# Setiap mesin mengoleksi sendiri: jalankan scripts/run_phase.py mulai --month 2019-01.
+# Folder dipertahankan lewat .gitkeep karena verify_setup.py mengecek keberadaannya.
+data/raw/news/*
+!data/raw/news/probe/
+data/raw/news/probe/*
+!data/raw/news/probe/.gitkeep
+data/processed/news/*
+!data/processed/news/.gitkeep
+
+# Laporan progres/hasil koleksi lokal (spesifik mesin yang menjalankan scraping)
+reports/phase_*.json
+reports/progress_news.json
+reports/audit_news_*
+reports/normalize_check.json
+reports/setup_check.json
