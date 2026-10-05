@@ -1,0 +1,19 @@
+# Dokumentasi internal - tidak di-push ke GitHub
+ARIF-Net_PROJECT_IMPLEMENTATION_PLAN_*.md
+ARIF-Net_Phase_0_*.md
+**/AGENT.md
+
+# Data hasil koleksi (raw / smoke / processed), laporan run, log, dan state lokal: tidak di-push
+**/data/**
+!**/data/**/
+!**/data/**/.gitkeep
+**/reports/**
+!**/reports/**/
+!**/reports/**/.gitkeep
+**/logs/**
+!**/logs/**/
+!**/logs/**/.gitkeep
+**/config/state.json
+**/archive/
+# Dokumentasi Phase 1 (hanya README yang di-push)
+**/docs/PHASE1_COLLECTION_*.md
