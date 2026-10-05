@@ -1,6 +1,6 @@
 # ARIF-Net — Phase 1 · Koleksi Harga PIHPS (Pasar Kramatjati, 2019 → 2026-09-30)
 
-Paket ini mengoleksi harga **eceran** harian dari **PIHPS Bank Indonesia** untuk target market **Pasar Kramatjati (level 3)**. Komoditas yang dikoleksi adalah 3 komoditas primary Capstone. Dasarnya adalah P1-DG-01…06, 13, dan 16 (Plan v2.0.0 §0.5, §10.1a; Contract v2.1.0 §3.1, §5.6). Detail provenance ada di [`docs/PHASE1_COLLECTION_PIHPS.md`](docs/PHASE1_COLLECTION_PIHPS.md).
+Paket ini mengoleksi harga **eceran** harian dari **PIHPS Bank Indonesia** untuk target market **Pasar Kramatjati (level 3)**. Komoditas yang dikoleksi adalah 3 komoditas primary Capstone. Dasarnya adalah P1-DG-01…06, 13, dan 16 (Plan v2.0.0 §0.5, §10.1a; Contract v2.1.0 §3.1, §5.6). Data tidak disertakan di repositori; jalankan collector (lihat di bawah) untuk membuatnya di mesin sendiri.
 
 | Komoditas | comcat_id |
 |---|---|
@@ -31,9 +31,8 @@ scripts/     common.py · verify_setup.py · collect_pihps.py · normalize_pihps
 tests/       test_offline.py
 data/raw/pihps/<comcat_id>/<YYYY-MM>.json   ← raw evidence (byte-identik dengan response)
 data/raw/pihps/reference/ · smoke/ · collection_manifest.csv · collection_summary.json
-data/processed/pihps/pihps_kramatjati_long.csv   ← Git LFS
-archive/run_2022/   ← artefak run lama 2022-01 → 2026-09 (12 komoditas); hanya sebagai pembanding audit
-reports/ · logs/
+data/processed/pihps/pihps_kramatjati_long.csv
+reports/ · logs/     ← data, reports, dan logs dibuat oleh script; tidak di-commit
 ```
 
 ## Aturan integritas (ringkas)

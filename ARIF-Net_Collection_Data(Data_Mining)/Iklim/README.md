@@ -1,6 +1,6 @@
 # ARIF-Net — Phase 1 · Koleksi Data Iklim (Open-Meteo)
 
-Paket ini mengoleksi data iklim harian *reanalysis* dari **Open-Meteo Historical Weather API** untuk 18 kabupaten kandidat pemasok Jakarta. Dasarnya adalah keputusan P1-DG-09 sampai P1-DG-17 (Plan v2.0.0 §0.5, §10.2a; Contract v2.1.0 §5.6). Detail provenance ada di [`docs/PHASE1_COLLECTION_OPENMETEO.md`](docs/PHASE1_COLLECTION_OPENMETEO.md).
+Paket ini mengoleksi data iklim harian *reanalysis* dari **Open-Meteo Historical Weather API** untuk 18 kabupaten kandidat pemasok Jakarta. Dasarnya adalah keputusan P1-DG-09 sampai P1-DG-17 (Plan v2.0.0 §0.5, §10.2a; Contract v2.1.0 §5.6). Data tidak disertakan di repositori; jalankan collector (lihat di bawah) untuk membuatnya di mesin sendiri.
 
 | Elemen | Nilai |
 |---|---|
@@ -72,7 +72,7 @@ logs/        log per run + api_ledger.csv
 ## Catatan pemakaian data
 
 - **`usable_end_date` = 2026-09-24** (keputusan peneliti, CP6 opsi A). Fitur Phase 3 memotong seri iklim di tanggal ini, karena 2026-09-25 sampai 09-30 berada di tepi rilis ERA5 (berisi null dan `precipitation_hours` bernilai artefak). Raw dan processed tetap utuh sampai 2026-09-30.
-- CSV processed (70–92 MB) dilacak **Git LFS** lewat `.gitattributes` (`data/processed/**/*.csv`). Jalankan `git lfs install` sekali per mesin sebelum clone atau commit.
+- Isi `data/`, `reports/`, `logs/`, dan `config/state.json` **tidak di-commit**. Setiap mesin membuatnya sendiri dengan menjalankan collector; repositori hanya menyimpan kode, config, dan README.
 
 ## Aturan integritas (ringkas)
 

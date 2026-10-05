@@ -1,8 +1,8 @@
 # ARIF-Net — Phase 1 · Koleksi Harga Komoditas
 
-Folder ini berisi semua collector **harga komoditas** ARIF-Net. Setiap sumber adalah sub-paket mandiri dengan config, script, test, docs, data, dan report-nya sendiri. Path di manifest dan report selalu relatif terhadap folder sub-paket, sehingga sub-paket bisa dipindah tanpa merusak bukti.
+Folder ini berisi semua collector **harga komoditas** ARIF-Net. Setiap sumber adalah sub-paket mandiri dengan config, script, test, data, dan report-nya sendiri. Path di manifest dan report selalu relatif terhadap folder sub-paket, sehingga sub-paket bisa dipindah tanpa merusak bukti.
 
-**Otoritas:** Plan v2.0.0 §0.5 (P1-DG-01…06, 13, 16), §10.1a · Contract v2.1.0 §3.1, §5.1, §5.6. Panduan agen ada di `ARIF-Net_Collection_Data(Data_Mining)/AGENT.md` §13–§16.
+**Otoritas:** Plan v2.0.0 §0.5 (P1-DG-01…06, 13, 16), §10.1a · Contract v2.1.0 §3.1, §5.1, §5.6.
 
 | Sumber | Folder | Peran | Level harga | Komoditas | Periode | Status |
 |---|---|---|---|---|---|---|
@@ -15,9 +15,9 @@ Folder ini berisi semua collector **harga komoditas** ARIF-Net. Setiap sumber ad
 ```text
 Historical_Komoditas/
 ├── README.md · environment.yml · requirements.txt · .gitignore · .gitattributes   ← dipakai bersama
-├── PIHPS/   config/ scripts/ tests/ docs/ data/ reports/ logs/ archive/run_2022/
-├── PIBC/    config/ scripts/ tests/ docs/ data/ reports/ logs/
-└── IPJ/     config/ scripts/ tests/ docs/ data/ reports/ logs/
+├── PIHPS/   config/ scripts/ tests/ data/ reports/ logs/
+├── PIBC/    config/ scripts/ tests/ data/ reports/ logs/
+└── IPJ/     config/ scripts/ tests/ data/ reports/ logs/
 ```
 
 ## Menjalankan
@@ -61,4 +61,4 @@ conda run -n arif-net python scripts\audit_ipj.py
    - kalibrasi yang di-fit hanya pada data training;
    - eksperimen dilaporkan dengan dan tanpa nilai isian.
 4. Cookie atau token tidak pernah di-hardcode; sesi diambil lewat warm-up halaman publik.
-5. CSV processed dilacak **Git LFS** (`.gitattributes`).
+5. Isi `data/`, `reports/`, `logs/`, dan `config/state.json` **tidak di-commit**. Setiap anggota tim menjalankan collector sendiri; repositori hanya menyimpan kode, config, dan README.

@@ -1,6 +1,6 @@
 # ARIF-Net — Phase 1 · Koleksi Harga IPJ (Info Pangan Jakarta)
 
-Paket ini mengoleksi harga **eceran** harian dari Info Pangan Jakarta untuk **Pasar Kramat Jati (`market_id` 12)**, yaitu pasar yang sama dengan target PIHPS. Di ARIF-Net, IPJ adalah **sumber pelengkap dengan prioritas pengisian tertinggi**, karena harganya eceran dan berasal dari pasar yang sama (P1-DG-06). Detail provenance ada di [`docs/PHASE1_COLLECTION_IPJ.md`](docs/PHASE1_COLLECTION_IPJ.md).
+Paket ini mengoleksi harga **eceran** harian dari Info Pangan Jakarta untuk **Pasar Kramat Jati (`market_id` 12)**, yaitu pasar yang sama dengan target PIHPS. Di ARIF-Net, IPJ adalah **sumber pelengkap dengan prioritas pengisian tertinggi**, karena harganya eceran dan berasal dari pasar yang sama (P1-DG-06). Data tidak disertakan di repositori; jalankan collector (lihat di bawah) untuk membuatnya di mesin sendiri.
 
 | Target PIHPS | Komoditas IPJ (id) |
 |---|---|

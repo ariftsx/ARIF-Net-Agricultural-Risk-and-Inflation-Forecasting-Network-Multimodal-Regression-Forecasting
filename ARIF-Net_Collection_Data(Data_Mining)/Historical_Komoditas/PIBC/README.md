@@ -1,6 +1,6 @@
 # ARIF-Net — Phase 1 · Koleksi Harga Beras PIBC (Pasar Induk Beras Cipinang)
 
-Paket ini mengoleksi harga beras **grosir** harian dari situs PIBC (PT Food Station Tjipinang Jaya). Di ARIF-Net, PIBC berperan sebagai **sumber pelengkap dan konteks pasokan beras**, bukan target (P1-DG-01/02/06). Detail provenance ada di [`docs/PHASE1_COLLECTION_PIBC.md`](docs/PHASE1_COLLECTION_PIBC.md).
+Paket ini mengoleksi harga beras **grosir** harian dari situs PIBC (PT Food Station Tjipinang Jaya). Di ARIF-Net, PIBC berperan sebagai **sumber pelengkap dan konteks pasokan beras**, bukan target (P1-DG-01/02/06). Data tidak disertakan di repositori; jalankan collector (lihat di bawah) untuk membuatnya di mesin sendiri.
 
 - Endpoint: `GET https://pibc.foodstation.co.id/rice-price-detail` (DataTables server-side). Sebelumnya dilakukan warm-up `GET /rice-price` untuk cookie sesi; tidak ada cookie atau token yang di-hardcode.
 - **Semantik tanggal (terverifikasi):** `start_date` eksklusif dan `end_date` inklusif, sehingga untuk rentang [S, E] collector mengirim `start_date = S − 1`. Server mengabaikan parameter `order`.
