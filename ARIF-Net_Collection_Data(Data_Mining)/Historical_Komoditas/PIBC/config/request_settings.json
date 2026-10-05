@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "decision_refs": ["P1-DG-01", "P1-DG-02", "P1-DG-06", "P1-DG-16"],
+    "source": "PT Food Station Tjipinang Jaya — Pasar Induk Beras Cipinang (PIBC), harga GROSIR pasar induk",
+    "endpoint_evidence": "Tangkapan DevTools peneliti 2026-10-03 + probe read-only 2026-10-03",
+    "unit_note": "Halaman: 'Harga Rata-Rata dalam Rupiah' / 'Detail Harga Beras (dalam Rupiah)'. Satuan per kg TIDAK tertulis eksplisit di halaman.",
+    "date_semantics": "Terverifikasi probe: start_date EKSKLUSIF, end_date INKLUSIF, label tgl tidak bergeser → kirim start_date = S - 1 hari untuk rentang [S, E]. Parameter order diabaikan server (selalu menaik).",
+    "end_date_note": "Data terakhir di sumber = 2025-06-16 (query start_date=2025-06-16 → 0 baris; situs tidak diperbarui lagi). 2019-01-01..2025-06-16 = 2.359 hari = recordsTotal."
+  },
+  "base_url": "https://pibc.foodstation.co.id",
+  "page_url": "https://pibc.foodstation.co.id/rice-price",
+  "data_url": "https://pibc.foodstation.co.id/rice-price-detail",
+  "columns": ["tgl", "cjr_kpl", "cjr_slyp", "setra", "saigon", "muncul1", "muncul2", "muncul3",
+              "ir641", "ir642", "ir643", "ir42", "kp_biasa", "kp_paris", "ktn_htm"],
+  "start_date": "2019-01-01",
+  "end_date": "2025-06-16",
+  "chunk": "yearly",
+  "page_length": 400,
+  "delay_seconds": 1.5,
+  "timeout_seconds": 60,
+  "retries": 5,
+  "imputation_at_collection": false
+}
