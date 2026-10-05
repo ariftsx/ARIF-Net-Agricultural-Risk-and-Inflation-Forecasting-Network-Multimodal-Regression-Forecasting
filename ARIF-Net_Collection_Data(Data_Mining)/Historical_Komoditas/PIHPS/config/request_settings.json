@@ -1,0 +1,31 @@
+{
+  "_meta": {
+    "decision_refs": ["P1-DG-01", "P1-DG-02", "P1-DG-03", "P1-DG-06", "P1-DG-16"],
+    "authority": "Plan v2.0.0 §0.5, §10.1a; Contract v2.1.0 §5.1, §5.6",
+    "source": "PIHPS Bank Indonesia — survei pasar tradisional, harga ECERAN (Rp/kg)",
+    "endpoint_evidence": "Parameter dari tangkapan DevTools peneliti (docs lama PHASE1_COLLECTION_PIHPS.md, git 1779907)"
+  },
+  "base_url": "https://www.bi.go.id/hargapangan",
+  "page_url": "https://www.bi.go.id/hargapangan/TabelHarga/PasarTradisionalKomoditas",
+  "data_url": "https://www.bi.go.id/hargapangan/WebSite/TabelHarga/GetGridDataKomoditas",
+  "reference_url": "https://www.bi.go.id/hargapangan/WebSite/TabelHarga/GetRefCommodityAndCategory",
+  "price_type_id": 1,
+  "province_id": 13,
+  "regency_id": 34,
+  "regency_label_source": "Kota Jakarta Pusat",
+  "regency_label_note": "Source quirk PIHPS (P1-DG-03): label regency tidak dipakai; Pasar Kramatjati secara geografis di Jakarta Timur.",
+  "show_kota": "true",
+  "show_pasar": "true",
+  "tipe_laporan": 1,
+  "market_name": "Pasar Kramatjati",
+  "market_level": 3,
+  "start_date": "2019-01-01",
+  "end_date": "2026-09-30",
+  "chunk": "monthly",
+  "delay_seconds": 1.0,
+  "delay_jitter_seconds": 0.5,
+  "timeout_seconds": 60,
+  "retries": 5,
+  "imputation_at_collection": false,
+  "missing_value_policy": "Nilai '-' dari sumber = tidak dilaporkan → price kosong + is_reported=false. Tidak diisi (P1-DG-06: hanya null yang boleh diisi dari sumber lain, di layer terpisah)."
+}
