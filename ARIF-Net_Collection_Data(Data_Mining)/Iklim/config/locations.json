@@ -1,0 +1,235 @@
+{
+  "_meta": {
+    "decision_refs": [
+      "P1-DG-11",
+      "P1-DG-12"
+    ],
+    "authority": "Contract v2.1.0 §4.5-4.6; Plan v2.0.0 §10.2a",
+    "status": "CANDIDATE supplier regions - bukan bobot market share",
+    "tier_definition": "Tier 1 = bukti kuat & berulang sebagai pemasok Jakarta (dimodelkan lebih dulu); Tier 2 = sentra produksi, bukti lebih lemah/musiman (eksperimen pembanding). Tier dicatat per pasangan (lokasi, komoditas).",
+    "point_method": "centroid poligon batas administrasi KABUPATEN (bukan Kota), dihitung di EPSG:6933 lalu ke WGS84",
+    "coordinates_filled_in": "Langkah 2b — 2026-10-02T16:03:49Z"
+  },
+  "locations": [
+    {
+      "location_id": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "provinsi": "Jawa Barat",
+      "commodity_tiers": {
+        "cabai_merah_keriting": 1,
+        "bawang_merah_ukuran_sedang": 2
+      },
+      "latitude": -7.35951,
+      "longitude": 107.78883,
+      "boundary_feature": "Garut, JawaBarat (Kabupaten, IDN.9.11_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "cianjur",
+      "kabupaten": "Kabupaten Cianjur",
+      "provinsi": "Jawa Barat",
+      "commodity_tiers": {
+        "cabai_merah_keriting": 1
+      },
+      "latitude": -7.13358,
+      "longitude": 107.15776,
+      "boundary_feature": "Cianjur, JawaBarat (Kabupaten, IDN.9.7_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "bandung_barat",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "provinsi": "Jawa Barat",
+      "commodity_tiers": {
+        "cabai_merah_keriting": 1
+      },
+      "latitude": -6.89711,
+      "longitude": 107.41495,
+      "boundary_feature": "BandungBarat, JawaBarat (Kabupaten, IDN.9.1_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "provinsi": "Jawa Barat",
+      "commodity_tiers": {
+        "cabai_merah_keriting": 1
+      },
+      "latitude": -7.09994,
+      "longitude": 107.61075,
+      "boundary_feature": "Bandung, JawaBarat (Kabupaten, IDN.9.2_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "sumedang",
+      "kabupaten": "Kabupaten Sumedang",
+      "provinsi": "Jawa Barat",
+      "commodity_tiers": {
+        "cabai_merah_keriting": 1
+      },
+      "latitude": -6.82506,
+      "longitude": 107.98087,
+      "boundary_feature": "Sumedang, JawaBarat (Kabupaten, IDN.9.25_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "magelang",
+      "kabupaten": "Kabupaten Magelang",
+      "provinsi": "Jawa Tengah",
+      "commodity_tiers": {
+        "cabai_merah_keriting": 1
+      },
+      "latitude": -7.50157,
+      "longitude": 110.24663,
+      "boundary_feature": "Magelang, JawaTengah (Kabupaten, IDN.10.20_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "brebes",
+      "kabupaten": "Kabupaten Brebes",
+      "provinsi": "Jawa Tengah",
+      "commodity_tiers": {
+        "bawang_merah_ukuran_sedang": 1
+      },
+      "latitude": -7.05928,
+      "longitude": 108.92756,
+      "boundary_feature": "Brebes, JawaTengah (Kabupaten, IDN.10.6_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "cirebon",
+      "kabupaten": "Kabupaten Cirebon",
+      "provinsi": "Jawa Barat",
+      "commodity_tiers": {
+        "bawang_merah_ukuran_sedang": 1,
+        "beras_kualitas_medium_i": 1
+      },
+      "latitude": -6.74541,
+      "longitude": 108.55129,
+      "boundary_feature": "Cirebon, JawaBarat (Kabupaten, IDN.9.9_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "indramayu",
+      "kabupaten": "Kabupaten Indramayu",
+      "provinsi": "Jawa Barat",
+      "commodity_tiers": {
+        "bawang_merah_ukuran_sedang": 1,
+        "beras_kualitas_medium_i": 1
+      },
+      "latitude": -6.44857,
+      "longitude": 108.16875,
+      "boundary_feature": "Indramayu, JawaBarat (Kabupaten, IDN.9.12_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "karawang",
+      "kabupaten": "Kabupaten Karawang",
+      "provinsi": "Jawa Barat",
+      "commodity_tiers": {
+        "beras_kualitas_medium_i": 1
+      },
+      "latitude": -6.25204,
+      "longitude": 107.35394,
+      "boundary_feature": "Karawang, JawaBarat (Kabupaten, IDN.9.13_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "subang",
+      "kabupaten": "Kabupaten Subang",
+      "provinsi": "Jawa Barat",
+      "commodity_tiers": {
+        "beras_kualitas_medium_i": 1
+      },
+      "latitude": -6.48414,
+      "longitude": 107.7322,
+      "boundary_feature": "Subang, JawaBarat (Kabupaten, IDN.9.23_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "demak",
+      "kabupaten": "Kabupaten Demak",
+      "provinsi": "Jawa Tengah",
+      "commodity_tiers": {
+        "beras_kualitas_medium_i": 1,
+        "bawang_merah_ukuran_sedang": 2
+      },
+      "latitude": -6.91109,
+      "longitude": 110.63202,
+      "boundary_feature": "Demak, JawaTengah (Kabupaten, IDN.10.8_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "temanggung",
+      "kabupaten": "Kabupaten Temanggung",
+      "provinsi": "Jawa Tengah",
+      "commodity_tiers": {
+        "cabai_merah_keriting": 2
+      },
+      "latitude": -7.25788,
+      "longitude": 110.13565,
+      "boundary_feature": "Temanggung, JawaTengah (Kabupaten, IDN.10.33_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "nganjuk",
+      "kabupaten": "Kabupaten Nganjuk",
+      "provinsi": "Jawa Timur",
+      "commodity_tiers": {
+        "bawang_merah_ukuran_sedang": 2
+      },
+      "latitude": -7.59737,
+      "longitude": 111.9384,
+      "boundary_feature": "Nganjuk, JawaTimur (Kabupaten, IDN.11.24_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "bima",
+      "kabupaten": "Kabupaten Bima",
+      "provinsi": "Nusa Tenggara Barat",
+      "commodity_tiers": {
+        "bawang_merah_ukuran_sedang": 2
+      },
+      "latitude": -8.47469,
+      "longitude": 118.6187,
+      "boundary_feature": "Bima, NusaTenggaraBarat (Kabupaten, IDN.20.1_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "sragen",
+      "kabupaten": "Kabupaten Sragen",
+      "provinsi": "Jawa Tengah",
+      "commodity_tiers": {
+        "beras_kualitas_medium_i": 2
+      },
+      "latitude": -7.3872,
+      "longitude": 110.97751,
+      "boundary_feature": "Sragen, JawaTengah (Kabupaten, IDN.10.29_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "cilacap",
+      "kabupaten": "Kabupaten Cilacap",
+      "provinsi": "Jawa Tengah",
+      "commodity_tiers": {
+        "beras_kualitas_medium_i": 2
+      },
+      "latitude": -7.49089,
+      "longitude": 108.89037,
+      "boundary_feature": "Cilacap, JawaTengah (Kabupaten, IDN.10.7_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    },
+    {
+      "location_id": "sukoharjo",
+      "kabupaten": "Kabupaten Sukoharjo",
+      "provinsi": "Jawa Tengah",
+      "commodity_tiers": {
+        "beras_kualitas_medium_i": 2
+      },
+      "latitude": -7.6808,
+      "longitude": 110.83464,
+      "boundary_feature": "Sukoharjo, JawaTengah (Kabupaten, IDN.10.30_1)",
+      "boundary_source": "GADM 4.1 level 2 | gadm41_IDN_2.json | sha256=a30b7026ad37fd02f67bad8bc454653e0ac31ad8a0ba855ed317e27e5c35fb75"
+    }
+  ]
+}

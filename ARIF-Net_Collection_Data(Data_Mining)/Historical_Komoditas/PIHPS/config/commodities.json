@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "decision_refs": ["P1-DG-04", "P1-DG-05", "P1-DG-13"],
+    "authority": "Plan v2.0.0 §0.5; Contract v2.1.0 §3.1",
+    "scope": "3 komoditas primary Capstone (keputusan peneliti 2026-10-03: koleksi ulang hanya primary). Bawang putih dikeluarkan (P1-DG-13).",
+    "id_source": "comcat_id dari reference endpoint PIHPS (run 2022, archive/run_2022/data_raw_pihps/commodity_id_mapping.json); com_14 & com_11 juga dari tangkapan DevTools peneliti. Diverifikasi ulang saat smoke (config/state.json)."
+  },
+  "commodities": [
+    {"key": "cabai_merah_keriting", "pihps_name": "Cabai Merah Keriting", "comcat_id": "com_14", "role": "primary"},
+    {"key": "bawang_merah_ukuran_sedang", "pihps_name": "Bawang Merah Ukuran Sedang", "comcat_id": "com_11", "role": "primary"},
+    {"key": "beras_kualitas_medium_i", "pihps_name": "Beras Kualitas Medium I", "comcat_id": "com_3", "role": "primary"}
+  ]
+}

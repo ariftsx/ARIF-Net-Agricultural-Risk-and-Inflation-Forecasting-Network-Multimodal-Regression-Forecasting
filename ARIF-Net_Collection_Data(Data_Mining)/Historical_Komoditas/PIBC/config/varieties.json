@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "decision_refs": [
+      "P1-DG-01",
+      "P1-DG-02",
+      "P1-DG-05",
+      "P1-DG-06"
+    ],
+    "authority": "Plan v2.0.0 §0.5, §10.1a; Contract v2.1.0 §3.1 (catatan taxonomy), §5.6",
+    "label_source": "Header tabel #gridPrice di https://pibc.foodstation.co.id/rice-price (dibaca 2026-10-03)",
+    "medium_i_mapping_rule": "Pemetaan Beras Kualitas Medium I (PIHPS com_3) ke kolom PIBC = KEPUTUSAN PENELITI (P1-DG-05). Diisi hanya setelah keputusan; normalize_pibc.py menolak berjalan bila null.",
+    "medium_i_mapping_decided_at": "2026-10-03",
+    "medium_i_mapping_decision": "KEPUTUSAN PENELITI (CP2, P1-DG-05): Beras Kualitas Medium I (PIHPS com_3) -> PIBC 'Muncul I' (muncul1). Alasan peneliti: seri Muncul (I, II, III) membagi tingkatan kelas mutu Medium; Muncul I adalah tingkat tertinggi di kelas medium dengan pemenuhan fisik medium kelas I (butir kepala minimal 80%, butir patah maksimal 18%). Bukti statistik 2019-2020 (reports/mapping_evidence.*) lemah karena seri PIHPS hampir datar; keputusan berbasis definisi mutu."
+  },
+  "medium_i_mapping": "muncul1",
+  "varieties": [
+    {
+      "field": "cjr_kpl",
+      "label": "Cianjur Kepala",
+      "group": "non-ketan"
+    },
+    {
+      "field": "cjr_slyp",
+      "label": "Cianjur Slyp",
+      "group": "non-ketan"
+    },
+    {
+      "field": "setra",
+      "label": "Setra",
+      "group": "non-ketan"
+    },
+    {
+      "field": "saigon",
+      "label": "Saigon",
+      "group": "non-ketan"
+    },
+    {
+      "field": "muncul1",
+      "label": "Muncul I",
+      "group": "non-ketan"
+    },
+    {
+      "field": "muncul2",
+      "label": "Muncul II",
+      "group": "non-ketan"
+    },
+    {
+      "field": "muncul3",
+      "label": "Muncul III",
+      "group": "non-ketan"
+    },
+    {
+      "field": "ir641",
+      "label": "IR-64 I",
+      "group": "non-ketan"
+    },
+    {
+      "field": "ir642",
+      "label": "IR-64 II",
+      "group": "non-ketan"
+    },
+    {
+      "field": "ir643",
+      "label": "IR-64 III",
+      "group": "non-ketan"
+    },
+    {
+      "field": "ir42",
+      "label": "IR-42",
+      "group": "non-ketan"
+    },
+    {
+      "field": "kp_biasa",
+      "label": "Ketan Putih Lokal",
+      "group": "ketan"
+    },
+    {
+      "field": "kp_paris",
+      "label": "Ketan Putih Paris",
+      "group": "ketan"
+    },
+    {
+      "field": "ktn_htm",
+      "label": "Ketan Hitam",
+      "group": "ketan"
+    }
+  ]
+}

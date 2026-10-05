@@ -1,1 +1,4 @@
-requests>=2.31.0,<3
+# Collector harga komoditas ARIF-Net (PIHPS, PIBC). Env: arif-net.
+requests>=2.32
+pandas>=3.0
+numpy>=2.0

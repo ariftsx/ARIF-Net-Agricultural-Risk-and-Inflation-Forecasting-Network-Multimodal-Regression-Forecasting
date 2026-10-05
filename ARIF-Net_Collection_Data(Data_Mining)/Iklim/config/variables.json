@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "decision_refs": ["P1-DG-14"],
+    "authority": "Plan v2.0.0 §10.2a; Contract v2.1.0 §5.6",
+    "note": "api_param dicocokkan dengan daftar 'Daily Weather Variables' di open-meteo.com/en/docs/historical-weather-api (dicek 2026-10-02). Verifikasi akhir = smoke test (status di config/state.json).",
+    "core_usage": "dipakai untuk modelling",
+    "reserve_usage": "dikoleksi & disimpan terpisah, TIDAK dipakai modelling; aktivasi hanya via decision gate baru",
+    "rain_sum_role": "QC saja (pembanding precipitation_sum)"
+  },
+  "core": [
+    {"display_name": "Precipitation Sum", "api_param": "precipitation_sum", "doc_unit": "mm"},
+    {"display_name": "Precipitation Hours", "api_param": "precipitation_hours", "doc_unit": "h"},
+    {"display_name": "Mean Temperature (2 m)", "api_param": "temperature_2m_mean", "doc_unit": "°C"},
+    {"display_name": "Maximum Temperature (2 m)", "api_param": "temperature_2m_max", "doc_unit": "°C"},
+    {"display_name": "Minimum Temperature (2 m)", "api_param": "temperature_2m_min", "doc_unit": "°C"},
+    {"display_name": "Mean Relative Humidity (2 m)", "api_param": "relative_humidity_2m_mean", "doc_unit": "%"},
+    {"display_name": "Sunshine Duration", "api_param": "sunshine_duration", "doc_unit": "s"},
+    {"display_name": "Reference Evapotranspiration (ET0)", "api_param": "et0_fao_evapotranspiration", "doc_unit": "mm"},
+    {"display_name": "Mean Soil Moisture (7-28 cm)", "api_param": "soil_moisture_7_to_28cm_mean", "doc_unit": "m³/m³"}
+  ],
+  "reserve": [
+    {"display_name": "Maximum Relative Humidity (2 m)", "api_param": "relative_humidity_2m_max", "doc_unit": "%"},
+    {"display_name": "Minimum Relative Humidity (2 m)", "api_param": "relative_humidity_2m_min", "doc_unit": "%"},
+    {"display_name": "Maximum Vapour Pressure Deficit", "api_param": "vapour_pressure_deficit_max", "doc_unit": "kPa"},
+    {"display_name": "Shortwave Radiation Sum", "api_param": "shortwave_radiation_sum", "doc_unit": "MJ/m²"},
+    {"display_name": "Mean Cloud Cover", "api_param": "cloud_cover_mean", "doc_unit": "%"},
+    {"display_name": "Maximum Wind Speed (10 m)", "api_param": "wind_speed_10m_max", "doc_unit": "m/s"},
+    {"display_name": "Mean Wind Speed (10 m)", "api_param": "wind_speed_10m_mean", "doc_unit": "m/s"},
+    {"display_name": "Mean Soil Moisture (0-7 cm)", "api_param": "soil_moisture_0_to_7cm_mean", "doc_unit": "m³/m³"},
+    {"display_name": "Mean Soil Moisture (28-100 cm)", "api_param": "soil_moisture_28_to_100cm_mean", "doc_unit": "m³/m³"},
+    {"display_name": "Mean Soil Temperature (0-7 cm)", "api_param": "soil_temperature_0_to_7cm_mean", "doc_unit": "°C"},
+    {"display_name": "Rain Sum (QC)", "api_param": "rain_sum", "doc_unit": "mm"}
+  ]
+}
