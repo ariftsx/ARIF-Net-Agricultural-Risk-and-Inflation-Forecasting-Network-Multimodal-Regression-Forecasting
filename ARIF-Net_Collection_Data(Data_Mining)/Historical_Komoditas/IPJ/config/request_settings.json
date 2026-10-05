@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "decision_refs": ["P1-DG-01", "P1-DG-02", "P1-DG-06", "P1-DG-16"],
+    "source": "Info Pangan Jakarta (IPJ) — Pemprov DKI Jakarta, harga ECERAN pasar tradisional",
+    "endpoint_evidence": "Tangkapan DevTools peneliti 2026-10-03 + probe read-only 2026-10-03",
+    "market_note": "market_id 12 = 'Pasar Kramat Jati' (Jakarta Timur, Jl. Raya Bogor KM.20) = pasar eceran yang sama dengan target PIHPS. market_id 1 = 'Pasar Induk Kramat Jati' (grosir, PIKJ) TIDAK dipakai (P1-DG-02).",
+    "availability_note": "Probe: 2019-01 s.d. 2023-12 (bulan yang dicek) kosong; bulan pertama berisi data 2024-01; 2026-09 lengkap. Semua bulan 2019-01..2026-09 tetap diminta (keputusan peneliti) sebagai bukti ketersediaan."
+  },
+  "base_url": "https://infopangan.jakarta.go.id/api2",
+  "page_url": "https://infopangan.jakarta.go.id/statistic",
+  "report_path": "/v1/public/report",
+  "market_path": "/v1/master-data/market",
+  "filter_by": "market",
+  "market_id": 12,
+  "market_name": "Pasar Kramat Jati",
+  "market_search_text": "kramat",
+  "start_month": "2019-01",
+  "end_month": "2026-09",
+  "delay_seconds": 1.5,
+  "timeout_seconds": 60,
+  "retries": 5,
+  "imputation_at_collection": false
+}
