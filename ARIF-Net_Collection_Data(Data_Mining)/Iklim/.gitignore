@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.part
+*.tmp
+
+# Log run & ledger kuota API (lokal)
+logs/*
+!logs/.gitkeep
+
+# GADM: lisensi tidak mengizinkan redistribusi → tidak di-commit (provenance di reports/boundaries_check.json)
+data/external/boundaries/*
+!data/external/boundaries/.gitkeep

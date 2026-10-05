@@ -1,0 +1,14 @@
+# Conda env ARIF-Net (dipakai bersama). Env sudah ada → cukup tambahkan paket geospasial:
+#   conda install -n arif-net -c conda-forge geopandas pyogrio pyproj shapely
+name: arif-net
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - requests
+  - pandas>=3.0
+  - numpy
+  - geopandas
+  - shapely
+  - pyproj
+  - pyogrio
