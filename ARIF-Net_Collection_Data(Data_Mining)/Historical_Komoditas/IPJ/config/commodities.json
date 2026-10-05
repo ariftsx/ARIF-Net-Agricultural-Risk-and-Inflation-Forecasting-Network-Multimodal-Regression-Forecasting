@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "decision_refs": ["P1-DG-04", "P1-DG-05", "P1-DG-06"],
+    "authority": "Plan v2.0.0 §0.5, §10.1a; Contract v2.1.0 §3.1",
+    "decision": "KEPUTUSAN PENELITI 2026-10-03: pemetaan komoditas IPJ → 3 komoditas primary target PIHPS.",
+    "id_source": "commodity_id & commodity_name dari respons /api2/v1/public/report (probe 2026-10-03); diverifikasi ulang saat smoke.",
+    "taxonomy_caveat": "IPJ 'Bawang Merah' tidak menyebut ukuran; PIHPS 'Bawang Merah Ukuran Sedang'. IPJ juga punya kategori 'Beras Medium' (id 114) yang baru muncul 2026 dan sangat jarang — TIDAK dipakai; beras dipetakan ke 'Beras Muncul I' konsisten dengan keputusan P1-DG-05 di PIBC."
+  },
+  "commodities": [
+    {"target": "Cabai Merah Keriting",       "comcat_id": "com_14", "ipj_commodity_id": 8,  "ipj_commodity_name": "Cabe Merah Keriting"},
+    {"target": "Bawang Merah Ukuran Sedang", "comcat_id": "com_11", "ipj_commodity_id": 12, "ipj_commodity_name": "Bawang Merah"},
+    {"target": "Beras Kualitas Medium I",    "comcat_id": "com_3",  "ipj_commodity_id": 4,  "ipj_commodity_name": "Beras Muncul I"}
+  ]
+}
